@@ -137,7 +137,7 @@
       "firefox > 16",
       "android 4"
     ],
-    "prodURL": "http://test4.intent.pro/tantum/",
+    "prodURL": "https://0saw.github.io/Tantum/dist/",
     "shareImageURL": "/static/share.png",
     "twitterHandle": "@domain",
     "analyticsUA": "UA-XXXXX-X",
