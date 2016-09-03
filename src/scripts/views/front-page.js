@@ -61,7 +61,7 @@ var knob = {
   draw: function() {
     if (knob.floraPattern == null) {
       var floraImg = new Image();
-      floraImg.src = '/images/flora.png';
+      floraImg.src = 'images/flora.png';
       floraImg.addEventListener("load", function () {
         $clock.trigger("change");
       }, false);
