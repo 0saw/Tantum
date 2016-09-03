@@ -10,7 +10,6 @@ var girlsInfo = {
 
 var windowResize = function () {
   girlsInfo.width = girlsContainer.offsetWidth;
-  $('.welcome').height($(girlsContainer).height() - 100);
   requestAnimationFrame(pan);
 };
 $(window).on('resize', windowResize);
@@ -87,7 +86,7 @@ window.addEventListener('scroll', function () {
   var $myElem = $('#problems');
   if(($(this).scrollTop() + $(this).height()) >= $myElem.offset().top) {
     $({animatedVal: knob.max}).animate({animatedVal: knob.min}, {
-      duration: 2000,
+      duration: 3000,
       easing: "easeInOutSine",
       step: function() { 
         knob.value = this.animatedVal;

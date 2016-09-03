@@ -1,28 +1,30 @@
 .girls {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
   /* 70px / 1920px */
-  padding-bottom: 3.64583vw;
+  /*padding-bottom: 3.64583vw;*/
   &__before, &__after {
     img {
       display: block;
     }
   }
   &__before {
+    padding-bottom: 2.083vw;
     img {
       min-width: 100vw;
       height: 41.8229167vw;
       /* 40px / 1920px */
-      margin-bottom: 2.083vw;
+      /*margin-bottom: 2.083vw;*/
     }
   }
   &__after {
     position: absolute;
     top: 0;
-    bottom: 3.64583vw;
+    /*bottom: 3.64583vw;*/
+    bottom: 0;
     left: 50vw;
     margin: auto 0;
     right: -25vw;
@@ -42,6 +44,7 @@
     perspective: 500px;
     position: relative;
     top: 80px;
+    z-index: 1;
     margin: 0 auto;
     max-width: 50rem;
     user-select: none;

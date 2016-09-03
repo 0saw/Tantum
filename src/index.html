@@ -24,10 +24,18 @@
   <div class="viewport" id="container">
     <div class="site-content">
       <!-- @include inc/_browserhappy.html -->
-      <!-- @include inc/header.html -->
 
       <section class="welcome">
+        <!-- @include inc/header.html -->
         <div class="wrapper">
+          <div class="girls" id="girlsContainer">
+            <div class="girls__before">
+              <img src="images/girl_before.jpg" alt="Тантум до">
+            </div>
+            <div class="girls__after" id="girlAfter">
+              <img src="images/girl_after.jpg" alt="Тантум после">
+            </div>
+          </div>
           <div class="welcome__logo">
             <img src="logo.png"
                  srcset="images/logo.png 1x, images/logo@2x.png 2x"
@@ -53,19 +61,12 @@
               </div>
             </div>
           </div>
-          <div class="girls" id="girlsContainer">
-            <div class="girls__before">
-              <img src="images/girl_before.jpg" alt="Тантум до">
-            </div>
-            <div class="girls__after" id="girlAfter">
-              <img src="images/girl_after.jpg" alt="Тантум после">
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="problems" class="problems">
         <div class="wrapper">
+          
           <canvas id="problemsClock" width="280" height="280">
             Ваш браузер не поддерживает скрипты.
           </canvas>

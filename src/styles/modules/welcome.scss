@@ -1,5 +1,8 @@
 .welcome {
   user-select: none;
+  position: relative;
+  height: 41.8229167vw;
+  padding-top: 6rem;
   &__logo {
     text-align: center;
   }
@@ -7,5 +10,9 @@
     font: bold italic 1.8rem 'Georgia', sans;
     color: #f5f5f5;
     text-align: center;
+  }
+  &__logo, &__tagline {
+    position: relative;
+    z-index: 1;
   }
 }

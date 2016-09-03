@@ -42,6 +42,7 @@ html {
   -js-display: flex;
   display: flex;
   flex-flow: column;
+  overflow-x: hidden;
   .site-content {
     flex-grow: 1;
   }

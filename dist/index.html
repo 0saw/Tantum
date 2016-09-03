@@ -88,32 +88,40 @@
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
       
-      <header class="header">
-        <div class="wrapper">
-          <nav class="nav">
-            <ul>
-              <li><a href="/">Главная</a></li>
-              <li><a href="#">О препарате</a></li>
-              <li><a href="#">Формы выпуска</a></li>
-              <li class="menu-item-has-children">
-                <a href="#">Когда применять</a>
-                <ul>
-                  <li><a href="#">Я мама</a></li>
-                  <li><a href="#">До и после операции</a></li>
-                  <li><a href="#">Если причина в другом</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Это интересно</a></li>
-              <li><a href="#">Специалистам</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      
 
       <section class="welcome">
+        <header class="header">
+          <div class="wrapper">
+            <nav class="nav">
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="#">О препарате</a></li>
+                <li><a href="#">Формы выпуска</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Когда применять</a>
+                  <ul>
+                    <li><a href="#">Я мама</a></li>
+                    <li><a href="#">До и после операции</a></li>
+                    <li><a href="#">Если причина в другом</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Это интересно</a></li>
+                <li><a href="#">Специалистам</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        
         <div class="wrapper">
+          <div class="girls" id="girlsContainer">
+            <div class="girls__before">
+              <img src="images/girl_before.jpg" alt="Тантум до">
+            </div>
+            <div class="girls__after" id="girlAfter">
+              <img src="images/girl_after.jpg" alt="Тантум после">
+            </div>
+          </div>
           <div class="welcome__logo">
             <img src="logo.png"
                  srcset="images/logo.png 1x, images/logo@2x.png 2x"
@@ -139,19 +147,12 @@
               </div>
             </div>
           </div>
-          <div class="girls" id="girlsContainer">
-            <div class="girls__before">
-              <img src="images/girl_before.jpg" alt="Тантум до">
-            </div>
-            <div class="girls__after" id="girlAfter">
-              <img src="images/girl_after.jpg" alt="Тантум после">
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="problems" class="problems">
         <div class="wrapper">
+          
           <canvas id="problemsClock" width="280" height="280">
             Ваш браузер не поддерживает скрипты.
           </canvas>
