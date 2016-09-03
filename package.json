@@ -35,7 +35,6 @@
     "vendors/jquery-3.1.0.js",
     "vendors/jquery.easing.js",
     "vendors/sequence.js",
-    "vendors/jquery.knob.js",
     "vendors/jquery.magnific-popup.js",
     "vendors/pushy.js",
     "vendors/slick.js"
