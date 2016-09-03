@@ -6,6 +6,18 @@
 
 @font-face {
   font-family: 'Open Sans';
+  src: url('subset-OpenSans.eot');
+  src: url('subset-OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('subset-OpenSans.woff') format('woff'),
+    url('subset-OpenSans.ttf') format('truetype'),
+    url('subset-OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
   src: url('fonts/subset-OpenSans-Light.eot');
   src: url('fonts/subset-OpenSans-Light.eot?#iefix') format('embedded-opentype'),
     url('fonts/subset-OpenSans-Light.woff') format('woff'),
