@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Gulp Frontend Boilerplate</title>
+	<title>Tantum</title>
 
 	<!-- @if ENV='dev' -->
 	<link rel="stylesheet" href="styles/main.css">
@@ -18,10 +18,18 @@
 	<!-- @include inc/_favicons.html -->
 </head>
 <body>
-	<!-- @include inc/_browserhappy.html -->
+  <!-- @include inc/pushy.html -->
 
-	<div id="main"></div>
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <!-- @include inc/header.html -->
 
+      <div class="wrapper">
+        
+      </div>
+    </div>
+  </div>
 	<!-- @if ENV='dev' -->
 	<script src="scripts/vendor.js"></script>
 	<script src="scripts/main.js"></script>

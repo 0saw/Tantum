@@ -6,4 +6,30 @@
 
 @import 'fonts/_fonts';
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
 @import 'modules/**/*';
