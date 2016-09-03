@@ -38,4 +38,13 @@ html {
   margin: 0 auto;
 }
 
+.viewport {
+  -js-display: flex;
+  display: flex;
+  flex-flow: column;
+  .site-content {
+    flex-grow: 1;
+  }
+}
+
 @import 'modules/**/*';

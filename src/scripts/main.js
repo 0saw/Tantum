@@ -1,5 +1,4 @@
-// import View from './views/view';
+var lala = require('./views/front-page');
 
-// const g = 9.81;
 
 console.log('Hello World');

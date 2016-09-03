@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
 	<title>Tantum</title>
 
 	<!-- @if ENV='dev' -->
@@ -32,14 +33,40 @@
                  srcset="images/logo.png 1x, images/logo@2x.png 2x"
                  alt="Логотип Тантум">
           </div>
-          <div class="girls">
+          <div class="welcome__tagline">
+            Интимная забота о Вашей<br>женственности
+          </div>
+          <div class="girls--handle">
+            <div id="welcomeHandle">
+              <img class="girls__handle-image" src="images/welcome-item.png" alt="">
+              <div class="girls__h-bg">
+                <div class="girls__h-bg_left">
+                  <div class="girls__h-text">
+                    Переместите<br>ползунок влево
+                  </div>
+                </div>
+                <div class="girls__h-bg_right">
+                  <div class="girls__h-text">
+                    Переместите<br>ползунок вправо
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="girls" id="girlsContainer">
             <div class="girls__before">
               <img src="images/girl_before.jpg" alt="Тантум до">
             </div>
-            <div class="girls__after">
+            <div class="girls__after" id="girlAfter">
               <img src="images/girl_after.jpg" alt="Тантум после">
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="problems">
+        <div class="wrapper">
+          <input type="text" value="0" class="clock" />
         </div>
       </section>
     </div>

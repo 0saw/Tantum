@@ -1,0 +1,11 @@
+.welcome {
+  user-select: none;
+  &__logo {
+    text-align: center;
+  }
+  &__tagline {
+    font: bold italic 1.8rem 'Georgia', sans;
+    color: #f5f5f5;
+    text-align: center;
+  }
+}

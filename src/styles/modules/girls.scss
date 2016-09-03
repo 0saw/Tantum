@@ -38,4 +38,49 @@
       transform: skewX(-17deg);
     }
   }
+  &--handle {
+    perspective: 500px;
+    position: relative;
+    top: 80px;
+    margin: 0 auto;
+    max-width: 50rem;
+    user-select: none;
+    cursor: pointer;
+    cursor: move;
+    & > div {
+      transition: padding 0.3s ease-out;
+      transition-timing-function: $mTrans;
+      &:hover, &.panning {
+        padding: 0 0.5rem;
+        transition-timing-function: $mTransOut;
+      }
+    }
+  }
+  &__handle-image {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 10px;
+    bottom: -200px;
+    margin: auto;
+    pointer-events: none;
+  }
+  &__h-bg {
+    &_left, &_right {
+      width: 50%;
+      float: left;
+      color: #f5f5f5;
+      font: italic 1.3rem 'Georgia', serif;
+    }
+    &_left {
+      background: url('../images/welcome-arrow-left.png') left center no-repeat;
+      text-align: right;
+      padding: 60px 175px 60px 40px;
+    }
+    &_right {
+      background: url('../images/welcome-arrow-right.png') right center no-repeat;
+      padding: 60px 40px 60px 175px;
+    }
+  }
 }
