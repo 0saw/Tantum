@@ -47,8 +47,10 @@
       right: 25vw;
       transform: skewX(-17deg);
     }
-    &:hover {
-      left: 0;
+  }
+  &:hover {
+    .girls__after {
+      left: 0vw;
     }
   }
 }
