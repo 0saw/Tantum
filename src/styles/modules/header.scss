@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 10;
 }
@@ -49,8 +49,8 @@
           border: 2px solid rgba(255, 255, 255, 0.2);
           backface-visibility: hidden;
           opacity: 0.001;
-          transition: 0.2s ease-out;
-          transition-property: transform, opacity, background-color;
+          transition: opacity 0.2s ease-out;
+          transition-property: opacity, background-color, transform;
           transition-timing-function: $mTrans;
           border-radius: 10px;
           background-color: rgba(255, 255, 255, 0.1);
@@ -85,8 +85,8 @@
         left: 0;
         width: 13.75rem;
         transition: 0.2s linear;
-        transition-property: opacity, transform, visibility;
-        transition-delay: 0s, 0s, 0.2s;
+        transition-property: all, visibility;
+        transition-delay: 0s, 0.2s;
         transition-timing-function: $mTrans, $mTrans, linear;
         backface-visibility: hidden;
         transform: translate3d(0, 5px, 0);
@@ -128,7 +128,7 @@
           opacity: 1;
           visibility: visible;
           transform: translate3d(0, 0rem, 0);
-          transition-delay: 0s, 0s, 0s;
+          transition-delay: 0s, 0s;
           transition-timing-function: $mTransOut, $mTransOut, linear;
         }
         & > a {
