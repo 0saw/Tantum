@@ -1,0 +1,54 @@
+.girls {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3.64583vw;
+  /*height: 0;
+  padding-bottom: 45.91%;*/
+  &__before, &__after {
+    img {
+      display: block;
+    }
+    div {
+      /*position: absolute;
+      height: 100%;
+      margin: 0 auto;
+      background-repeat: no-repeat;*/
+    }
+  }
+  &__before {
+    img {
+      min-width: 100vw;
+      height: 41.8229167vw;
+      margin-bottom: 2.083vw;
+    }
+    /*div {
+      left: 0;
+      right: 0;
+      background: center center;
+      background-size: cover;
+    }*/
+  }
+  &__after {
+    position: absolute;
+    top: 0;
+    /* 70px / 1920px */
+    bottom: 3.64583vw;
+    left: 50vw;
+    margin: auto 0;
+    right: -25vw;
+    transform: skewX(17deg);
+    overflow: hidden;
+    transition: left 0.5s ease-out;
+    box-shadow: 0 0 3.64583vw rgba(0,0,0,0.25);
+    img {
+      min-width: 100vw;
+      position: absolute;
+      height: 100%;
+      right: 25vw;
+      transform: skewX(-17deg);
+    }
+    &:hover {
+      left: 0;
+    }
+  }
+}
