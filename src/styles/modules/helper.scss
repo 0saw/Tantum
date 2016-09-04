@@ -1,7 +1,9 @@
 .helper {
-  background: url('../images/helper_bg.jpg') top center no-repeat;
-  background-size: cover;
   padding: 5rem 0 0;
+  &--shared-bg {
+    background: url('../images/helper_bg.jpg') top center no-repeat;
+    background-size: cover;
+  }
   &__header {
     font: italic 3rem 'Georgia', serif;
     padding: 0 2rem;

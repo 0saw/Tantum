@@ -57,6 +57,7 @@ var knob = {
   init: function() {
     knob.elem = document.getElementById('problemsClock');
     knob.ctx = knob.elem.getContext('2d');
+    knob.draw();
   },
   draw: function() {
     if (knob.floraPattern == null) {
@@ -97,7 +98,7 @@ var parallax1 = new Parallax(scene1, {
 
 window.addEventListener('scroll', function () {
   var $myElem = $('#problems');
-  if(($(this).scrollTop() + $(this).height()) >= $myElem.offset().top) {
+  if(($(this).scrollTop()) >= $myElem.offset().top) {
     $({animatedVal: knob.max}).animate({animatedVal: knob.min}, {
       duration: 3000,
       easing: "easeInOutSine",
