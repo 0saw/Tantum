@@ -36,8 +36,8 @@
     "vendors/jquery.easing.js",
     "vendors/sequence.js",
     "vendors/jquery.magnific-popup.js",
-    "vendors/pushy.js",
-    "vendors/slick.js"
+    "vendors/parallax.js",
+    "vendors/pushy.js"
   ],
   "napa": {},
   "dependencies": {

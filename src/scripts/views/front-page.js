@@ -77,10 +77,23 @@ var knob = {
   }
 };
 knob.init();
-// $clock.knob(knobOptions);
 
      
-
+var scene1 = document.getElementById('signsScene');
+var parallax1 = new Parallax(scene1, {
+  calibrateX: true,
+  calibrateY: true,
+  invertX: false,
+  invertY: false,
+  limitX: false,
+  limitY: false,
+  scalarX: 2,
+  scalarY: 2,
+  frictionX: 0.3,
+  frictionY: 0.5,
+  originX: 0.5,
+  originY: 0.5
+});
 
 window.addEventListener('scroll', function () {
   var $myElem = $('#problems');

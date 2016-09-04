@@ -32,6 +32,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  overflow-x: hidden;
+}
 
 .wrapper {
   max-width: 60rem;
@@ -42,7 +45,6 @@ html {
   -js-display: flex;
   display: flex;
   flex-flow: column;
-  overflow-x: hidden;
   .site-content {
     flex-grow: 1;
   }
