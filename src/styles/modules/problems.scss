@@ -1,6 +1,86 @@
 .problems {
   background: url('../images/problems_bg.jpg') no-repeat;
   background-size: cover;
+  padding-top: 6rem;
+  .wrapper {
+    position: relative;
+    background: url('../images/problems_cell2.png') 10% 70% no-repeat;
+  }
+  &__header {
+    font: italic 3.125rem 'Georgia', serif;
+  }
+  &__cell {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  &__item {
+    width: 36%;
+    margin: 0 66% 0 0;
+    font-weight: 400;
+    &:nth-child(2n+1) {
+      margin: 0 0 0 66%;
+      text-align: right;
+    }
+    &:nth-child(2) {
+      margin-top: -3rem;
+    }
+    &:nth-child(3) {
+      margin-top: -5rem;
+    }
+    .pulse {
+      display: inline-block;
+    }
+  }
+  &__title {
+    color: #41393a;
+    font: bold italic 1.5rem 'Georgia', serif;
+    margin: 1rem 0 1.8rem;
+  }
+  &__container {
+    -js-display: flex;
+    display: flex;
+    flex-flow: column;
+  }
+  &__clock {
+    position: relative;
+    display: inline-block;
+    padding: 37px;
+    background: url('../images/clock.png') center center no-repeat;
+  }
+  &__time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: 4rem;
+    font: italic 7rem/4rem 'Georgia', serif;
+  }
+  &__above, &__besides {
+    position: absolute;
+  }
+  &__above {
+    font: italic 1.5rem 'Georgia', serif;
+    bottom: 100%;
+    left: 0;
+    width: 400px;
+    text-align: left;
+  }
+  &__besides {
+    width: 300px;
+    left: 100%;
+    bottom: 0;
+    margin-left: 1rem;
+    text-align: left;
+    font-size: 4rem;
+    line-height: 2rem;
+    vertical-align: bottom;
+  }
+  &__fast {
+    text-align: center;
+  }
 }
 
 
