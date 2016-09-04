@@ -1,58 +1,106 @@
 .button {
-  display: inline-block;
-  position: relative;
-  background: linear-gradient(to bottom, #fe7fa2 0%, #e96388 100%);
-  background-color: $pink;
-  text-decoration: none;
-  color: #f5f5f5;
-  font: bold italic 1.2rem/1rem 'Georgia', serif;
-  border-radius: 2rem;
-  padding: 1rem 2rem 1.2rem;
-  box-shadow: 0 4px 0 0 darken($pink, 6);
-  transform: translate3d(0, 0px, 0);
-  transition: 0.3s ease-out;
-  transition-property: box-shadow, color, transform;
-  backface-visibility: hidden;
-  transition-timing-function: $mTrans;
-  &:before {
-    content: '';
-    display: block;
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    background: url('../images/button_shine.png') center center no-repeat;
-    opacity: 0.001;
-    transition: opacity 0.3s ease-out;
+  &_format {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to bottom, #fe7fa2 0%, #e96388 100%);
+    background-color: $pink;
+    text-decoration: none;
+    color: #f5f5f5;
+    font: bold italic 1.2rem/1rem 'Georgia', serif;
+    border-radius: 2rem;
+    padding: 1rem 2rem 1.2rem;
+    box-shadow: 0 4px 0 0 darken($pink, 6);
+    transform: translate3d(0, 0px, 0);
+    transition: 0.3s ease-out;
+    transition-property: box-shadow, color, transform;
+    backface-visibility: hidden;
     transition-timing-function: $mTrans;
-  }
-  &:hover {
-    color: #fff;
-    transform: translate3d(0, -2px, 0);
-    box-shadow: 0 6px 0 0 darken($pink, 6);
-    transition-duration: 0.2s;
-    transition-timing-function: $mTransOut;
     &:before {
-      opacity: 1;
+      content: '';
+      display: block;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      background: url('../images/button_shine.png') center center no-repeat;
+      opacity: 0.001;
+      transition: opacity 0.3s ease-out;
+      transition-timing-function: $mTrans;
+    }
+    &:hover {
+      color: #fff;
+      transform: translate3d(0, -2px, 0);
+      box-shadow: 0 6px 0 0 darken($pink, 6);
       transition-duration: 0.2s;
       transition-timing-function: $mTransOut;
+      &:before {
+        opacity: 1;
+        transition-duration: 0.2s;
+        transition-timing-function: $mTransOut;
+      }
     }
-  }
-  &:active {
-    background: linear-gradient(to top, #fe7fa2 0%, #e96388 100%);
-    background-color: $pink;
-    color: #fff;
-    transform: translate3d(0, 2px, 0);
-    box-shadow: 0 2px 0 0 darken($pink, 6);
-    transition-duration: 0.1s;
-    transition-timing-function: $mTransOut;
-    &:before {
-      opacity: 0.001;
+    &:active {
+      background: linear-gradient(to top, #fe7fa2 0%, #e96388 100%);
+      background-color: $pink;
+      color: #fff;
+      transform: translate3d(0, 2px, 0);
+      box-shadow: 0 2px 0 0 darken($pink, 6);
       transition-duration: 0.1s;
       transition-timing-function: $mTransOut;
+      &:before {
+        opacity: 0.001;
+        transition-duration: 0.1s;
+        transition-timing-function: $mTransOut;
+      }
+    }
+  }
+
+  &_trust {
+    display: inline-block;
+    position: relative;
+    /*overflow: hidden;*/
+    border: 2px solid #ec546f;
+    color: #ec546f;
+    padding: 0.5rem 2rem;
+    border-radius: 1.3rem;
+    font: italic 1.1rem 'Georgia', serif;
+    text-decoration: none;
+    z-index: 1;
+    transition: 0.3s ease-out;
+    transition-property: color, background-color;
+    transition-timing-function: $mTrans;
+    &:before {
+      z-index: -1;
+      background-color: #ec546f;
+      border-radius: 1.2rem;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.001;
+      backface-visibility: hidden;
+      transform: translateZ(0) scale(0.7, 0.7);
+      transition: 0.3s ease-out;
+      transition-property: transform, opacity;
+      transition-timing-function: $mTrans;
+    }
+    &:hover {
+      background-color: #ec546f;
+      color: #fff;
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+      &:before {
+        opacity: 1;
+        transform: translateZ(0) scale(1.0, 1.0);
+        transition-duration: 0.2s;
+        transition-timing-function: $mTransOut;
+      }
     }
   }
 }
