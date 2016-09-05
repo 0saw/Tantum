@@ -4,12 +4,22 @@ var girlsContainer = document.getElementById('girlsContainer');
 var $handle = $(handle);
 var $clock = $(".clock");
 var mc = new Hammer(handle);
+var enableParallax = null;
 var girlsInfo = {
   x: 0
 };
 
 var windowResize = function () {
   girlsInfo.width = girlsContainer.offsetWidth;
+  var newParallax = $(window).width() > 960;
+  if (newParallax != enableParallax) {
+    enableParallax = newParallax;
+    if (enableParallax) {
+      parallax1.enable();
+    } else {
+      parallax1.disable();
+    }
+  }
   requestAnimationFrame(pan);
 };
 $(window).on('resize', windowResize);

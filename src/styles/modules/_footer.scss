@@ -12,6 +12,7 @@
   }
   &__col {
     padding: 0 2rem;
+    transition: all 0.3s ease-out;
     &_center {
       flex-grow: 1;
     }
@@ -86,10 +87,17 @@
     max-width: 40%;
     margin: 1.5rem auto;
   }
+  &__logo {
+    max-width: 100%;
+    &_m {
+      display: none;
+    }
+  }
   &__warning {
     text-align: center;
     color: #fff;
     font: italic 1.2rem 'Georgia', serif;
+    letter-spacing: 0.20em;
   }
   &__copyright {
     font-size: 0.9rem;
@@ -97,5 +105,69 @@
     text-align: center;
   }
   &__button {
+  }
+  @media screen and (max-width: 60rem) {
+    .wrapper {
+      padding: 1rem 0 1rem;
+    }
+    &__col {
+      &_left {
+        flex-grow: 1;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 0.4rem 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 50rem) {
+    &__container {
+      flex-flow: row wrap;
+    }
+    &__item {
+    }
+    &__col {
+      &_parent {
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 1rem;
+      }
+    }
+    &__button {
+      text-align: center;
+      .button {
+        display: inline-block;
+        max-width: 16rem;
+      }
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__col {
+      width: 100%;
+      padding: 0 0.5rem;
+      text-align: center;
+    }
+    &__logo {
+      display: none;
+      &_m {
+        display: block;
+      }
+    }
+    &__legal {
+      border-radius: 6px;
+      background-color: rgba(255,255,255,0.6);
+      max-height: 100px;
+      color: #333;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      margin: 1rem 0.5rem 0;
+      padding: 0.5rem;
+      &:hover {
+        background-color: rgba(255,255,255,0.8);
+      }
+    }
   }
 }
