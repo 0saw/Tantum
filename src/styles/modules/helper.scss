@@ -2,7 +2,6 @@
   padding: 5rem 0 6rem;
   &--shared-bg {
     background: url('../images/helper_bg.jpg') top center no-repeat;
-    background-size: cover;
   }
   &__header {
     font: italic 3rem 'Georgia', serif;
@@ -55,5 +54,48 @@
   }
   &__item-image {
     margin-top: -2.5rem;
+  }
+  @media screen and (max-width: 40rem) {
+    padding: 1.5rem 0;
+    &__header {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+    &__item, &__item:nth-child(n) {
+      width: 100%;
+      margin: 0 0 1rem;
+      padding: 0;
+    }
+    &__container {
+      width: 100%;
+      margin: 0;
+      padding: 0 0.5rem;
+    }
+    &__text {
+      margin: 0;
+    }
+    &__item-image {
+      margin-top: -1rem;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 20rem) {
+    &__header {
+      font-size: 1.4rem;
+      sup {
+      }
+    }
+    &__item {
+      
+    }
+    &__image {
+      display: none;
+    }
   }
 }

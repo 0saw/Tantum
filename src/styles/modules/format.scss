@@ -1,6 +1,6 @@
 .format {
   background: url('../images/format_bg.png') center center no-repeat;
-  padding: 0 0 7rem;
+  padding: 0 0 5rem;
   &__header {
     font: italic 3rem 'Georgia', serif;
     padding: 0 2rem;
@@ -13,13 +13,14 @@
     align-items: stretch;
   }
   &__item {
+    margin-bottom: 2rem;
     position: relative;
-    flex: 1;
+    width: 50%;
     padding-bottom: 3.4rem;
   }
   &__image {
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
   &__title, &__button {
@@ -34,5 +35,13 @@
     bottom: 0.2rem;
     width: 100%;
     left: 0;
+  }
+  @media screen and (max-width: 40rem) {
+    &__container {
+      flex-flow: row wrap;
+    }
+    &__item {
+      width: 100%;
+    }
   }
 }

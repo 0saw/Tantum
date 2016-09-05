@@ -6,6 +6,18 @@
 }
 
 .nav {
+  padding: 0 0.5rem;
+  -js-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__pushy {
+    cursor: pointer;
+    display: none;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -15,6 +27,7 @@
     display: block;
   }
   & > ul {
+    flex: 1;
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
@@ -159,6 +172,20 @@
           & > a:before {
             transform: translate3d(0, 0rem, 0);
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 52rem) {
+    &__pushy {
+      display: block;
+    }
+    & > ul {
+      & > li {
+        display: none;
+        &:first-child {
+          display: block;
+          padding: 1.1rem 0;
         }
       }
     }

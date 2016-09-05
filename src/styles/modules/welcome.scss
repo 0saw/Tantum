@@ -1,8 +1,12 @@
 .welcome {
+  background-color: $pink;
   user-select: none;
   position: relative;
   height: 41.8229167vw;
   padding-top: 6rem;
+  .wrapper {
+    width: 100%;
+  }
   &__logo {
     text-align: center;
   }
@@ -13,6 +17,39 @@
   }
   &__logo, &__tagline {
     position: relative;
+    z-index: 11;
+  }
+  &__supertext {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
     z-index: 1;
+  }
+  @media screen and (max-width: 75rem) {
+    &__supertext {
+      .wrapper {
+        -js-display: flex;
+            display: flex;
+        justify-content: center;
+        align-items: center;    
+      }
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    padding-bottom: 2rem;
+    &__supertext {
+      top: 7rem;
+    }
+  }
+  @media screen and (max-width: 40rem) {
+    &__supertext {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    transition: height 0.3s ease-out;
+    height: 6rem;
+    padding: 0;
   }
 }

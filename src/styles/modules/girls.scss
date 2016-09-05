@@ -1,11 +1,13 @@
 .girls {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   /*overflow: hidden;*/
   /* 70px / 1920px */
   /*padding-bottom: 3.64583vw;*/
+  animation: welcomeToTop 0.3s ease-out forwards;
+  backface-visibility: hidden;
   &__before, &__after {
     img {
       display: block;
@@ -43,7 +45,7 @@
   &--handle {
     perspective: 500px;
     position: relative;
-    top: 80px;
+    top: 21rem;
     z-index: 1;
     margin: 0 auto;
     max-width: 50rem;
@@ -85,5 +87,79 @@
       background: url('../images/welcome-arrow-right.png') right center no-repeat;
       padding: 60px 40px 60px 175px;
     }
+  }
+  @media screen and (max-width: 75rem) {
+    &__handle-image {
+      display: none;
+    }
+    &__h-bg {
+      &_left, &_right {
+        padding: 1rem 2rem;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 100rem) {
+    &--handle {
+      top: 17rem;
+    }
+  }
+  @media screen and (max-width: 75rem) {
+    &--handle {
+      top: 13rem;
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    position: relative;
+    animation: welcomeToBottom 0.3s ease-out forwards;
+    &--handle {
+      max-width: 30rem;
+      width: 100%;
+      position: absolute;
+      top: 18rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      span {
+        display: none;
+      }
+    }
+    &__h-bg_left {
+      text-align: left;
+    }
+    &__h-bg_right {
+      text-align: right;
+    }
+  }
+  @media screen and (max-width: 40rem) {
+    &--handle {
+      top: 10rem;
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    display: none;
+    &--handle {
+      display: none;
+    }
+  }
+}
+
+@keyframes welcomeToBottom {
+  0% {
+    transform: translate3d(0, -6rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes welcomeToTop {
+  0% {
+    transform: translate3d(0, 6rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
