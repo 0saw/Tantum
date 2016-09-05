@@ -24,6 +24,10 @@ $pink: #de628c;
     *zoom: 1;
 }
 
+html, body, .viewport {
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
