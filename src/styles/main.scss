@@ -52,7 +52,7 @@ body {
   overflow-x: hidden;
   flex-flow: column;
   .site-content {
-    flex: 1;
+    flex-grow: 1;
   }
 }
 
