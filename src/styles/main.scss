@@ -37,7 +37,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 .wrapper {
@@ -49,6 +49,7 @@ body {
   -js-display: flex;
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
   flex-flow: column;
   .site-content {
     flex: 1;

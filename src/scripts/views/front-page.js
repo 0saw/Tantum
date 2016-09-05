@@ -53,23 +53,22 @@ var frontPage = function() {
     girlsInfo.x = e.deltaX;
     requestAnimationFrame(pan);
   }).on('panstart', function() {
-    if ($handle.hasClass('animating')) {
-      return false;
-    }
-    $handle.addClass('panning');
+    $(document.body).addClass('panning');
   }).on('panend', function() {
-    $handle.removeClass('panning').addClass('animating');
-    $({animVal: girlsInfo.x}).animate({animVal: 0}, {
-      duration: 600,
-      easing: 'easeInOutSine',
-      step: function () {
-        girlsInfo.x = this.animVal;
-        requestAnimationFrame(pan);
-      },
-      complete: function() {
-        $handle.removeClass('animating');
-      }
-    });
+    $(document.body).removeClass('panning');
+    girlsInfo.x = 0;
+    requestAnimationFrame(pan);
+    // $({animVal: girlsInfo.x}).animate({animVal: 0}, {
+    //   duration: 600,
+    //   easing: 'easeInOutSine',
+    //   step: function () {
+    //     girlsInfo.x = this.animVal;
+    //     requestAnimationFrame(pan);
+    //   },
+    //   complete: function() {
+    //     $(document.body).removeClass('animating');
+    //   }
+    // });
   });
 
   var pan = function () {
@@ -123,7 +122,7 @@ var frontPage = function() {
   };
   knob.init();
 
-  window.addEventListener('scroll', function () {
+  document.getElementById('container').addEventListener('scroll', function () {
     var $myElem = $('#problems');
     if(($(this).scrollTop()) >= $myElem.offset().top) {
       $({animatedVal: knob.max}).animate({animatedVal: knob.min}, {
