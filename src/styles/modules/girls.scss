@@ -35,8 +35,11 @@
     right: -25vw;
     transform: skewX(17deg);
     overflow: hidden;
-    transition: left 0.5s ease-out;
     box-shadow: 0 0 3.64583vw rgba(0,0,0,0.25);
+    transition: left 0.5s ease-out;
+    .panning & {
+      transition: none;
+    }
     img {
       min-width: 100vw;
       position: absolute;
@@ -55,9 +58,16 @@
     user-select: none;
     cursor: pointer;
     cursor: move;
+    /*.panning & {
+      
+    }*/
     & > div {
-      transition: padding 0.3s ease-out;
+      transition: 0.3s ease-out;
+      transition-property: transform, padding;
       transition-timing-function: $mTrans;
+      .panning & {
+        transition: none;
+      }
       &:hover, &.panning {
         padding: 0 0.5rem;
         transition-timing-function: $mTransOut;

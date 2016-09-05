@@ -37,7 +37,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 .wrapper {
@@ -46,13 +46,14 @@ body {
 }
 
 .viewport {
-  -js-display: flex;
-  display: flex;
+  /*-js-display: flex;
+  display: flex;*/
   min-height: 100vh;
-  flex-flow: column;
+  overflow-x: hidden;
+  /*flex-flow: column;
   .site-content {
-    flex: 1;
-  }
+    flex-grow: 1;
+  }*/
 }
 
 @import 'modules/**/*';
