@@ -1,5 +1,6 @@
 .soc {
   &__icon {
+    margin: 0 0.5rem;
     display: inline-block;
     opacity: 0.8;
     transform: translate3d(0, 0, 0);
@@ -7,6 +8,9 @@
     transition-timing-function: $mTrans;
     transition-property: opacity, transform;
     backface-visibility: hidden;
+    &:first-child {
+      margin-left: 0;
+    }
     &_fb {
       @include retina-sprite($icon_fb-group);
     }

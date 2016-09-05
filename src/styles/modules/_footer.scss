@@ -1,7 +1,9 @@
 .footer {
   background: url('../images/footer_overlay.png') center center no-repeat,
       #26262d url('../images/footer_bg.png');
-  padding: 1.5rem 0 0;
+  .wrapper {
+    padding: 1.5rem 0 3.5rem;
+  }
   &__container {
     -js-display: flex;
     display: flex;
@@ -19,6 +21,7 @@
     }
     &_parent {
       padding-right: 0;
+      text-align: center;
     }
     ul {
       padding-left: 1rem;
@@ -46,5 +49,53 @@
   }
   &__legal {
     font-size: 0.9rem;
+    margin: 1rem 0 1.2rem;
+    a {
+      color: #41a7e7;
+      text-decoration: underline;
+      font-weight: normal;
+      &:hover {
+        text-decoration: none;
+        color: lighten(#41a7e7, 10);
+      }
+    }
+  }
+  &__share {
+    padding: 0.5rem 0 0.5rem 1rem;
+    .footer__text {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  &__pd {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    a {
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      &:hover {
+        color: rgba(255,255,255,0.5);
+        text-decoration: underline;
+      }
+    }
+  }
+  hr {
+    background-color: rgba(0,0,0,0);
+    border-width: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    max-width: 40%;
+    margin: 1.5rem auto;
+  }
+  &__warning {
+    text-align: center;
+    color: #fff;
+    font: italic 1.2rem 'Georgia', serif;
+  }
+  &__copyright {
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+  &__button {
   }
 }

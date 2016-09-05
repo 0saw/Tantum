@@ -9,7 +9,7 @@
     font: bold italic 1.2rem/1rem 'Georgia', serif;
     border-radius: 2rem;
     padding: 1rem 2rem 1.2rem;
-    box-shadow: 0 4px 0 0 darken($pink, 6);
+    box-shadow: 0 4px 0 0 darken($pink, 6), 0 4px 9px rgba(0,0,0,0.3);
     transform: translate3d(0, 0px, 0);
     transition: 0.3s ease-out;
     transition-property: box-shadow, color, transform;
@@ -33,7 +33,7 @@
     &:hover {
       color: #fff;
       transform: translate3d(0, -2px, 0);
-      box-shadow: 0 6px 0 0 darken($pink, 6);
+      box-shadow: 0 6px 0 0 darken($pink, 6), 0 8px 9px rgba(0,0,0,0.3);
       transition-duration: 0.2s;
       transition-timing-function: $mTransOut;
       &:before {
@@ -47,7 +47,7 @@
       background-color: $pink;
       color: #fff;
       transform: translate3d(0, 2px, 0);
-      box-shadow: 0 2px 0 0 darken($pink, 6);
+      box-shadow: 0 2px 0 0 darken($pink, 6), 0 2px 3px rgba(0,0,0,0.2);
       transition-duration: 0.1s;
       transition-timing-function: $mTransOut;
       &:before {
@@ -101,6 +101,27 @@
         transition-duration: 0.2s;
         transition-timing-function: $mTransOut;
       }
+    }
+  }
+
+  &_footer {
+    display: block;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.7rem 1.5rem;
+    font: italic 1.3rem 'Georgia', serif;
+    border-radius: 2rem;
+    transition: 0.3s ease-out;
+    transition-timing-function: $mTrans;
+    transition-property: color, background-color;
+    &:hover {
+      color: $pink;
+      background-color: rgba(255,255,255,1);
+      transition-timing-function: $mTransOut;
+      transition-duration: 0.2s;
+      box-shadow: 0 1px 1px rgba(255,255,255,0.3);
     }
   }
 }

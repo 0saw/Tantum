@@ -48,9 +48,10 @@ body {
 .viewport {
   -js-display: flex;
   display: flex;
+  min-height: 100vh;
   flex-flow: column;
   .site-content {
-    flex-grow: 1;
+    flex: 1;
   }
 }
 
