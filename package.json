@@ -27,15 +27,17 @@
   "license": "MIT",
   "vendors": [
     "vendors/hammer.js",
-    "vendors/imagesloaded.pkgd.js",
     "vendors/flexibility.js",
     "vendors/rempoly.js",
     "vendors/vminpoly.js",
+    "vendors/requestAnimationFrame.js", 
     "vendors/jquery-3.1.0.js",
+    "vendors/imagesloaded.pkgd.js",
+    "vendors/jquery.easing.js",
     "vendors/sequence.js",
     "vendors/jquery.magnific-popup.js",
-    "vendors/pushy.js",
-    "vendors/slick.js"
+    "vendors/parallax.js",
+    "vendors/pushy.js"
   ],
   "napa": {},
   "dependencies": {
@@ -137,7 +139,7 @@
       "firefox > 16",
       "android 4"
     ],
-    "prodURL": "http://test4.intent.pro/tantum/",
+    "prodURL": "https://0saw.github.io/Tantum/dist/",
     "shareImageURL": "/static/share.png",
     "twitterHandle": "@domain",
     "analyticsUA": "UA-XXXXX-X",

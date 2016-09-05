@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Gulp Frontend Boilerplate</title>
+  <meta name="msapplication-tap-highlight" content="no" />
+	<title>Tantum</title>
 
 	<!-- @if ENV='dev' -->
 	<link rel="stylesheet" href="styles/main.css">
@@ -18,19 +19,368 @@
 	<!-- @include inc/_favicons.html -->
 </head>
 <body>
-	<!-- @include inc/_browserhappy.html -->
+  <!-- @include inc/pushy.html -->
 
-	<div id="main"></div>
+  <div class="viewport" id="container">
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
 
-	<!-- @if ENV='dev' -->
-	<script src="scripts/vendor.js"></script>
-	<script src="scripts/main.js"></script>
-	<!-- @endif -->
-	<!-- @if ENV='prod' -->
-	<script src="scripts/vendor.min.js"></script>
-	<script src="scripts/main.min.js"></script>
-	<!-- @endif -->
+      <section class="welcome">
+        <!-- @include inc/header.html -->
+        <div class="wrapper">
+          <div class="welcome__supertext">
+            <div class="wrapper">
+              <div class="welcome__logo">
+                <img src="logo.png"
+                     srcset="images/logo.png 1x, images/logo@2x.png 2x"
+                     alt="Логотип Тантум">
+              </div>
+              <div class="welcome__tagline">
+                Интимная забота о Вашей <br> женственности
+              </div>
+            </div>
+          </div>
+          <div class="girls" id="girlsContainer">
+            <div class="girls__before">
+              <img src="images/girl_before.jpg" alt="Тантум до">
+            </div>
+            <div class="girls__after" id="girlAfter">
+              <img src="images/girl_after.jpg" alt="Тантум после">
+            </div>
+          </div>
+          <div class="girls--handle">
+            <div id="welcomeHandle">
+              <img class="girls__handle-image" src="images/welcome-item.png" alt="">
+              <div class="girls__h-bg">
+                <div class="girls__h-bg_left">
+                  <div class="girls__h-text">
+                    <span>Переместите ползунок </span>влево
+                  </div>
+                </div>
+                <div class="girls__h-bg_right">
+                  <div class="girls__h-text">
+                    <span>Переместите ползунок </span>вправо
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-	<!-- //@include inc/_analytics.html -->
+      <section id="problems" class="problems">
+        <div class="wrapper">
+          <header class="problems__header">
+            Столкнулись с одной <br> из проблем?
+          </header>
+          <img class="problems__cell" src="images/problems_cell.png" alt="Бактерия">
+          <div class="problems__container">
+            <div class="problems__item">
+              <div class="pulse">
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+              </div>
+              <div class="problems__title">Постоянный <br> зуд жжение</div>
+              Вследствие чего вы испытываете дискомфорт в повседневной жизни
+            </div>
+            <div class="problems__item">
+              <div class="pulse">
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+              </div>
+              <div class="problems__title">Неприятный запах и болевые ощущения</div>
+              А значит ограничение или полное отсутствие общения с противоположным полом
+            </div>
+            <div class="problems__item">
+              <div class="pulse">
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+                <div class="pulse__ripple"></div>
+              </div>
+              <div class="problems__title">Постоянное возвращение симптомов молочницы</div>
+              Постоянный стресс, боязнь того, что проблема может снова вернуться
+            </div>
+          </div>
+          <div class="problems__fast">
+            <div class="problems__clock">
+              <img id="flora" src="http://localhost:3000/images/flora.png" alt="">
+              <canvas id="problemsClock" width="280" height="280">
+                Ваш браузер не поддерживает скрипты.
+              </canvas>
+              <div class="problems__time">
+                <div class="problems__above">Избавьтесь от них всего за</div>
+                20
+                <div class="problems__besides">минут!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="helper--shared-bg">
+        <section class="helper">
+          <div class="wrapper">
+            <header class="helper__header">
+              Тантум <sup>&reg;</sup> Роза эффективный помощник в решении Ваших проблем
+            </header>
+            <div class="helper__container">
+              <div class="helper__item">
+                <div class="helper__image">
+                  <img src="images/helper_fast.png" alt="Действует быстро">
+                </div>
+                <div class="helper__text">
+                  <div class="helper__title">Действует быстро</div>
+                  Значительное облегчение неприятных ощущений при молочнице уже после 10-го применения и их полное исчезновение уже на 3-й день использования препарата
+                </div>
+              </div>
+              <div class="helper__item">
+                <div class="helper__image">
+                  <img src="images/helper_regenerative.png" alt="Восстанавливает микрофлору">
+                </div>
+                <div class="helper__text">
+                  <div class="helper__title">Восстанавливает микрофлору</div>
+                  Обладает противовоспалительным, обезболивающим и антимикробным действием и облегчает такие симптомы как: выделения жжение изуд неприятный запах
+                </div>
+              </div>
+              <div class="helper__item">
+                <div class="helper__image">
+                  <img src="images/helper_pregnant.png" alt="Разрешен при беременности и лактации">
+                </div>
+                <div class="helper__text">
+                  <div class="helper__title">Разрешен при беременности и лактации</div>
+                  Снижает риск возвращения симптомов молочницы. Разрешен в период беременности и лактации
+                </div>
+              </div>
+              <div class="helper__item">
+                <div class="helper__image">
+                  <img src="images/helper_comfy.png" alt="Удобная форма выпуска">
+                </div>
+                <div class="helper__text">
+                  <div class="helper__title">Удобная форма выпуска</div>
+                  Быстрое и удобное решение проблемы в любой жизненной ситуации! Раствор не вытекает, не оставляет следов на белье и одежде
+                </div>
+              </div>
+            </div>
+            <div class="helper__item-image">
+              <img src="images/helper_item.png" alt="Тантум Роза Раствор">
+            </div>
+          </div>
+        </section>
+
+        <section class="format">
+          <div class="wrapper">
+            <div class="format__header">
+              Выберите удобный для Вас формат Тантум Роза
+            </div>
+            <div class="format__container">
+              <div class="format__item">
+                <div class="format__image">
+                  <img src="images/format_prepeared.png" alt="Готовый раствор в спринцовке">
+                </div>
+                <div class="format__title">Готовый раствор в спринцовке</div>
+                <div class="format__button">
+                  <a href="#" class="button button_format">Узнайте больше</a>
+                </div>
+              </div>
+              <div class="format__item">
+                <div class="format__image">
+                  <img src="images/format_undone.png" alt="Саше с порошком для приготовления раствора">
+                </div>
+                <div class="format__title">Саше с порошком<br>для приготовления раствора</div>
+                <div class="format__button">
+                  <a href="#" class="button button_format">Узнайте больше</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="signs">
+        <div class="wrapper">
+          <header class="signs__header">
+            Возможные причины неприятных симптомов
+          </header>
+          <img class="signs__girl" src="images/signs_girl.png" alt="Тантум возможные причины неприятных симптомов">
+          <div class="signs__container signs__container_mobile">
+            <div>Гинекологические операции</div>
+            <div>Ослабление иммунитета</div>
+            <div>Постоянные стрессы</div>
+            <div>Изменение гормонального баланса</div>
+            <div>Беременность</div>
+            <div>Смена партнера</div>
+            <div>Переохлаждение</div>
+          </div>
+          <div class="signs__container signs__container_desktop" id="signsScene">
+            <div class="layer" data-depth="3.8">
+              <div class="signs__petal signs__petal_1">
+                <div>Гинекологические операции</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="2.1">
+              <div class="signs__petal signs__petal_2">
+                <div>Ослабление иммунитета</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="1.1">
+              <div class="signs__petal signs__petal_3">
+                <div>Постоянные стрессы</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="2.7">
+              <div class="signs__petal signs__petal_4">
+                <div>Изменение гормонального баланса</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="1.2">
+              <div class="signs__petal signs__petal_5">
+                <div>Беременность</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="3.3">
+              <div class="signs__petal signs__petal_6">
+                <div>Смена партнера</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="2.6">
+              <div class="signs__petal signs__petal_7">
+                <div>Переохлаждение</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div class="wrapper">
+          <div class="trust__header">Доверие, заслуженное временем</div>
+          <div class="trust__container">
+            <div class="trust__item">
+              <div class="trust__icon trust__icon_1"></div>
+              <div class="trust__title">История прохождения</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="trust__button">
+                <a href="#" class="button button_trust">Подробнее</a>
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__icon trust__icon_2"></div>
+              <div class="trust__title">Итальянские технологии</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="trust__button">
+                <a href="#" class="button button_trust">Подробнее</a>
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__icon trust__icon_3"></div>
+              <div class="trust__title">Клинические исследования</div>
+              При лечении препаратом Тантум Роза происходит устойчивое снижение концентраций Gardnerella vaginalis (являющимися причиной заболевания мочеполовой системы) и одновременное величение концентраций лактобактерий
+              <div class="trust__button">
+                <a href="#" class="button button_trust">Подробнее</a>
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__icon trust__icon_4"></div>
+              <div class="trust__title">Мнения экспертов и врачей</div>
+              Лечение препаратом Тантум Роза
+              <div class="trust__button">
+                <a href="#" class="button button_trust">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interesting">
+        <div class="wrapper">
+          <div class="interesting__header">
+            Вас может заинтересовать:
+          </div>
+          <div class="interesting__item">
+            <a class="interesting__image" href="#" style="background-image: url('images/interesting_girl.jpg');"></a>
+            <div class="interesting__text">
+              <div class="interesting__title">Heading</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы. Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="interesting__button">
+                <a href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="interesting__item">
+            <a class="interesting__image" href="#" style="background-image: url('images/interesting_girl2.jpg');"></a>
+            <div class="interesting__text">
+              <div class="interesting__title">Heading</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы. Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="interesting__button">
+                <a href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-form">
+        <header class="footer-form__header">
+          Получите консультацию врача
+        </header>
+        <div class="wrapper">
+          <img class="footer-form__left" src="images/footer-form_left.png" alt="">
+          <img class="footer-form__right" src="images/footer-form_right.png" alt="">
+          <form action="/">
+            <input type="text" name="name" placeholder="Ваше имя" />
+            <input type="email" name="email" placeholder="Ваш e-mail*" required />
+            <textarea name="mess" placeholder="Опишите проблему"></textarea>
+            <div class="footer-form__checkbox">
+              <label for="processdata">
+                <input type="checkbox" name="processdata" id="processdata"><span></span>
+              </label>
+              <label for="processdata" class="footer-form__label">Согласен на обработку<br>персональных данных</label>
+            </div>
+            <div class="footer-form__submit">
+              <input type="submit" value="Получить консультацию" />
+            </div>
+            <div class="footer-form__checkbox">
+              <label for="newsletter">
+                <input type="checkbox" name="newsletter" id="newsletter"><span></span>
+              </label>
+              <label for="newsletter" class="footer-form__label">Подписаться на рассылку новостей</label>
+            </div>
+            <div class="footer-form__legend">*Укажите верный email. На него придет ответ по вашему вопросу</div>
+          </form>
+        </div>
+      </section>
+    </div>
+	<!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
 </body>
 </html>

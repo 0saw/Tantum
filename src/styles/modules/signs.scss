@@ -1,0 +1,173 @@
+.signs {
+  background: url('../images/signs_bg.jpg') center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .wrapper {
+    position: relative;
+    min-height: 1130px;
+    height: 1px;
+    @media screen and (max-width: 60rem) {
+      padding: 0 1rem;
+      min-height: auto;
+      height: auto;
+      padding: 0 0 3rem;
+    }
+  }
+  &__header {
+    position: absolute;
+    padding: 6rem 0 2rem 30%;
+    text-align: center;
+    font: italic 3.125rem 'Georgia', serif;
+    @media screen and (max-width: 60rem) {
+      padding: 3rem 0 2rem 0;
+      position: relative;
+      font-size: 2.2rem;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__container {
+    position: relative;
+    height: 100%;
+    left: 0;
+    top: 0;
+    .layer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &_desktop {
+      display: none;
+      @media screen and (min-width: 60rem) {
+        display: block;
+      }
+    }
+    &_mobile {
+      padding: 0 0 0 30%;
+      display: none;
+      font-weight: 400;
+      & > div {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        &:last-child {
+          border-width: 0;
+        }
+      }
+      @media screen and (max-width: 60rem) {
+        display: block;
+      }
+      @media screen and (max-width: 40rem) {
+        padding: 0 1rem;
+      }
+    }
+  }
+  &__petal {
+    position: absolute;
+    background: url('../images/roses/rose1.png') center center no-repeat;
+    animation: float 4s ease-in-out infinite forwards;
+    div {
+      position: absolute;
+      text-align: center;
+      color: #5d474f;
+      font: bold italic 1.4rem 'Georgia', serif;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    &_1 {
+      background-image: url('../images/roses/rose1.png');
+      height: 285px;
+      width: 345px;
+      left: 550px;
+      top: 190px;
+      animation-delay: -0.4s;
+      div {
+        left: 55%;
+        top: 45%;
+      }
+    }
+    &_2 {
+      background-image: url('../images/roses/rose2.png');
+      height: 175px;
+      width: 291px;
+      left: 260px;
+      top: 350px;
+      animation-delay: -2.9s;
+      div {
+        left: 45%;
+      }
+    }
+    &_7 {
+      background-image: url('../images/roses/rose3.png');
+      height: 178px;
+      width: 276px;
+      left: 610px;
+      top: 890px;
+      animation-delay: -3.4s;
+    }
+    &_5 {
+      background-image: url('../images/roses/rose4.png');
+      height: 193px;
+      width: 274px;
+      top: 610px;
+      left: 420px;
+      animation-delay: -1.3s;
+      div {
+        left: 45%;
+        top: 52%;
+      }
+    }
+    &_6 {
+      background-image: url('../images/roses/rose5.png');
+      height: 156px;
+      width: 324px;
+      top: 840px;
+      left: 150px;
+      animation-delay: -2.3s;
+    }
+    &_4 {
+      background-image: url('../images/roses/rose6.png');
+      height: 197px;
+      width: 277px;
+      left: 730px;
+      top: 540px;
+      animation-delay: -2.5s;
+      div {
+        left: 45%;
+      }
+    }
+    &_3 {
+      background-image: url('../images/roses/rose7.png');
+      height: 166px;
+      width: 254px;
+      left: -34px;
+      top: 520px;
+      animation-delay: -0.4s;
+    }
+  }
+  &__girl {
+    position: absolute;
+    left: 50%;
+    top: 5rem;
+    margin-left: -730px;
+    @media screen and (max-width: 30rem) {
+      display: none;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0.3rem, 0);
+  }
+  50% {
+    transform: translate3d(0, -0.3rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0.3rem, 0);
+  }
+}

@@ -1,0 +1,86 @@
+.interesting {
+  padding: 3rem 0 4rem;
+  background: url('../images/interesting_bg.jpg') center center no-repeat;
+  &__header {
+    font: italic 3.125rem 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 60rem) {
+      padding: 0;
+      position: relative;
+      font-size: 2.2rem;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    -js-display: flex;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 3rem 0;
+  }
+  &__image {
+    max-width: 190px;
+    height: 190px;
+    flex: 1;
+    border-radius: 50%;
+    display: block;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease-out;
+    transition-timing-function: $mTrans;
+    background-position: top center;
+    background-size: cover;
+    &:hover {
+      box-shadow: inset 0 0 0 8px #f37799,
+                        0 0 0 1px #f37799;
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+    }
+  }
+  &__text {
+    padding-left: 2rem;
+    flex: 1;
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+  &__title {
+    font: bold italic 1.2rem 'Georgia', serif;
+    color: #f37799;
+    margin-bottom: 1rem;
+  }
+  &__button {
+    margin-top: 1rem;
+    a {
+      color: #41a7e7;
+      text-decoration: underline;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+        color: lighten(#41a7e7, 10);
+      }
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    padding: 1rem 0;
+  }
+  @media screen and (max-width: 40rem) {
+    &__item {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    &__button {
+      text-align: center;
+    }
+    &__text {
+      flex: unset;
+      padding: 0 0.5rem;
+    }
+    &__title {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  }
+}

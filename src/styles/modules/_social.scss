@@ -1,0 +1,33 @@
+.soc {
+  &__icon {
+    margin: 0 0.5rem;
+    display: inline-block;
+    opacity: 0.8;
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s ease-out;
+    transition-timing-function: $mTrans;
+    transition-property: opacity, transform;
+    backface-visibility: hidden;
+    &:first-child {
+      margin-left: 0;
+    }
+    &_fb {
+      @include retina-sprite($icon_fb-group);
+    }
+    &_vk {
+      @include retina-sprite($icon_vk-group);
+    }
+    &_ok {
+      @include retina-sprite($icon_ok-group);
+    }
+    &_twitter {
+      @include retina-sprite($icon_twitter-group);
+    }
+    &:hover {
+      opacity: 1;
+      transform: translate3d(0, -3px, 0);
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+    }
+  }
+}
