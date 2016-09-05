@@ -7,16 +7,16 @@ var imagesSelector = [
 
 $(imagesSelector).imagesLoaded({ background: true })
   .done(function(instance) {
-    $(document.body).addClass('imagesLoaded');
-    $('#preloader').fadeOut({
-      duration: 400,
-      easing: 'easeInOutSine'
-    });
   })
   .fail(function() {
     alert("Не все изображения удалось загрузить. Веб-страница может выглядеть искаженной.");
   })
   .always(function() {
+    $(document.body).addClass('imagesLoaded');
+    $('#preloader').fadeOut({
+      duration: 400,
+      easing: 'easeInOutSine'
+    });
     frontPage();
   });
 
@@ -77,6 +77,21 @@ var frontPage = function() {
     girl.style.left = girlsInfo.width / 2 + girlsInfo.x + 'px';
   };
 
+  var scene1 = document.getElementById('signsScene');
+  var parallax1 = new Parallax(scene1, {
+    calibrateX: true,
+    calibrateY: true,
+    invertX: false,
+    invertY: false,
+    limitX: false,
+    limitY: false,
+    scalarX: 2,
+    scalarY: 2,
+    frictionX: 0.3,
+    frictionY: 0.5,
+    originX: 0.5,
+    originY: 0.5
+  });
 
   var knob = {
     min: 0,
@@ -94,11 +109,7 @@ var frontPage = function() {
     },
     draw: function() {
       if (knob.floraPattern == null) {
-        var floraImg = new Image();
-        floraImg.src = 'images/flora.png';
-        floraImg.addEventListener("load", function () {
-          $clock.trigger("change");
-        }, false);
+        var floraImg = document.getElementById('flora');
         knob.floraPattern = knob.ctx.createPattern(floraImg, "repeat");
       }
       knob.ctx.clearRect(0, 0, knob.width, knob.height);
@@ -111,23 +122,6 @@ var frontPage = function() {
     }
   };
   knob.init();
-
-       
-  var scene1 = document.getElementById('signsScene');
-  var parallax1 = new Parallax(scene1, {
-    calibrateX: true,
-    calibrateY: true,
-    invertX: false,
-    invertY: false,
-    limitX: false,
-    limitY: false,
-    scalarX: 2,
-    scalarY: 2,
-    frictionX: 0.3,
-    frictionY: 0.5,
-    originX: 0.5,
-    originY: 0.5
-  });
 
   window.addEventListener('scroll', function () {
     var $myElem = $('#problems');
@@ -147,8 +141,6 @@ var frontPage = function() {
       this.removeEventListener('scroll', arguments.callee);
     }
   });
-
-
 
   windowResize();
 }
