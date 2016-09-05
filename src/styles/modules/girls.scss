@@ -6,8 +6,11 @@
   /*overflow: hidden;*/
   /* 70px / 1920px */
   /*padding-bottom: 3.64583vw;*/
-  animation: welcomeToTop 0.3s ease-out forwards;
   backface-visibility: hidden;
+  transform: translate3d(0, 6rem, 0);
+  .imagesLoaded & {
+    animation: welcomeToTop 0.3s ease-out forwards;
+  }
   &__before, &__after {
     img {
       display: block;

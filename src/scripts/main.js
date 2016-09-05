@@ -1,1 +1,3 @@
-var frontPage = require('./views/front-page');
+$(function() {
+  var frontPage = require('./views/front-page');
+});

@@ -2,6 +2,13 @@
   background: url('../images/problems_bg.jpg') no-repeat;
   background-size: cover;
   padding: 6rem 0;
+  #flora {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
   .wrapper {
     position: relative;
     background: url('../images/problems_cell2.png') 10% 70% no-repeat;
@@ -118,6 +125,9 @@
     .pulse {
       display: none;
     }
+  }
+  @media screen and (max-width: 30rem) {
+    padding: 3rem 0 0;
   }
 }
 

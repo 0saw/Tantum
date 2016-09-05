@@ -40,10 +40,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-mobile-web-app-title" content="Tantum">
 	<link rel="icon" type="image/png" sizes="228x228" href="images/favicon/coast-228x228.png">
-	<link rel="yandex-tableau-widget" href="images/favicon/yandex-browser-manifest.json">
 	<meta name="msapplication-TileColor" content="transparent">
 	<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
 	<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+	<link rel="yandex-tableau-widget" href="images/favicon/yandex-browser-manifest.json">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -83,6 +83,24 @@
   
 
   <div class="viewport" id="container">
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
     <div class="site-content">
       <!--[if lt IE 8]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -194,6 +212,7 @@
           </div>
           <div class="problems__fast">
             <div class="problems__clock">
+              <img id="flora" src="http://localhost:3000/images/flora.png" alt="">
               <canvas id="problemsClock" width="280" height="280">
                 Ваш браузер не поддерживает скрипты.
               </canvas>

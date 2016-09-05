@@ -27,12 +27,12 @@
   "license": "MIT",
   "vendors": [
     "vendors/hammer.js",
-    "vendors/imagesloaded.pkgd.js",
     "vendors/flexibility.js",
     "vendors/rempoly.js",
     "vendors/vminpoly.js",
     "vendors/requestAnimationFrame.js", 
     "vendors/jquery-3.1.0.js",
+    "vendors/imagesloaded.pkgd.js",
     "vendors/jquery.easing.js",
     "vendors/sequence.js",
     "vendors/jquery.magnific-popup.js",
