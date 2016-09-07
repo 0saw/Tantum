@@ -1,7 +1,7 @@
 /**
    * Tantum
    * An ES6 boilerplate with common frontend tasks using Gulp 4 as build system.
-   * Compiled: Wed Sep 07 2016 17:53:56 GMT+0300 (Russia TZ 2 Standard Time)
+   * Compiled: Wed Sep 07 2016 17:58:06 GMT+0300 (Russia TZ 2 Standard Time)
    * @version v1.5.2
    * @link https://github.com/dmnsgn/gulp-frontend-boilerplate
    * @copyright MIT
