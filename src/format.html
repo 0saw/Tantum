@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+	<title>Tantum</title>
+
+	<!-- @if ENV='dev' -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- @endif -->
+	<!-- @if ENV='prod' -->
+	<link rel="stylesheet" href="styles/main.min.css">
+	<!-- @endif -->
+
+	<!-- @include inc/_meta.html -->
+
+	<!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="formats">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Формы выпуска</span>
+          </div>
+        </div>
+        <div class="formats__header">
+          <div class="formats__line"></div>
+          <h1>Формы выпуска</h1>
+          <div class="formats__line"></div>
+        </div>
+        <div class="wrapper">
+          <div class="formats__container">
+            <div class="formats__item">
+              <div class="formats__image">
+                <img src="images/format_prepeared.png" alt="Готовый раствор в спринцовке">
+              </div>
+              <div class="formats__title">Готовый раствор в спринцовке</div>
+              <div class="formats__text">
+                <b>Регистрационный номер:</b> ПN014275/01<br>
+                <b>Форма выпуска:</b> Порошок для приготовления<br>
+                раствора вагинального 500 мг
+              </div>
+              <div class="formats__button">
+                <a href="#" class="button button_format">Инструкция</a>
+              </div>
+            </div>
+            <div class="formats__item">
+              <div class="formats__image">
+                <img src="images/format_undone.png" alt="Саше с порошком для приготовления раствора">
+              </div>
+              <div class="formats__title">Саше с порошком<br>для приготовления раствора</div>
+              <div class="formats__text">
+                <b>Регистрационный номер:</b> ПN014275/02<br>
+                <b>Форма выпуска:</b> Раствор вагинальный 0,1%<br>
+                По 140 мл препарата во флаконе
+              </div>
+              <div class="formats__button">
+                <a href="#" class="button button_format">Инструкция</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="wrapper">
+          <h2>Новости</h2>
+          <div class="news__container">
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer-form">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>
