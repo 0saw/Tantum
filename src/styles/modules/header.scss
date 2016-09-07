@@ -3,6 +3,11 @@
   width: 100%;
   z-index: 100;
   top: 0;
+  position: fixed;
+  transition: background-color 0.3s ease-out;
+  &.fixed {
+    background-color: #de628c;
+  }
 }
 
 .welcome .nav {
@@ -43,6 +48,7 @@
         padding: 1.1rem 0;
         position: relative;
         border-radius: 10px;
+        font-size: 1.1rem;
         text-align: center;
         &:after {
           content: '';

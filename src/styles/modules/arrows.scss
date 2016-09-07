@@ -1,0 +1,85 @@
+.arrows {
+  display: block;
+  position: absolute;
+  height: 3rem;
+  width: 61px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 9px;
+  cursor: pointer;
+  &--container {
+    margin-top: 3rem;
+    height: 3rem;
+    position: relative;
+    .welcome & {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      @media screen and (max-width: 60rem) {
+        display: none;
+      }
+    }
+    .signs & {
+      bottom: 1rem;
+      width: 100%;
+      margin-top: -3rem;
+    }
+    .trust & {
+      margin-top: 1rem;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 61px;
+    height: 17px;
+    opacity: 0.4;
+    background: url('../images/arrow-down.png') center center;
+    background-size: 61px 17px;
+    animation-delay: -0.66s !important;
+    transform: translate3d(0, 0, 0) scale(1, 1);
+    &:nth-child(2) {
+      top: 50%;
+      opacity: 0.6;
+      transform: translate3d(0, 1px, 0) scale(1.05, 1.05);
+      margin-top: -8.5px;
+      animation-delay: -0.33s !important;
+    }
+    &:nth-child(3) {
+      top: 100%;
+      margin-top: -17px;
+      opacity: 0.8;
+      transform: translate3d(0, 3px, 0) scale(1.1, 1.1);
+      animation-delay: 0s !important;
+    }
+  }
+  &_black {
+    .arrows__arrow {
+      background-image: url('../images/arrows_black.png');
+    }
+  }
+  &:hover {
+    .arrows__arrow {
+      animation: arrowsAnim 2s ease-out infinite;
+    }
+  }
+}
+
+@keyframes arrowsAnim {
+  0% {
+    opacity: 0.4;
+    transform: translate3d(0, 0, 0) scale(1, 1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate3d(0, 3px, 0) scale(1.1, 1.1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate3d(0, 0, 0) scale(1, 1);
+  }
+}

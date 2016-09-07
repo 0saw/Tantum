@@ -2,6 +2,7 @@
   background: url('../images/signs_bg.jpg') center center no-repeat;
   background-size: cover;
   overflow: hidden;
+  /*position: relative;*/
   .wrapper {
     position: relative;
     min-height: 1130px;
@@ -82,8 +83,8 @@
       background-image: url('../images/roses/rose1.png');
       height: 285px;
       width: 345px;
-      left: 550px;
-      top: 190px;
+      left: 580px;
+      top: 280px;
       animation-delay: -0.4s;
       div {
         left: 55%;

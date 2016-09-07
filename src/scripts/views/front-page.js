@@ -5,6 +5,37 @@ var imagesSelector = [
   "#flora",
 ].join(', ');
 
+var scrollToElements = [
+  { sel: "a[href='#f0']", offset: 100 },
+  { sel: "a[href='#f1']", offset: 200 },
+  { sel: "a[href='#f2']", offset: 100 },
+  { sel: "a[href='#f3']", offset: 100 },
+  { sel: "a[href='#f4']", offset: 100 },
+  { sel: "a[href='#f5']", offset: 100 },
+  { sel: "a[href='#f6']", offset: 100 },
+  { sel: "a[href='#f7']", offset: 100 },
+  { sel: "a[href='#f8']", offset: 100 },
+  { sel: "a[href='#footer']", offset: 100 }
+];
+
+var scrollTos = function () {
+  var scrollToElement = function (element, offset) {
+    $(element).click(function(e) {
+      e.preventDefault();
+
+      var elementClick = $(this).attr("href");
+      var destination  = $(elementClick)[0].offsetTop;
+      if(destination < 0) { destination = 0; }
+      console.log($(elementClick), $(elementClick)[0].offsetTop);
+      $('#container').animate({ scrollTop: destination - offset }, "slow");
+    });
+  }
+
+  for (var i = 0; i < scrollToElements.length; i++) {
+    scrollToElement(scrollToElements[i].sel, scrollToElements[i].offset);
+  }
+};
+
 $(imagesSelector).imagesLoaded({ background: true })
   .done(function(instance) {
   })
@@ -18,6 +49,7 @@ $(imagesSelector).imagesLoaded({ background: true })
       easing: 'easeInOutSine'
     });
     frontPage();
+    scrollTos();
   });
 
 var frontPage = function() {
@@ -34,6 +66,7 @@ var frontPage = function() {
 
   var windowResize = function () {
     girlsInfo.width = girlsContainer.offsetWidth;
+    girlsInfo.x = 0;
     var newParallax = $(window).width() > 960;
     if (newParallax != enableParallax) {
       enableParallax = newParallax;
@@ -50,14 +83,16 @@ var frontPage = function() {
   mc.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
 
   mc.on("panmove", function(e) {
-    girlsInfo.x = e.deltaX;
+    girlsInfo.x = Math.max(Math.min(girlsInfo.xOrig + e.deltaX, girlsInfo.width / 2), -girlsInfo.width / 2);
     requestAnimationFrame(pan);
   }).on('panstart', function() {
+    girlsInfo.xOrig = girlsInfo.x;
     $(document.body).addClass('panning');
   }).on('panend', function() {
     $(document.body).removeClass('panning');
-    girlsInfo.x = 0;
-    requestAnimationFrame(pan);
+    // girlsInfo.x = 0;
+    // requestAnimationFrame(pan);
+
     // $({animVal: girlsInfo.x}).animate({animVal: 0}, {
     //   duration: 600,
     //   easing: 'easeInOutSine',
@@ -72,7 +107,8 @@ var frontPage = function() {
   });
 
   var pan = function () {
-    $handle.css('transform', 'translate3d(' + girlsInfo.x + 'px, 0, 0) rotate3d(0, 1, 0, ' + 15 * Math.sin(girlsInfo.x / girlsInfo.width) + 'deg)');
+    // $handle.css('transform', 'translate3d(' + girlsInfo.x + 'px, 0, 0) rotate3d(0, 1, 0, ' + 15 * Math.sin(girlsInfo.x / girlsInfo.width) + 'deg)');
+    $handle.css('transform', 'translate3d(' + girlsInfo.x + 'px, 0, 0)');
     girl.style.left = girlsInfo.width / 2 + girlsInfo.x + 'px';
   };
 
@@ -122,9 +158,13 @@ var frontPage = function() {
   };
   knob.init();
 
+  $header = $('.header');
   document.getElementById('container').addEventListener('scroll', function () {
+    $header.toggleClass('fixed', $(this).scrollTop() > 10);
+
     var $myElem = $('#problems');
-    if(($(this).scrollTop()) >= $myElem.offset().top) {
+    if((($(this).scrollTop()) >= $myElem.offset().top) && (!$myElem.hasClass('animating'))) {
+      $myElem.addClass('animating');
       $({animatedVal: knob.max}).animate({animatedVal: knob.min}, {
         duration: 3000,
         easing: "easeInOutSine",
@@ -136,8 +176,10 @@ var frontPage = function() {
           knob.value = this.animatedVal;
           requestAnimationFrame(knob.draw);
         }
-      }); 
-      this.removeEventListener('scroll', arguments.callee);
+      });
+      setTimeout(function() {
+        $myElem.removeClass('animating');
+      }, 5000);
     }
   });
 
