@@ -102,9 +102,6 @@
     }
   }
   @media screen and (max-width: 75rem) {
-    &__handle-image {
-      display: none;
-    }
     &__h-bg {
       &_left, &_right {
         padding: 1rem 2rem;
@@ -119,9 +116,14 @@
       top: 17rem;
     }
   }
-  @media screen and (max-width: 75rem) {
+  @media screen and (max-width: 93rem) {
     &--handle {
       top: 13rem;
+    }
+  }
+  @media screen and (max-width: 83rem) {
+    &__handle-image {
+      display: none;
     }
   }
   @media screen and (max-width: 60rem) {
@@ -131,7 +133,7 @@
       max-width: 30rem;
       width: 100%;
       position: absolute;
-      top: 18rem;
+      top: 17rem;
       left: 0;
       right: 0;
       margin: 0 auto;

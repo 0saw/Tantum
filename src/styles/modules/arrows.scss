@@ -16,7 +16,13 @@
       position: absolute;
       bottom: 0;
       width: 100%;
+      @media screen and (max-width: 78rem) {
+        bottom: 0rem;
+      }
       @media screen and (max-width: 60rem) {
+        bottom: -5rem;
+      }
+      @media screen and (max-width: 30rem) {
         display: none;
       }
     }

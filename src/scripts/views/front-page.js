@@ -151,7 +151,9 @@ var frontPage = function() {
       knob.ctx.fillStyle = knob.floraPattern;
       knob.ctx.beginPath();
       knob.ctx.moveTo(knob.width / 2, knob.width / 2);
-      knob.ctx.arc(knob.width / 2, knob.width / 2, knob.width / 2, -knob.PI2, -knob.PI2 + knob.value * Math.PI * 2 / knob.max, false);
+      knob.ctx.arc(knob.width / 2, knob.width / 2, knob.width / 2, -knob.PI2, -knob.PI2 + (knob.PI2 + knob.PI2 / 3) * (knob.value / knob.max), false);
+      // knob.ctx.arc(knob.width / 2, knob.width / 2, knob.width / 2, 0, (knob.PI2 + knob.PI2 / 3) * (knob.value / knob.max), false);
+      console.log(knob.value / knob.max)
       knob.ctx.closePath();
       knob.ctx.fill();
     }

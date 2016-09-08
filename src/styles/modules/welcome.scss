@@ -26,7 +26,8 @@
     width: 100%;
     z-index: 1;
   }
-  @media screen and (max-width: 75rem) {
+  @media screen and (max-width: 93rem) {
+    padding-bottom: 2rem;
     &__supertext {
       .wrapper {
         -js-display: flex;
@@ -35,12 +36,11 @@
         align-items: center;    
       }
     }
-  }
-  @media screen and (max-width: 60rem) {
-    padding-bottom: 2rem;
     &__supertext {
       top: 7rem;
     }
+  }
+  @media screen and (max-width: 60rem) {
   }
   @media screen and (max-width: 40rem) {
     &__supertext {
