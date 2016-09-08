@@ -268,12 +268,15 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: flex-start;
+    margin-left: -1rem;
     & > li {
       position: relative;
       flex-grow: 1;
       & > a {
         text-decoration: none;
-        color: #000;
+        /*color: #000;*/
+        color: #f5f5f5;
         display: block;
         padding: 1rem 0;
         position: relative;
@@ -301,11 +304,13 @@
           top: 0; right: 0; left: 0; bottom: 0;
           margin: auto;
           content: '';
-          background: #ed698d;
+          /*background: #ed698d;*/
           backface-visibility: hidden;
           opacity: 0.001;
           transition: opacity 0.2s ease-out;
-          transform-origin: 50% 20%;
+          /*transform-origin: 50% 20%;*/
+          border-radius: 6px;
+          border: 1px solid rgba(255,255,255,0.3);
           transition-property: opacity, background-color, transform;
           transition-timing-function: $mTrans;
           transform: translateZ(0) scale(0.8, 0.8);
@@ -382,6 +387,11 @@
       }
       &.menu-item-has-children {
       }
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    ul {
+      margin-left: 0;
     }
   }
   @media screen and (max-width: 52rem) {
