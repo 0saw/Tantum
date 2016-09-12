@@ -1,7 +1,9 @@
 .helper {
   padding: 5rem 0 6rem;
   &--shared-bg {
-    background: url('../images/helper_bg.jpg') top center no-repeat;
+    // background: url('../images/helper_bg.jpg') top center no-repeat;
+    background: url('../images/problems_girl.png') 100% 200px no-repeat, url('../images/problems_background.jpg') center top no-repeat;
+    // background-size: auto auto, cover;
   }
   &__header {
     font: italic 3rem 'Georgia', serif;
@@ -155,6 +157,37 @@
   &__item-image {
     margin-top: -2.5rem;
   }
+  @media screen and (max-height: 900px) {
+    &__header {
+      font-size: 2.4rem;
+    }
+  }
+  @media screen and (max-width: 87.5rem) {
+    &--shared-bg {
+      background-position: 120% 200px, top center;
+    }
+  }
+  @media screen and (max-width: 75rem) {
+    &--shared-bg {
+      background-position: 150% 200px, center top;
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    &--shared-bg {
+      background: url('../images/problems_background.jpg') center top no-repeat;
+    }
+    &__container {
+      width: 100%;
+      transition: all 0.5s ease-out;
+    }
+    &__item-image {
+      margin-top: -1rem;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
   @media screen and (max-width: 40rem) {
     padding: 1.5rem 0;
     &__header {
@@ -170,6 +203,12 @@
       margin: 0 0 1rem;
       padding: 0;
     }
+    &__image {
+      margin-right: 0.5rem;
+      img {
+        max-width: 100%;
+      }
+    }
     &__container {
       width: 100%;
       margin: 0;
@@ -177,12 +216,6 @@
     }
     &__text {
       margin: 0;
-    }
-    &__item-image {
-      margin-top: -1rem;
-      img {
-        max-width: 100%;
-      }
     }
   }
   @media screen and (max-width: 20rem) {

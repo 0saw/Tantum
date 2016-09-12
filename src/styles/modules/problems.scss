@@ -1,6 +1,4 @@
 .problems {
-  background: url('../images/problems_bg.jpg') no-repeat;
-  background-size: cover;
   padding: 6rem 0 2rem;
   overflow: hidden;
   #flora {
@@ -93,10 +91,78 @@
   &__fast {
     text-align: center;
   }
+  
+  @media screen and (max-height: 900px) {
+    padding-bottom: 0;
+    &__fast {
+      margin-bottom: -90px;
+    }
+    &__header {
+      font-size: 2.4rem;
+    }
+    &__clock {
+      top: -90px;
+    }
+  }
 
   @media screen and (max-width: 60rem) {
     padding-top: 8rem;
+    &__container {
+      flex-flow: column;
+    }
+    &__item, &__item:nth-child(n) {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 1rem;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+    &__clock {
+      top: 1rem;
+    }
+    &__fast {
+      margin-bottom: 0;
+    }
+    &__title {
+      font-size: 1rem;
+    }
+    &__cell {
+      opacity: 0.001;
+      transform: translateZ(0) scale(0.8, 0.8);
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+    }
   }
+  @media screen and (min-width: 50rem) and (max-width: 60rem) {
+    &__container {
+      flex-flow: row;
+    }
+    &__item, &__item:nth-child(n) {
+      flex: 1 0 auto;
+      max-width: 33.33%;
+      /*width: 33.33%;*/
+      /*margin: 0 0 1rem;*/
+      margin: 0;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 40rem) and (max-width: 50rem) {
+    &__container {
+      flex-flow: row wrap;
+      justify-content: center
+    }
+    &__item, &__item:nth-child(n) {
+      flex: 1 0 auto;
+      max-width: 50%;
+      /*width: 33.33%;*/
+      /*margin: 0 0 1rem;*/
+      margin: 0;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+  }
+
   @media screen and (max-width: 40rem) {
     &__header {
       font-size: 2.2rem;
@@ -105,17 +171,19 @@
         display: none;
       }
     }
-    &__cell {
-      opacity: 0.001;
-      transform: translateZ(0) scale(0.8, 0.8);
-      transition-duration: 0.2s;
-      transition-timing-function: $mTransOut;
-    }
-    &__item, &__item:nth-child(n) {
-      width: 100%;
-      margin: 0 0 1rem;
-      padding: 0 0.5rem;
-      text-align: left;
+    &__clock {
+      width: 56.25vw;
+      height: 56.25vw;
+      background-size: contain;
+      position: relative;
+      canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 2rem;
+      }
     }
     &__title {
       margin-bottom: 0.3rem;
@@ -129,6 +197,9 @@
   }
   @media screen and (max-width: 30rem) {
     padding: 3rem 0 0;
+    &__header {
+      font-size: 1.6rem;
+    }
   }
 }
 

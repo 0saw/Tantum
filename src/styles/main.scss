@@ -57,4 +57,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+@media screen and (max-width: 30rem) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
 @import 'modules/**/*';
