@@ -22,6 +22,9 @@
     display: flex;
     flex-flow: row nowrap;
   }
+  &__image {
+    text-align: center;
+  }
   &__item {
     flex-grow: 1;
     padding-bottom: 4.2rem;

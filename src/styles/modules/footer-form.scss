@@ -138,6 +138,18 @@
     top: 3rem;
     position: absolute;
   }
+  &__left, &__right {
+    transition: 0.3s ease-out;
+    backface-visibility: hidden;
+    transition-property: opacity, transform;
+    transition-timing-function: $mTrans;
+    @media screen and (max-width: 75rem) {
+      opacity: 0.001;
+      transform: translateZ(0) scale(0.8, 0.8);
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+    }
+  }
   @media screen and (max-width: 60rem) {
     padding: 1rem 0 2rem;
   }

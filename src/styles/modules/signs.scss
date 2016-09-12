@@ -181,6 +181,9 @@
       bottom: 0;
     }
   }
+  @media screen and (max-width: 60rem) {
+    padding-bottom: 1rem;
+  }
 }
 
 @keyframes float {
