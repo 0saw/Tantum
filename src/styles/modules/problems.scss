@@ -135,10 +135,10 @@
   }
   @media screen and (min-width: 50rem) and (max-width: 60rem) {
     &__container {
-      flex-flow: row;
+      flex-flow: row wrap;
     }
     &__item, &__item:nth-child(n) {
-      flex: 1 0 auto;
+      flex: 1 0 33.33%;
       max-width: 33.33%;
       /*width: 33.33%;*/
       /*margin: 0 0 1rem;*/
@@ -150,10 +150,10 @@
   @media screen and (min-width: 40rem) and (max-width: 50rem) {
     &__container {
       flex-flow: row wrap;
-      justify-content: center
+      justify-content: center;
     }
     &__item, &__item:nth-child(n) {
-      flex: 1 0 auto;
+      flex: 1 0 50%;
       max-width: 50%;
       /*width: 33.33%;*/
       /*margin: 0 0 1rem;*/
