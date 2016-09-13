@@ -64,6 +64,14 @@ var frontPage = function() {
     x: 0
   };
 
+  $('.literature').on('click', function (e) {
+    $('.footer__legal .footer__cont').show();
+  });
+  $('.readMoreFooter').on('click', function (e) {
+    e.preventDefault();
+    $('.footer__legal .footer__cont').slideToggle();
+  });
+
   var windowResize = function () {
     girlsInfo.width = girlsContainer.offsetWidth;
     girlsInfo.x = 0;
