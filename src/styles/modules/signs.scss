@@ -16,9 +16,18 @@
   }
   &__header {
     position: absolute;
-    padding: 6rem 0 2rem 30%;
+    z-index: 20;
+    padding: 6rem 0 2rem 0;
+    left: 30%;
     text-align: center;
     font: italic 3.125rem 'Georgia', serif;
+    &, a {
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: #966;
+      }
+    }
     @media screen and (max-width: 60rem) {
       padding: 3rem 0 2rem 0;
       position: relative;
