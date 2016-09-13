@@ -88,6 +88,7 @@
     position: absolute;
     background: url('../images/roses/rose1.png') center center no-repeat;
     animation: float 4s ease-in-out infinite forwards;
+    z-index: 2;
     div {
       position: absolute;
       text-align: center;
@@ -167,6 +168,22 @@
       top: 520 / 1130 * 100%;
       animation-delay: -0.4s;
     }
+    &_8 {
+      background-image: url('../images/roses/rose2.png');
+      height: 175px;
+      width: 291px;
+      left: -12.91667%;
+      top: 75.97345%;
+      animation-delay: -2.9s;
+      div {
+        left: 45%;
+      }
+    }
+  }
+  &__button {
+    bottom: 20px;
+    position: absolute;
+    z-index: 1;
   }
   &__girl {
     position: absolute;
@@ -180,10 +197,7 @@
       top: auto;
       bottom: 0;
     }
-  }
-  @media screen and (max-width: 60rem) {
-    padding-bottom: 1rem;
-  }
+  }    
 }
 
 @keyframes float {

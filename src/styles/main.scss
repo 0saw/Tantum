@@ -57,6 +57,15 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.literature {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 0.3em;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 @media screen and (max-width: 30rem) {
   html, body {
     font-size: 12px;
