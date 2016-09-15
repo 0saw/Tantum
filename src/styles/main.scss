@@ -57,6 +57,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.pdSlide {
+  &__info {
+    display: none;
+  }
+}
+
 .literature {
   color: inherit;
   text-decoration: none;
