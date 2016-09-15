@@ -160,7 +160,7 @@
     text-align: center;
     width: 71px;
     img {
-      margin-top: -1rem;
+      margin-top: 0rem;
     }
   }
   &__title {
@@ -171,7 +171,7 @@
   &__item-image {
     margin-top: -2.5rem;
     img {
-      height: 40vh;
+      height: 35vh;
       @media screen and (max-height: 640px) {
         display: none !important;
       }

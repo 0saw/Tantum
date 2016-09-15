@@ -10,7 +10,7 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
-    align-items: stretch;
+    align-items: flex-end;
   }
   &__item {
     margin-bottom: 2rem;
