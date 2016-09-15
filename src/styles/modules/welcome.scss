@@ -9,6 +9,12 @@
   }
   &__logo {
     text-align: center;
+    img {
+      max-height: 145px;
+      max-width: 164px;
+      width: 164 / 2 / 960 * 100vw;
+      height: 145 / 2 / 960 * 100vw;
+    }
   }
   &__tagline {
     font: bold italic 1.8rem 'Georgia', serif;
@@ -30,10 +36,10 @@
     padding-bottom: 2rem;
     &__supertext {
       .wrapper {
-        -js-display: flex;
+        /*-js-display: flex;
             display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;    */
       }
     }
     &__supertext {
@@ -49,7 +55,7 @@
   }
   @media screen and (max-width: 30rem) {
     transition: height 0.3s ease-out;
-    height: 4rem;
+    height: 6rem;
     padding: 0;
   }
 }
