@@ -6,9 +6,9 @@ var imagesSelector = [
 ].join(', ');
 
 var scrollToElements = [
-  { sel: "a[href='#f0']", offset: 100 },
-  { sel: "a[href='#f1']", offset: 200 },
-  { sel: "a[href='#f2']", offset: 100 },
+  { sel: "a[href='#f0']", offset: 50 },
+  { sel: "a[href='#f1']", offset: 100 },
+  { sel: "a[href='#f2']", offset: 60 },
   { sel: "a[href='#f3']", offset: 100 },
   { sel: "a[href='#f4']", offset: 100 },
   { sel: "a[href='#f5']", offset: 100 },
@@ -18,23 +18,7 @@ var scrollToElements = [
   { sel: "a[href='#footer']", offset: 100 }
 ];
 
-var scrollTos = function () {
-  var scrollToElement = function (element, offset) {
-    $(element).click(function(e) {
-      e.preventDefault();
 
-      var elementClick = $(this).attr("href");
-      var destination  = $(elementClick)[0].offsetTop;
-      if(destination < 0) { destination = 0; }
-      console.log($(elementClick), $(elementClick)[0].offsetTop);
-      $('#container').animate({ scrollTop: destination - offset }, "slow");
-    });
-  }
-
-  for (var i = 0; i < scrollToElements.length; i++) {
-    scrollToElement(scrollToElements[i].sel, scrollToElements[i].offset);
-  }
-};
 
 $(imagesSelector).imagesLoaded({ background: true })
   .done(function(instance) {
@@ -52,6 +36,23 @@ $(imagesSelector).imagesLoaded({ background: true })
     scrollTos();
   });
 
+var scrollTos = function () {
+  var scrollToElement = function (element, offset) {
+    $(element).click(function(e) {
+      e.preventDefault();
+
+      var elementClick = $(this).attr("href");
+      var destination  = $(elementClick)[0].offsetTop;
+      if(destination < 0) { destination = 0; }
+      $('#container').animate({ scrollTop: destination - offset }, "slow");
+    });
+  };
+
+  for (var i = 0; i < scrollToElements.length; i++) {
+    scrollToElement(scrollToElements[i].sel, scrollToElements[i].offset);
+  }
+};
+
 var frontPage = function() {
   var handle = document.getElementById('welcomeHandle');
   var girl = document.getElementById('girlAfter');
@@ -60,6 +61,7 @@ var frontPage = function() {
   var $clock = $(".clock");
   var mc = new Hammer(handle);
   var enableParallax = null;
+  var helperItems = [];
   var girlsInfo = {
     x: 0
   };
@@ -72,6 +74,42 @@ var frontPage = function() {
     $('.footer__legal .footer__cont').slideToggle();
   });
 
+  $('.pdSlide').each(function (e) {
+    helperItems.push({
+      elem: this,
+      toggled: false,
+      text: $(this).find('.pdSlide__info'),
+    });
+  }).on('click', function (e) {
+    $this = $(this);
+    var item = $.grep(helperItems, function (elem) {
+      return elem.elem == $this[0];
+    });
+    if (typeof item[0] != 'undefined') {
+      item[0].toggled = true;
+      item[0].text.slideToggle();
+    }
+  });
+
+  function toggleHelpers(show, anim) {
+    if (typeof anim === 'undefined') {
+      anim = true;
+    }
+    $.each(helperItems, function (index, elem) {
+      if (!elem.toggled) {
+        if (anim) {
+          elem.text.slideToggle(show);
+        } else {
+          elem.text.toggle();
+        }
+      }
+    });
+  };
+  console.log($(window).height());
+  if ($(window).height() < 750) {
+    toggleHelpers(false, false);
+  }
+
   var windowResize = function () {
     girlsInfo.width = girlsContainer.offsetWidth;
     girlsInfo.x = 0;
@@ -80,8 +118,10 @@ var frontPage = function() {
       enableParallax = newParallax;
       if (enableParallax) {
         parallax1.enable();
+        toggleHelpers(true);
       } else {
         parallax1.disable();
+        toggleHelpers(false);
       }
     }
     requestAnimationFrame(pan);
@@ -160,7 +200,6 @@ var frontPage = function() {
       knob.ctx.beginPath();
       knob.ctx.moveTo(knob.width / 2, knob.width / 2);
       knob.ctx.arc(knob.width / 2, knob.width / 2, knob.width / 2, -knob.PI2, -knob.PI2 + (knob.PI2 + knob.PI2 / 3) * (1 - knob.value / knob.max), false);
-      // knob.ctx.arc(knob.width / 2, knob.width / 2, knob.width / 2, 0, (knob.PI2 + knob.PI2 / 3) * (knob.value / knob.max), false);
       knob.ctx.closePath();
       knob.ctx.fill();
     }

@@ -115,6 +115,7 @@
               <ul>
                 <li><a href="/">Главная</a></li>
                 <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Причины</a></li>
                 <li><a href="format.html">Формы выпуска</a></li>
                 <li class="menu-item-has-children">
                   <a href="#">Когда применять</a>
@@ -127,7 +128,7 @@
                 <li class="menu-item-has-children">
                   <a href="#">Это интересно</a>
                   <ul>
-                    <li><a href="#">Причины неприятных симптомов</a></li>
+                    <!-- <li><a href="#">Причины неприятных симптомов</a></li> -->
                     <li><a href="#">Новости</a></li>
                     <li><a href="#">Полезные статьи</a></li>
                     <li><a href="#">Советы</a></li>
@@ -145,7 +146,7 @@
                     <li><a href="#">Абстракты</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Контакты</a></li>
+                <!-- <li><a href="#">Контакты</a></li> -->
               </ul>
               <div class="nav__pushy">
                 <div class="menu-btn"><img src="images/menu.png" alt=""><span>Меню</span></div>
@@ -202,11 +203,11 @@
         </div>
       </section>
 
-      <section id="problems" class="problems">
+      <section id="problems" class="problems неттекста">
         <a href="" id="f1"></a>
         <div class="wrapper">
           <header class="problems__header">
-            Столкнулись с одной <br> из проблем?
+            Столкнулись с одной из проблем?
           </header>
           <img class="problems__cell" src="images/problems_cell.png" alt="Бактерия">
           <div class="problems__container">
@@ -255,7 +256,7 @@
               <div class="problems__time">
                 <div class="problems__above">Как облегчить неприятные симптомы всего за</div>
                 20
-                <div class="problems__besides">минут?</div>
+                <div class="problems__besides">минут<span>?</span></div>
               </div>
             </div>
           </div>
@@ -277,40 +278,47 @@
               Тантум<sup>&reg;</sup> Роза - помощник в борьбе с нежелательными симптомами в интимной зоне
             </header>
             <div class="helper__container">
-              <div class="helper__item">
+              <div class="helper__item pdSlide">
                 <div class="helper__image helper__image_bird">
                   <img src="images/helper_fast.png" alt="Действует быстро">
                 </div>
                 <div class="helper__text">
                   <div class="helper__title">Действует быстро</div>
-                  Облегчает зуд, боль и раздражение уже через 20 минут после применения, после 3 применений состояние значительно улучшается<a href="#literature1" class="literature">[1]</a>
+                  <div class="helper__info pdSlide__info">
+                    Облегчает зуд, боль и раздражение уже через 20 минут после применения, после 3 применений состояние значительно улучшается<a href="#literature1" class="literature">1</a>
+                  </div>
                 </div>
               </div>
-              <div class="helper__item">
+              <div class="helper__item pdSlide">
                 <div class="helper__image">
                   <img src="images/helper_regenerative.png" alt="Действует избирательно">
                 </div>
                 <div class="helper__text">
                   <div class="helper__title">Действует избирательно</div>
-                  Избирательно действует на вагинальную микрофлору, подавляя рост и активность только болезнетворных микроорганизмов<a href="#literature2" class="literature">[2]</a>.
+                  <div class="helper__info pdSlide__info">
+                    Избирательно действует на вагинальную микрофлору, подавляя рост и активность только болезнетворных микроорганизмов<a href="#literature2" class="literature">2</a>
+                  </div>
                 </div>
               </div>
-              <div class="helper__item">
+              <div class="helper__item pdSlide">
+                <div class="helper__image helper__image_ages">
+                  <img src="images/helper_ages.png" alt="Без возрастных ограничений">
+                </div>
+                <div class="helper__text">
+                  <div class="helper__title">Без возрастных ограничений<a href="#literature3" class="literature">3</a></div>
+                  <div class="helper__info pdSlide__info">Подходит женщинам любого возраста</div>
+                </div>
+              </div>
+              <div class="helper__item pdSlide">
                 <div class="helper__image helper__image_pregnant">
                   <img src="images/helper_pregnant.png" alt="Разрешен при беременности и лактации">
                 </div>
-                <div class="helper__text">
-                  <div class="helper__title">Без возрастных ограничений<a href="#literature3" class="literature">[3]</a></div>
-                  Подходит женщинам любого возраста.
-                </div>
-              </div>
-              <div class="helper__item">
-                <div class="helper__image">
+                <!-- <div class="helper__image">
                   <img src="images/helper_comfy.png" alt="Разрешен в период беременности и лактации">
-                </div>
+                </div> -->
                 <div class="helper__text">
-                  <div class="helper__title">Разрешен в период беременности и лактации<a href="#literature3" class="literature">[3]</a></div>
-                  
+                  <div class="helper__title">Разрешен в период беременности и лактации<a href="#literature3" class="literature">3</a></div>
+                  <div class="helper__info pdSlide__info"></div>
                 </div>
               </div>
             </div>
@@ -441,34 +449,34 @@
         <div class="wrapper">
           <div class="trust__header">Доверие, заслуженное временем</div>
           <div class="trust__container">
-            <div class="trust__item">
+            <div class="trust__item pdSlide">
               <div class="trust__icon trust__icon_1"></div>
               <div class="trust__title">История прохождения</div>
-              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="pdSlide__info">Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы</div>
               <div class="trust__button">
                 <a href="#" class="button button_trust">Подробнее</a>
               </div>
             </div>
-            <div class="trust__item">
+            <div class="trust__item pdSlide">
               <div class="trust__icon trust__icon_2"></div>
               <div class="trust__title">Итальянские технологии</div>
-              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="pdSlide__info">Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы</div>
               <div class="trust__button">
                 <a href="#" class="button button_trust">Подробнее</a>
               </div>
             </div>
-            <div class="trust__item">
+            <div class="trust__item pdSlide">
               <div class="trust__icon trust__icon_3"></div>
               <div class="trust__title">Клинические исследования</div>
-              При лечении препаратом Тантум Роза происходит устойчивое снижение концентраций Gardnerella vaginalis (являющимися причиной заболевания мочеполовой системы) и одновременное величение концентраций лактобактерий
+              <div class="pdSlide__info">При лечении препаратом Тантум Роза происходит устойчивое снижение концентраций Gardnerella vaginalis (являющимися причиной заболевания мочеполовой системы) и одновременное величение концентраций лактобактерий</div>
               <div class="trust__button">
                 <a href="#" class="button button_trust">Подробнее</a>
               </div>
             </div>
-            <div class="trust__item">
+            <div class="trust__item pdSlide">
               <div class="trust__icon trust__icon_4"></div>
               <div class="trust__title">Мнения экспертов и врачей</div>
-              Лечение препаратом Тантум Роза
+              <div class="pdSlide__info">Лечение препаратом Тантум Роза</div>
               <div class="trust__button">
                 <a href="#" class="button button_trust">Подробнее</a>
               </div>
@@ -616,12 +624,12 @@
 	        <p id="literature1">1. Czajka, R. et al. Assessment of the efficacy of benzydamine (Tantum Rosa) in form of vaginal lavage in the treatment of perineal complaints in the early puerperium. Pol J Gyn Invest 2001; 4(2): 99-105</p>
 	        <p id="literature2">2. MaglianoE. At al. The role of benzydamine in the topical treatment of the so called non specific vaginitis. Int J Tiss React 1987; X1(2): 151-156</p>
 	        <p id="literature3">3. Согласно инструкции по применению препарата Тантум® Роза</p>
-	        © ООО  «Анджелини Фарма Рус», Россия, 2016<br>
+	      </div>
+	      © ООО  «Анджелини Фарма Рус», Россия, 2016<br>
 	        Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам обратиться к специалисту.<br>
 	        Нажимая на кнопку "Поделиться в социальных сетях", я подтверждаю, что выражаю собственное мнение о продукте Тантум® Роза. Мое мнение основано исключительно на моей собственной оценке данного продукта, я подтверждаю, что оно не мотивировано получением каких-либо благ или преференций производителя/импортера/продавцов продукта.<br>
 	        Номера регистрационных удостоверений: ПN 014275/01 от 16.05.2012, ПN 014275/02 от 30.06.2010<br><br>
 	        Если во время приема препарата ООО «Анджелини Фарма Рус» Ваше состояние ухудшилось, пожалуйста, как можно скорее сообщите нам об этом, прислав сообщение на электронный адрес <a href="mailto:Angelini.Russia@angelini.ru">Angelini.Russia@angelini.ru</a>.
-	      </div>
 	    </div>
 	    <hr>
 	    <div class="footer__warning">

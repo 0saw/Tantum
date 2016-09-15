@@ -17,6 +17,8 @@
   }
   &__header {
     font: italic 3.125rem 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   &__cell {
     position: absolute;
@@ -24,6 +26,7 @@
     right: 0;
     margin: 0 auto;
     max-width: 100%;
+    width: 419 / 960 * 100%;
     transition: 0.3s ease-out;
     backface-visibility: hidden;
     transition-property: opacity, transform;
@@ -31,13 +34,22 @@
   }
   &__item {
     width: 35%;
+    padding: 0 3rem 0 0;
     font-weight: 400;
-    margin-top: 10vmin;
+    margin-top: 1vmin;
+    text-align: left;
     .pulse {
       display: inline-block;
     }
     &:nth-child(2n) {
+      padding: 0 0 0 3rem;
       text-align: right;
+    }
+    .неттекста & {
+      text-align: right;
+      &:nth-child(2n) {
+        text-align: left;
+      }
     }
   }
   &__title {
@@ -96,13 +108,13 @@
       position: relative;
     }
     &__item {
-      position: absolute;
+      /*position: absolute;
       text-align: left !important;
       .pulse {
         float: left;
         margin-right: 10px;
-      }
-      &:nth-child(1) {
+      }*/
+      /*&:nth-child(1) {
         left: 200px;
         top: 0;
       }
@@ -117,8 +129,7 @@
       &:nth-child(4) {
         right: 0px;
         top: 150px;
-
-      }
+      }*/
     }
   }
 
@@ -131,19 +142,23 @@
       font-size: 2.4rem;
     }
     &__clock {
-      top: -90px;
+      top: -50px;
     }
   }
 
   @media screen and (max-width: 60rem) {
+    .wrapper {
+      background-position: 80% 30%;
+    }
     padding-top: 8rem;
     &__container {
       flex-flow: column;
+      width: 50%;
     }
     &__item, &__item:nth-child(n) {
       width: 100%;
       max-width: 100%;
-      margin: 0 0 1rem;
+      margin: 1vmin 0 1rem;
       padding: 0 0.5rem;
       text-align: left;
     }
@@ -168,42 +183,25 @@
       flex-flow: row wrap;
     }
     &__item, &__item:nth-child(n) {
-      flex: 1 0 33.33%;
-      max-width: 33.33%;
-      /*width: 33.33%;*/
-      /*margin: 0 0 1rem;*/
-      margin: 0;
-      padding: 0 0.5rem;
-      text-align: left;
-    }
-  }
-  @media screen and (min-width: 40rem) and (max-width: 50rem) {
-    &__container {
-      flex-flow: row wrap;
-      justify-content: center;
-    }
-    &__item, &__item:nth-child(n) {
       flex: 1 0 50%;
       max-width: 50%;
       /*width: 33.33%;*/
       /*margin: 0 0 1rem;*/
-      margin: 0;
+      margin: 1vmin 0 0;
       padding: 0 0.5rem;
       text-align: left;
     }
-  }
-
-  @media screen and (max-width: 40rem) {
-    &__header {
-      font-size: 2.2rem;
-      text-align: center;
-      br {
-        display: none;
-      }
+    &__fast {
+      position: absolute;
+      right: 0;
+      top: 28px;
+    }
+    &__time {
+      font-size: 1.5rem;
     }
     &__clock {
-      width: 56.25vw;
-      height: 56.25vw;
+      width: 35vw;
+      height: 35vw;
       background-size: contain;
       position: relative;
       canvas {
@@ -215,13 +213,67 @@
         padding: 2rem;
       }
     }
+    &__above {
+      display: none;
+    }
+    &__besides {
+      display: inline;
+      position: static;
+      font-size: 1.5rem;
+      vertical-align: baseline;
+      margin: 0;
+      span {
+        display: none;
+      }
+    }
+  }
+  @media screen and (min-width: 40rem) and (max-width: 50rem) {
+    &__container {
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    &__item, &__item:nth-child(n) {
+      flex: 1 0 50%;
+      max-width: 50%;
+      /*width: 33.33%;*/
+      /*margin: 0 0 1rem;*/
+      margin: 1vmin 0 0;
+      padding: 0 0.5rem;
+      text-align: left;
+    }
+    &__fast {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 40rem) {
+    &__header {
+      font-size: 2.2rem;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    &__container {
+      width: 100%;
+    }
+    &__item {
+      &, &:nth-child(n) {
+        margin: 0;
+      }
+    }
     &__title {
+      text-align: center;
       margin-bottom: 0.3rem;
       br {
         display: none;
       }
     }
     .pulse {
+      display: none;
+    }
+    &__fast {
       display: none;
     }
   }
@@ -231,6 +283,16 @@
       font-size: 1.6rem;
     }
   }
+}
+
+.problems .problems__clock canvas {
+  transition: opacity 0.3s ease-out;
+  opacity: 0.001;
+}
+
+.problems.animating .problems__clock canvas {
+  transition-duration: 0s;
+  opacity: 1;
 }
 
 

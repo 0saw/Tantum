@@ -19,8 +19,9 @@
     padding-bottom: 3.4rem;
   }
   &__image {
+    text-align: center;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
   &__title, &__button {

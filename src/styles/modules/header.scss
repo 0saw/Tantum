@@ -7,6 +7,14 @@
   transition: background-color 0.3s ease-out;
   &.fixed {
     background-color: #de628c;
+    .nav > ul {
+      margin: 0;
+      & > li {
+        & > ul {
+          top: 90%;
+        }
+      }
+    }
   }
 }
 
@@ -41,8 +49,9 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
-    padding: 1.2rem 0;
+    margin: 1.2rem 0;
     align-items: center;
+    transition: margin 0.3s ease-out;
     & > li {
       position: relative;
       flex-grow: 1;
@@ -123,7 +132,7 @@
           padding-left: 1rem;
         }
         a {
-          display: inline-block;
+          display: inline;
           text-decoration: none;
           color: #1e1e1d;
           font-weight: normal;
