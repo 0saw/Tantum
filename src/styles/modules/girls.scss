@@ -120,6 +120,9 @@
     &--handle {
       top: 13rem;
     }
+    &__handle-image {
+      display: none;
+    }
   }
   @media screen and (max-width: 83rem) {
     &__handle-image {
@@ -150,13 +153,41 @@
   }
   @media screen and (max-width: 40rem) {
     &--handle {
-      top: 10rem;
+      /*top: 10rem;*/
+    }
+    &__h-bg {
+      &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+      }
+      &:before {
+        border-radius: 50%;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: rgba(255,255,255,1);
+      }
+      &:after {
+        width: 50%;
+        height: 2px;
+        top: 0.7rem;
+        margin-top: -1px;
+        background-color: rgba(255,255,255,0.7);
+      }
+    }
+    &__h-bg_left, &__h-bg_right {
+      display: none;
     }
   }
   @media screen and (max-width: 30rem) {
-    display: none;
+    /*display: none;*/
     &--handle {
-      display: none;
+      top: 15rem;
+      /*display: none;*/
     }
   }
 }

@@ -32,17 +32,21 @@ $(function() {
       anim = true;
     }
     $.each(helperItems, function (index, elem) {
-      if (!elem.toggled) {
-        if (anim) {
-          elem.text.slideToggle(show);
-        } else {
-          elem.text.toggle();
-        }
+      if (show) {
+        elem.text.slideDown();
+      } else {
+        elem.text.slideUp();
       }
     });
   };
-  if ($(window).height() < 750) {
-    toggleHelpers(false, false);
+  if (($(window).height() < 750) || ($(window).width() <= 960)) {
+    $.each(helperItems, function (index, elem) {
+      elem.text.hide();
+    });
+  } else {
+    $.each(helperItems, function (index, elem) {
+      elem.text.show();
+    });
   }
 
   var windowResize = function () {

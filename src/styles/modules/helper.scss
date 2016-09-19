@@ -1,5 +1,5 @@
 .helper {
-  padding: 5rem 0 6rem;
+  padding: 5rem 0 3rem;
   &--shared-bg {
     // background: url('../images/helper_bg.jpg') top center no-repeat;
     background: url('../images/problems_girl.png') 100% 200px no-repeat, url('../images/problems_background.jpg') center top no-repeat;
@@ -19,7 +19,7 @@
               background-size: 300px auto, auto auto;
     }
     @media screen and (max-width: 60rem) {
-      background: url('../images/problems_background.jpg') center top no-repeat;
+      background: url('../images/problems_background_mobile.jpg') center top no-repeat;
     }
   }
   &__header {
@@ -31,6 +31,14 @@
       top: -1.5em;
       font-family: 'Open Sans', sans-serif;
       font-weight: normal;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: #966;
+      }
     }
   }
   &__container {
@@ -195,6 +203,9 @@
         max-width: 100%;
       }
     }
+    &__header {
+      font-size: 2.2rem;
+    }
   }
   @media screen and (max-width: 40rem) {
     padding: 1.5rem 0;
@@ -224,6 +235,11 @@
     }
     &__text {
       margin: 0;
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__header {
+      font-size: 1.6rem;
     }
   }
   @media screen and (max-width: 20rem) {

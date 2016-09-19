@@ -22,7 +22,7 @@
       @media screen and (max-width: 60rem) {
         bottom: -5rem;
       }
-      @media screen and (max-width: 30rem) {
+      @media screen and (max-width: 40rem) {
         display: none;
       }
     }
@@ -33,6 +33,19 @@
     }
     .trust & {
       margin-top: 1rem;
+    }
+    .helper & {
+      margin-top: -2rem;
+    }
+    .problems & {
+      @media screen and (max-width: 60rem) {
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+      }
+      @media screen and (max-width: 30rem) {
+        margin-bottom: 0.5rem;
+        margin-top: 0rem;
+      }
     }
   }
   &__arrow {

@@ -50,13 +50,16 @@
   }
   @media screen and (max-width: 40rem) {
     &__supertext {
-      display: none;
+      font-size: 1.4rem;
     }
   }
   @media screen and (max-width: 30rem) {
     transition: height 0.3s ease-out;
-    height: 6rem;
-    padding: 0;
+    /*height: 6rem;*/
+    /*padding: 0;*/
+    &__tagline {
+      font-size: 1.6rem;
+    }
   }
 }
 

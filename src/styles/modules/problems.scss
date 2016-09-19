@@ -279,7 +279,12 @@
     }
   }
   @media screen and (max-width: 30rem) {
-    padding: 3rem 0 0;
+    /*padding: 3rem 0 0;*/
+    .wrapper {
+      padding-bottom: 3rem;
+      -webkit-background-size: 120px auto;
+      background-size: 120px auto;
+    }
     &__header {
       font-size: 1.6rem;
     }
