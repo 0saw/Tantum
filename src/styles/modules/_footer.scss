@@ -115,6 +115,9 @@
     margin-top: 0.5rem;
   }
   @media screen and (max-width: 60rem) {
+    &__pd {
+      text-align: center;
+    }
     .wrapper {
       padding: 1rem 0 1rem;
     }
@@ -167,10 +170,10 @@
     &__legal {
       border-radius: 6px;
       background-color: rgba(255,255,255,0.6);
-      max-height: 100px;
+      // max-height: 100px;
       color: #333;
-      overflow-y: scroll;
-      overflow-x: hidden;
+      // overflow-y: scroll;
+      // overflow-x: hidden;
       margin: 1rem 0.5rem 0;
       padding: 0.5rem;
       &:hover {
