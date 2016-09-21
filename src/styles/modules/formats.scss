@@ -21,6 +21,7 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
+    align-items: flex-end;
   }
   &__image {
     text-align: center;
@@ -41,7 +42,18 @@
   &__text {
     margin: 1rem 0 1rem;
     color: #62656b;
-    text-align: center;
+    text-align: left;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        position: relative;
+        &:before {
+          content: '– ';
+        }
+      }
+    }
   }
   &__button {
     width: 100%;
@@ -59,6 +71,21 @@
     &__item {
       margin-top: 2rem;
       min-width: 100%;
+      &:last-child {
+        margin-top: 3rem;
+        padding-top: 3rem;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 20%;
+          right: 20%;
+          height: 0px;
+          border-top: rgba(222, 98, 140, 0.4) dotted 2px;
+          // background-color: rgba(222, 98, 140, 0.4);
+        }
+      }
     }
   }
 }
