@@ -35,12 +35,12 @@
       margin-top: 1rem;
     }
     .helper & {
-      margin-top: -2rem;
+      margin-top: -3rem;
     }
     .problems & {
       @media screen and (max-width: 60rem) {
         margin-bottom: 0.5rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
       @media screen and (max-width: 30rem) {
         margin-bottom: 0.5rem;

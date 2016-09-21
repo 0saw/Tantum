@@ -1,8 +1,9 @@
 .helper {
-  padding: 5rem 0 3rem;
+  padding: 5rem 0 2rem;
   &--shared-bg {
     // background: url('../images/helper_bg.jpg') top center no-repeat;
-    background: url('../images/problems_girl.png') 100% 200px no-repeat, url('../images/problems_background.jpg') center top no-repeat;
+    background: url('../images/problems_girl.png') 100% 200px no-repeat, 
+                url('../images/problems_background_mobile.jpg') center top no-repeat;
     // background-size: auto auto, cover;
     -webkit-background-size: auto auto, auto auto;
     background-size: auto auto, auto auto;
@@ -54,7 +55,7 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     margin: 2rem 0;
     &:nth-child(2n) {
       padding-left: 0.5rem;
@@ -184,12 +185,12 @@
         display: none !important;
       }
     }
-  }
-  @media screen and (max-height: 900px) {
+  }/*
+  @media screen and (min-height: 900px) {
     &__header {
       font-size: 2.4rem;
     }
-  }
+  }*/
   @media screen and (max-width: 60rem) {
     &__container {
       width: 100%;
@@ -205,12 +206,18 @@
     }
     &__header {
       font-size: 2.2rem;
+      sup {
+        top: -1em;
+      }
+    }
+    &__item {
+      align-items: center;
     }
   }
   @media screen and (max-width: 40rem) {
     padding: 1.5rem 0;
     &__header {
-      font-size: 2.2rem;
+      font-size: 2rem;
       text-align: center;
       margin-bottom: 1rem;
       sup {
@@ -240,6 +247,9 @@
   @media screen and (max-width: 30rem) {
     &__header {
       font-size: 1.6rem;
+      sup {
+        top: -0.5em;
+      }
     }
   }
   @media screen and (max-width: 20rem) {

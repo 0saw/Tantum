@@ -49,7 +49,7 @@ body {
   /*-js-display: flex;
   display: flex;*/
   min-height: 100vh;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   /*flex-flow: column;
   .site-content {
     flex-grow: 1;
@@ -63,6 +63,9 @@ body {
   }
 }
 
+.site-content {
+  overflow-x: hidden;
+}
 .literature {
   color: inherit;
   text-decoration: none;

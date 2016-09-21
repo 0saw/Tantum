@@ -39,12 +39,16 @@
     }
     @media screen and (max-width: 40rem) {
       padding: 3rem 0 2rem 0;
-      font-size: 1.6rem;
+      font-size: 2rem;
       text-align: center;
       br {
         display: none;
       }
-    }/*
+    }
+    @media screen and (max-width: 30rem) {
+      font-size: 1.8rem;
+    }
+    /*
     @media screen and (max-height: 900px) {
       font-size: 1.6rem;
     }*/
@@ -73,7 +77,7 @@
       font-weight: 400;
       & > div {
         padding: 1rem 1.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
+        /*border-bottom: 1px solid rgba(255,255,255,0.3);*/
         &:last-child {
           border-width: 0;
         }
@@ -199,7 +203,7 @@
     left: 50%;
     top: 5rem;
     margin-left: -730px;
-    @media screen and (max-width: 30rem) {
+    @media screen and (max-width: 40rem) {
       display: none;
     }
     @media screen and (min-width: 60.01rem) and (min-height: 1130px) {
@@ -207,12 +211,12 @@
       bottom: 0;
     }
   }
-
+/*
   @media screen and (max-height: 900px) {
     &__header {
       font-size: 2.4rem;
     }
-  }
+  }*/
 }
 
 @keyframes float {

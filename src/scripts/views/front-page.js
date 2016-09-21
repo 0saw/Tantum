@@ -44,7 +44,7 @@ var scrollTos = function () {
       var elementClick = $(this).attr("href");
       var destination  = $(elementClick)[0].offsetTop;
       if(destination < 0) { destination = 0; }
-      $('#container').animate({ scrollTop: destination - offset }, "slow");
+      $('html, body').animate({ scrollTop: destination - offset }, "slow");
     });
   };
 
@@ -160,7 +160,7 @@ var frontPage = function() {
   knob.init();
 
   $header = $('.header');
-  document.getElementById('container').addEventListener('scroll', function () {
+  document.addEventListener('scroll', function () {
     $header.toggleClass('fixed', $(this).scrollTop() > 10);
 
     var $myElem = $('#problems');
