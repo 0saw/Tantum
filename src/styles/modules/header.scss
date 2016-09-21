@@ -30,7 +30,7 @@
     color: #fff;
     font-weight: normal;
     font-size: 1.2rem;
-    padding-right: 15px;
+    padding-right: 1rem;
     img {
       vertical-align: bottom;
       margin-right: 0.4rem;
@@ -210,7 +210,7 @@
         display: none;
         &:first-child {
           display: block;
-          padding: 1.1rem 0;
+          padding: 1.1rem 0 1.1rem 1rem;
         }
       }
     }
@@ -232,7 +232,7 @@
 }
 
 .breadcrumbs {
-  // padding-left: 1.5rem;
+  padding: 0 0 0 1rem;
   * {
     vertical-align: middle;
   }
@@ -282,7 +282,7 @@
     color: #fff;
     font-weight: normal;
     font-size: 1.2rem;
-    padding-right: 15px;
+    padding-right: 1rem;
     img {
       vertical-align: bottom;
       margin-right: 0.4rem;
@@ -352,6 +352,7 @@
       }
       &:first-child {
         flex-grow: 0;
+        padding: 1.1rem 0 1.1rem 1rem;
         & > a {
           overflow: hidden;
           text-indent: 9999px;
@@ -472,7 +473,7 @@
         display: none;
         &:first-child {
           display: block;
-          padding: 1.1rem 0;
+          padding: 1.1rem 0 1.1rem 1rem;
         }
       }
     }

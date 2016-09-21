@@ -3,6 +3,7 @@
   background: url("../images/roses/rose2.png") 93% 100px no-repeat, 
               url("../images/roses/rose5.png") 7% 400px no-repeat,
               url("../images/news_bg.jpg") center center no-repeat;
+  background-size: auto auto, auto auto, cover;
   h2, &__header {
     font: italic 3.125rem 'Georgia', serif;
     padding: 0 2rem;
