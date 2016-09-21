@@ -18,16 +18,22 @@ $menu_width: 280px !default;
     visibility: hidden;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
-    a{
-        display: block;
-        color: #b3b3b1;
-        padding: 15px 30px;
-        text-decoration: none;
-        outline: 0;
+    a {
+      display: block;
+      color: #EFEFEF;
+      padding: 15px 30px;
+      text-decoration: none;
+      outline: 0;
+      text-decoration: none;
+      @media screen and (max-width: 30rem) {
+        font-size: 1.4rem;
+        line-height: 1;
+      }
     }
 
-    a:hover{
-        color: #FFF;
+    a:hover {
+      color: #FFF;
+      text-decoration: underline;
     }
 
     ul {
