@@ -46,6 +46,11 @@
       top: 7rem;
     }
   }
+  @media screen and (max-width: 40rem) {
+    &__supertext {
+      padding-top: 5rem;
+    }
+  }
   @media screen and (max-width: 52rem) {
     &__logo {
       display: none;
@@ -65,6 +70,9 @@
     /*padding: 0;*/
     &__tagline {
       font-size: 1.6rem;
+    }
+    &__supertext {
+      top: 6rem;
     }
   }
 }

@@ -137,6 +137,7 @@
       width: 100%;
       position: absolute;
       top: 17rem;
+      
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -153,7 +154,7 @@
   }
   @media screen and (max-width: 40rem) {
     &--handle {
-      /*top: 10rem;*/
+      top: 12rem;
     }
     &__h-bg {
       &:before, &:after {
@@ -186,7 +187,14 @@
   @media screen and (max-width: 30rem) {
     /*display: none;*/
     &--handle {
-      top: 15rem;
+      top: 11rem;
+      /*display: none;*/
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    /*display: none;*/
+    &--handle {
+      display: none;
       /*display: none;*/
     }
   }
