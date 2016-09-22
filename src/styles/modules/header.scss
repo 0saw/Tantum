@@ -5,6 +5,14 @@
   top: 0;
   position: fixed;
   transition: background-color 0.3s ease-out;
+  &__logo_mob {
+    img {
+      max-height: 64px;
+      display: none;
+      transition: max-height 0.3s ease-out;
+      transition-timing-function: $mTrans;
+    }
+  }
   &.fixed {
     background-color: #de628c;
     .nav > ul {
@@ -12,6 +20,34 @@
       & > li {
         & > ul {
           top: 90%;
+        }
+      }
+    }
+    .header__logo_mob {
+      img {
+        max-height: 32px;
+        transition-timing-function: $mTransOut;
+      }
+    }
+  }
+  @media screen and (max-width: 52rem) {
+    &__logo_mob {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 30rem) {
+    &__logo_mob {
+      img {
+        max-height: 45px;
+      }
+    }
+    &.fixed {
+      .header____logo_mob {
+        img {
+          max-height: 37px;
         }
       }
     }
@@ -206,6 +242,7 @@
       display: block;
     }
     & > ul {
+      flex: 0;
       & > li {
         display: none;
         &:first-child {

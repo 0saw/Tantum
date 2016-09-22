@@ -211,6 +211,12 @@
     left: 50%;
     top: 5rem;
     margin-left: -730px;
+    transition: opacity 0.6s ease-out;
+    transition-timing-function: $mTrans;
+    @media screen and (max-width: 75rem) {
+      opacity: 0.001;
+      transition-timing-function: $mTransOut;
+    }
     @media screen and (max-width: 40rem) {
       display: none;
     }

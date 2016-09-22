@@ -17,7 +17,7 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   &__item {
     margin-bottom: 2rem;
@@ -62,6 +62,10 @@
       sup {
         top: -0.5em;
       }
+    }
+
+    &__title {
+      font-weight: normal;
     }
     &__container {
       flex-flow: row wrap;

@@ -46,7 +46,13 @@
       top: 7rem;
     }
   }
-  @media screen and (max-width: 60rem) {
+  @media screen and (max-width: 52rem) {
+    &__logo {
+      display: none;
+    }
+    &__supertext {
+      top: 10rem;
+    }
   }
   @media screen and (max-width: 40rem) {
     &__supertext {

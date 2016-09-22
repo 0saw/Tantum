@@ -36,6 +36,9 @@
     }
     .helper & {
       margin-top: -3rem;
+      @media screen and (max-height: 40rem) {
+        margin-top: 0rem;
+      }
     }
     .problems & {
       @media screen and (max-width: 60rem) {

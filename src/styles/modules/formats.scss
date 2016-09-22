@@ -21,13 +21,52 @@
     -js-display: flex;
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-end;
+    align-items: stretch;
   }
   &__image {
     text-align: center;
   }
+  &__icon {
+    padding-left: 70px;
+    position: relative;
+    
+    margin: 44px 0;
+    .formats__item_small & {
+      margin: 22px 0;
+    }
+    &:first-child {
+      margin: 0 0 22px;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -200px;
+      bottom: -200px;
+      margin: auto;
+      width: 61px;
+      height: 61px;
+      content: '';
+      background: center center no-repeat;
+    }
+    &_time {
+      &:before {
+        background-image: url('../images/icon_time.png');
+      }
+    }
+    &_flacon {
+      &:before {
+        background-image: url('../images/icon_flacon.png');
+      }
+    }
+    &_rose {
+      &:before {
+        background-image: url('../images/icon_rose.png');
+      }
+    }
+  }
   &__item {
     flex-grow: 1;
+    padding: 0 0.5rem;
     padding-bottom: 4.2rem;
     min-width: 50%;
     position: relative;
@@ -43,6 +82,7 @@
     margin: 1rem 0 1rem;
     color: #62656b;
     text-align: left;
+    font-weight: normal;
     ul {
       list-style: none;
       padding: 0;
@@ -50,7 +90,7 @@
       li {
         position: relative;
         &:before {
-          content: '– ';
+          /*content: '– ';*/
         }
       }
     }
@@ -67,6 +107,9 @@
   @media screen and (max-width: 40rem) {
     &__container {
       flex-flow: row wrap;
+    }
+    &__title {
+      font-weight: normal;
     }
     &__item {
       margin-top: 2rem;
