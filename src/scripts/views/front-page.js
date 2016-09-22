@@ -68,13 +68,14 @@ var frontPage = function() {
   var windowResize = function () {
     girlsInfo.width = girlsContainer.offsetWidth;
     girlsInfo.x = 0;
-    var newParallax = $(window).width() > 960;
+    var newParallax = $(window).width() > 1024;
     if (newParallax != enableParallax) {
       enableParallax = newParallax;
       if (enableParallax) {
         parallax1.enable();
       } else {
         parallax1.disable();
+        parallax1.updateLayers();
       }
     }
     requestAnimationFrame(pan);
