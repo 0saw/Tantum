@@ -72,6 +72,11 @@
       font-size: 1.6rem;
     }
     &__supertext {
+      top: 9rem;
+    }
+  }
+  @media screen and (max-width: 20rem) {
+    &__supertext {
       top: 6rem;
     }
   }
