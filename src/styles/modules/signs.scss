@@ -28,6 +28,9 @@
         color: #966;
       }
     }
+    @media screen and (max-width: 75rem) {
+      left: 0;
+    }
     @media screen and (max-width: 60rem) {
       padding: 3rem 0 2rem 0;
       position: static;
