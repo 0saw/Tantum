@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta property="og:title" content="Tantum"/>
+  <meta property="og:url" content="https://0saw.github.io/Tantum/dist/"/>
+  <meta property="og:image" content="/static/share.png"/>
+  <meta property="og:site-name" content="Tantum"/>
+  <meta property="og:description" content="An ES6 boilerplate with common frontend tasks using Gulp 4 as build system."/>
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@domain">
+  <meta name="twitter:title" content="Tantum">
+  <meta name="twitter:description" content="An ES6 boilerplate with common frontend tasks using Gulp 4 as build system.">
+  <meta name="twitter:creator" content="@domain">
+  <meta name="twitter:image:src" content="/static/share.png">
+  
+
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="transparent">
+  <meta name="application-name" content="Tantum">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tantum">
+  <link rel="icon" type="image/png" sizes="228x228" href="images/favicon/coast-228x228.png">
+  <link rel="yandex-tableau-widget" href="images/favicon/yandex-browser-manifest.json">
+  <meta name="msapplication-TileColor" content="transparent">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-320x460.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-640x920.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-640x1096.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-750x1294.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="images/favicon/apple-touch-startup-image-1182x2208.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="images/favicon/apple-touch-startup-image-1242x2148.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-748x1024.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-768x1004.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-1496x2048.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-1536x2008.png">
+</head>
+<body>
+  <nav class="pushy pushy-left">
+    <ul>
+      <li class="pushy-link menu-item"><a href="/">Главная</a></li>
+      <li class="pushy-link menu-item"><a href="#">О препарате</a></li>
+      <li class="pushy-link menu-item"><a href="format.html">Формы выпуска</a></li>
+      <li class="pushy-submenu menu-item menu-item-has-children">
+        <a href="#">Когда применять</a>
+        <ul>
+          <li class="pushy-link"><a href="#">Я мама</a></li>
+          <li class="pushy-link"><a href="#">До и после операции</a></li>
+          <li class="pushy-link"><a href="#">Если причина в другом</a></li>
+        </ul>
+      </li>
+      <li class="pushy-link menu-item"><a href="#">Это интересно</a></li>
+      <li class="pushy-link menu-item"><a href="#">Специалистам</a></li>
+      <li class="pushy-link menu-item"><a href="#">Контакты</a></li>
+      <li class="pushy-link menu-item last"><a href="javascript://void">Закрыть</a></li>
+    </ul>
+  </nav>
+  
+  <div class="site-overlay"></div>
+  
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      
+      <div class="inner-welcome">
+        <header class="header">
+          <div class="header__logo">
+            <a href="/"><img src="images/logo-inner.png" alt=""></a>
+          </div>
+          <div class="header__line">
+            <nav class="nav wrapper">
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="#">Преимущества</a></li>
+                <li><a href="#">Причины</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Формы выпуска</a>
+                  <ul>
+                    <li><a href="#">Раствор</a></li>
+                    <li><a href="#">Порошок</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Когда применять</a>
+                  <ul>
+                    <li><a href="#">Я мама</a></li>
+                    <li><a href="#">До и после операции</a></li>
+                    <li><a href="#">Если причина в другом</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Это интересно</a>
+                  <ul>
+                    <!-- <li><a href="#">Причины неприятных симптомов</a></li> -->
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Полезные статьи</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">Женские хитрости</a></li>
+                    <li><a href="#">Тест</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Консультация специалиста</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Специалистам</a>
+                  <ul>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Абстракты</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="#">Контакты</a></li> -->
+              </ul>
+              <div class="nav__pushy">
+                <div class="menu-btn"><img src="images/menu.png" alt=""><span></span></div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        
+      </div>
+
+      <section class="page">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">До и после операции</span>
+          </div>
+        </div>
+        <div class="page__header">
+          <div class="page__line"></div>
+          <h1>До и после операции</h1>
+          <div class="page__line"></div>
+        </div>
+        <div class="wrapper">
+          <p>Кто такая женщина в современном мире? Это жена, это мама, это хранительница домашнего очага, покорительница мужских сердец, успешная бизнес-леди.</p>
+          <p>Женщина - поразительное создание. Она хрупкая, как хрусталь. Ее надо оберегать и любить. Современный ритм жизни подчас может выбить ее из привычной колеи. Поэтому главное, что нужно женщине – это забота. А   сама женщина, в свою очередь, должна заботиться о своем здоровье. Иногда важно вовремя обратиться к специалистам, и при необходимости пройти через гинекологические операции.</p>
+          <p>Если Вам предстоит гинекологическая операция, очень важно быть подготовленной как морально, так и физически. Поддержка близких и родных – залог Вашей уверенности в успешном результате. Конечно,  иногда приходится обращаться и к медикаментозной поддержке. Тантум<sup>®</sup> Роза это самый  хороший выбор женщины при этом. К тому же он обладает рядом преимуществ:</p>
+          <table class="icons-list">
+            <tbody>
+              <tr>
+                <td><img src="images/icon_feather.png" alt=""></td>
+                <td>Тантум<sup>®</sup> Роза в качестве спринцевания до и после <b>операции помогает облегчить неприятные ощущения</b> в интимной области (зуд, боль и жжение)</td>
+              </tr>
+              <tr>
+                <td><img src="images/icon_bacila.png" alt=""></td>
+                <td>Сама операция – это большой стресс для всего организма. Меняется и образ жизни и питание. После операции часто назначаются курсы антибиотиков. Все это вместе приводит к  нарушению микрофлоры и снижению защитных сил организма. Тантум<sup>®</sup> Роза <b>помогает восстановить нарушенную микрофлору</b> интимной зоны, подавляя рост только болезнетворной флоры.</td>
+              </tr>
+              <tr>
+                <td><img src="images/icon_shield.png" alt=""></td>
+                <td>Применение Тантум<sup>®</sup> Роза в комплексном лечении <b>стимулирует защитные силы организма</b> для борьбы с воспалением и помогает снизить риск возврата неприятных ощущений.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Восстановительный период после таких операций – разный. Но уже установленный факт: чем раньше женщина встает с постели и начинает вести активный образ жизни, тем быстрее заживают послеоперационные раны. Дискомфорт в интимной области в этот период мешает быстро вернуться к привычному ритму жизни. Тантум® Роза обладает широким спектром действия и не только снимает неприятные ощущения (зуд, боль и жжение), но и восстанавливает необходимый баланс в интимной зоне.</p>
+          <p>И снова можно радоваться каждому дню и каждому мгновению! Просыпаться каждое утро с улыбкой и своим хорошим настроением делиться с близкими людьми.</p>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="wrapper">
+          <h2>Новости</h2>
+          <div class="news__container">
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <div class="news__image"><img src="images/news-item.jpg" alt=""></div>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="articles-block">
+        <div class="wrapper">
+          <h2>Интересно к прочтению</h2>
+          <div class="articles-block__container">
+            <article class="articles-block__item">
+              <header class="articles-block__title">
+                <a href="#">Интимные проблемы после родов</a>
+                <p class="date">08 сентября 2016</p>
+              </header>
+              <p>
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам...
+              </p>
+            </article>
+            <article class="articles-block__item">
+              <header class="articles-block__title">
+                <a href="#">Восстановление менструального цикла после родов</a>
+                <p class="date">04 сентября 2016</p>
+              </header>
+              <p>
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам...
+              </p>
+            </article>
+          </div>
+          <div class="articles-block__button">
+            <a href="#" class="button button_articles">Посмотреть все статьи</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <footer class="footer">
+    <a href="" id="footer"></a>
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__col footer__col_left">
+          <div class="footer__logo footer__logo_m">
+            <a href="/"><img src="images/footer_logo.png" alt="Тантум" /></a>
+          </div>
+          <div class="footer__title footer__text">Разделы сайта</div>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Преимущества</a></li>
+            <li><a href="#">Причины</a></li>
+            <li><a href="format.html">Формы выпуска</a></li>
+            <li><a href="#">Когда применять</a></li>
+            <li><a href="#">Это интересно</a></li>
+            <li><a href="#">Специалистам</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col_center">
+          <div class="footer__logo">
+            <a href="/"><img src="images/footer_logo.png" alt="Тантум" /></a>
+          </div>
+          <ul>
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Политика использования</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+          <div class="footer__share">
+            <div class="footer__text">Поделиться в социальных сетях:</div>
+            <div class="soc">
+              <a href="#" class="soc__icon soc__icon_fb" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_vk" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_ok" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_twitter" rel="nofollow"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col footer__col_parent">
+          <div>
+            <a href="#" rel="nofollow"><img src="images/footer_parent.png" alt="Angelini" /></a>
+          </div>
+          <div class="footer__button">
+            <a href="#" class="button button_footer">Обратная связь</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__legal footer__text">
+        <div class="footer__more">
+          <a href="#" class="readMoreFooter">Список литературы</a>
+        </div>
+        <div class="footer__cont">
+          <p id="literature1">1. Czajka, R. et al. Assessment of the efficacy of benzydamine (Tantum Rosa) in form of vaginal lavage in the treatment of perineal complaints in the early puerperium. Pol J Gyn Invest 2001; 4(2): 99-105</p>
+          <p id="literature2">2. MaglianoE. At al. The role of benzydamine in the topical treatment of the so called non specific vaginitis. Int J Tiss React 1987; X1(2): 151-156</p>
+          <p id="literature3">3. Согласно инструкции по применению препарата Тантум® Роза</p>
+        </div>
+        © ООО  «Анджелини Фарма Рус», Россия, 2016<br>
+          Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам обратиться к специалисту.<br>
+          Нажимая на кнопку "Поделиться в социальных сетях", я подтверждаю, что выражаю собственное мнение о продукте Тантум® Роза. Мое мнение основано исключительно на моей собственной оценке данного продукта, я подтверждаю, что оно не мотивировано получением каких-либо благ или преференций производителя/импортера/продавцов продукта.<br>
+          Номера регистрационных удостоверений: ПN 014275/01 от 16.05.2012, ПN 014275/02 от 30.06.2010<br><br>
+          Если во время приема препарата ООО «Анджелини Фарма Рус» Ваше состояние ухудшилось, пожалуйста, как можно скорее сообщите нам об этом, прислав сообщение на электронный адрес <a href="mailto:Angelini.Russia@angelini.ru">Angelini.Russia@angelini.ru</a>.
+      </div>
+      <div class="footer__pd">
+        <a href="http://smartlanding.ru/">Разработано в smartlanding</a>
+      </div>
+      <hr>
+      <div class="footer__warning">
+        ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО<br>
+        ОЗНАКОМИТЬСЯ С ИНСТРУКЦИЕЙ ПО ПРИМЕНЕНИЮ
+      </div>
+      <div class="footer__text footer__copyright">
+        При использовании материалов, размещенных на данном сайте, ссылка на сайт обязательна
+      </div>
+    </div>
+  </footer>
+  
+  </div>
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <!-- @if ENV='dev' -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <link rel="stylesheet" href="styles/main.min.css">
+  <!-- @endif -->
+
+  <!-- @include inc/_meta.html -->
+
+  <!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="page page_nobg">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Статьи</span>
+          </div>
+        </div>
+        <div class="page__header">
+          <div class="page__line"></div>
+          <h1>Статьи</h1>
+          <div class="page__line"></div>
+        </div>
+      </section>
+
+      <section class="articles">
+        <div class="wrapper">
+          <form class="filter cf">
+            <div class="filter__col">
+                <input type="radio" name="filtertype" id="filtertype" value="theme" checked="">
+                <label for="filtertype">Тема</label>
+                <select class="filter__select" name="catfilter" id="catfilter" data-smart-positioning="false">
+                  <option value="1">Я мама</option>
+                  <option value="2">До и после операции</option>
+                  <option value="3">Если причина в другом</option>
+                </select>
+            </div>
+            <div class="filter__col">
+                <input type="radio" name="filtertype" id="filtertype2" value="date">
+                <label for="filtertype2">Дата публикации</label>
+                <select class="filter__select" name="datefilter" id="datefilter" data-smart-positioning="false">
+                  <option value="1">Сентябрь 2016</option>
+                  <option value="2">Август 2016</option>
+                  <option value="3">Июль 2016</option>
+                </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="articles__container">
+          <article class="articles__item">
+            <div class="wrapper">
+              <div class="articles__image">
+                <a href="#"><img src="images/articles/article1.jpg" alt=""></a>
+              </div>
+              <div class="articles__text">
+                <div class="articles__title"><a href="#">Интимные проблемы после родов</a></div>
+                <p class="date">08 сентября 2016</p>
+                <div class="articles__cat">
+                  Тантум<sup>®</sup> Роза уже через 20 минут после 1-­го применения помогает облегчить такие неприятные симптомы, как зуд, боль и жжение. Достаточно одного применения для того, чтобы снова почувствовать легкость и комфорт. А после трех применений...
+                </div>
+                <p></p>
+                <div class="articles__button">
+                  <a href="#" class="button button_articles">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <article class="articles__item">
+            <div class="wrapper">
+              <div class="articles__image">
+                <a href="#"><img src="images/articles/article2.jpg" alt=""></a>
+              </div>
+              <div class="articles__text">
+                <div class="articles__title"><a href="#">Восстановление менструального цикла после родов</a></div>
+                <p class="date">08 сентября 2016</p>
+                <div class="articles__cat">
+                  Одним из вопросов, которые часто возникают у женщин после родов, является вопрос о том, когда в норме должен восстанавливаться менструальный цикл, и с чем связано либо раннее, либо позднее наступление месячных после родов. Если говорить о тех нормах, 
+                </div>
+                <p></p>
+                <div class="articles__button">
+                  <a href="#" class="button button_articles">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="articles__item">
+            <div class="wrapper">
+              <div class="articles__image">
+                <a href="#"><img src="images/articles/article3.jpg" alt=""></a>
+              </div>
+              <div class="articles__text">
+                <div class="articles__title"><a href="#">Молочница – причины, признаки и симптомы</a></div>
+                <p class="date">08 сентября 2016</p>
+                <div class="articles__cat">
+                  Одним из вопросов, которые часто возникают у женщин после родов, является вопрос о том, когда в норме должен восстанавливаться менструальный цикл, и с чем связано либо раннее, либо позднее наступление месячных после родов. Если говорить о тех нормах, 
+                </div>
+                <p></p>
+                <div class="articles__button">
+                  <a href="#" class="button button_articles">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="articles__item">
+            <div class="wrapper">
+              <div class="articles__image">
+                <a href="#"><img src="images/articles/article4.jpg" alt=""></a>
+              </div>
+              <div class="articles__text">
+                <div class="articles__title"><a href="#">Диета и питание при молочнице</a></div>
+                <p class="date">08 сентября 2016</p>
+                <div class="articles__cat">
+                  Одним из вопросов, которые часто возникают у женщин после родов, является вопрос о том, когда в норме должен восстанавливаться менструальный цикл, и с чем связано либо раннее, либо позднее наступление месячных после родов. Если говорить о тех нормах, 
+                </div>
+                <p></p>
+                <div class="articles__button">
+                  <a href="#" class="button button_articles">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="wrapper">
+            <nav class="articles__nav">
+              <a href="#" class="articles__arrow articles__arrow_prev">Prev</a>
+              <span class="articles__dots"></span>
+              <ul>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+              </ul>
+              <span class="articles__dots"></span>
+              <a href="#" class="articles__arrow articles__arrow_next">Next</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- @include inc/news.html -->
+
+      <!-- @include inc/articles.html -->
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>

@@ -37,6 +37,7 @@
     "vendors/sequence.js",
     "vendors/jquery.magnific-popup.js",
     "vendors/parallax.js",
+    "vendors/jquery.formstyler.js",
     "vendors/pushy.js"
   ],
   "napa": {},

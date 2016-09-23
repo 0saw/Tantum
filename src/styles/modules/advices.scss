@@ -1,0 +1,51 @@
+.advices {
+  padding: 0 0 4rem;
+  &__container {
+    -js-display: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+  &__text {
+
+  }
+  &__item {
+    font-size: 0.95rem;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease-out;
+    flex-basis: 48%;
+    border-radius: 20px;
+    background: #fefbfb url('../images/advices/advice1.png') left bottom no-repeat;
+    &:nth-child(2n) {
+      background-image: url('../images/advices/advice2.png');
+    }
+    &:nth-child(3n) {
+      background-image: url('../images/advices/advice3.png');
+    }
+    &:nth-child(4n) {
+      background-image: url('../images/advices/advice4.png');
+    }
+    &:nth-child(5n) {
+      background-image: url('../images/advices/advice5.png');
+    }
+    &:nth-child(6n) {
+      background-image: url('../images/advices/advice6.png');
+    }
+    img {
+      float: left;
+    }
+  }
+  &__text {
+    margin-left: 95px;
+  }
+  &__title {
+    font: bold italic 1.2rem 'Georgia', serif;
+  }
+  @media screen and (max-width: 60rem) {
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .header {
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 101;
   top: 0;
   position: fixed;
   transition: background-color 0.3s ease-out;
@@ -148,11 +148,18 @@
           display: none;
         }
       }
+      &:last-child {
+        & > ul {
+          left: auto;
+          right: 0;
+        }
+      }
       & > ul {
         visibility: hidden;
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1;
         width: 13.75rem;
         transition: 0.2s linear;
         transition-property: all, visibility;
@@ -409,11 +416,19 @@
           display: none;
         }
       }
+      &:last-child {
+        & > ul {
+          left: auto;
+          right: 0;
+          border-radius: 10px 0 10px 10px;
+        }
+      }
       & > ul {
         visibility: hidden;
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1;
         width: 13.75rem;
         transition: 0.2s linear;
         transition-property: all, visibility;

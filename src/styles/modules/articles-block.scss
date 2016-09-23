@@ -1,0 +1,76 @@
+.articles-block {
+  padding: 1px 0 5rem;
+  background: url('../images/bg.jpg') center center no-repeat;
+  background-size: cover;
+  h2, &__header {
+    font: italic 3.125rem 'Georgia', serif;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  &__title {
+    a {
+      text-decoration: underline;
+      color: #3f62ae;
+      font: bold italic 1.2rem 'Georgia', serif;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__container {
+    -js-display: flex;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__item {
+    flex-basis: 50%;
+    padding: 0 0.5rem;
+  }
+  &__button {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  @media screen and (max-width: 60rem) {
+    &__header, h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      sup {
+        top: -1em;
+      }
+    }
+  }
+  @media screen and (max-width: 40rem) {
+    padding: 0 0 3rem;
+    &__header, h2 {
+      /*font-size: 1.6rem;*/
+      padding: 0.7rem 0.5rem 0;
+      font-size: 2rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+    &__container {
+      -js-display: flex;
+      display: flex;
+      align-items: flex-start;
+    }
+    &__item {
+      flex-basis: 100%;
+      padding: 0.5rem 0.2rem;
+      &:last-child {
+        padding-top: 1.5rem;
+      }
+    }
+    &__button {
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__header, h2 {
+      font-size: 1.8rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+  }
+}

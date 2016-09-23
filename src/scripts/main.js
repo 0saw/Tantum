@@ -62,6 +62,8 @@ $(function() {
   };
   $(window).on('resize', windowResize);
 
+  $('.filter input[type="radio"], .filter select').styler();
+
   var page = $(document.body).hasClass('front');
   page = page ? 'front' : '';
   switch (page) {

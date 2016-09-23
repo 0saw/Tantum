@@ -2,15 +2,16 @@
   background: url('../images/inner-welcome_bg.jpg') center center no-repeat;
   background-size: cover;
   padding: 11rem 0 3rem;
-  h1 {
-    font: italic 3.125rem 'Georgia', serif;
-    padding: 0 2rem;
-  }
   &__header {
     -js-display: flex;
     display: flex;
     width: 100%;
-    align-items: center
+    align-items: center;
+    &, h1 {
+      font: italic 3.125rem 'Georgia', serif;
+      padding: 0 2rem;
+      text-align: center;
+    }
   }
   &__line {
     flex-grow: 1;
@@ -27,44 +28,12 @@
     text-align: center;
   }
   &__icon {
-    padding-left: 70px;
-    position: relative;
-    
-    margin: 44px 0;
-    .formats__item_small & {
-      margin: 22px 0;
-      &:first-child {
-        margin: 10px 0 44px;
-      }
-    }
-    &:first-child {
-      margin: 25px 0 22px;
-    }
-    &:before {
-      position: absolute;
-      left: 0;
-      top: -200px;
-      bottom: -200px;
-      margin: auto;
-      width: 61px;
-      height: 61px;
-      content: '';
-      background: center center no-repeat;
-    }
-    &_time {
-      &:before {
-        background-image: url('../images/icon_time.png');
-      }
-    }
-    &_flacon {
-      &:before {
-        background-image: url('../images/icon_flacon.png');
-      }
-    }
-    &_rose {
-      &:before {
-        background-image: url('../images/icon_rose.png');
-      }
+    -js-display: flex;
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0;
+    img {
+      margin-right: 10px;
     }
   }
   &__item {
@@ -131,6 +100,33 @@
           border-top: rgba(222, 98, 140, 0.4) dotted 2px;
           // background-color: rgba(222, 98, 140, 0.4);
         }
+      }
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    &__header, &__header h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      sup {
+        top: -1em;
+      }
+    }
+  }
+  @media screen and (max-width: 40rem) {
+    &__header, &__header h1 {
+      /*font-size: 1.6rem;*/
+      font-size: 2rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    padding: 14rem 0 3rem;
+    &__header, &__header h1 {
+      font-size: 1.8rem;
+      sup {
+        top: -0.5em;
       }
     }
   }

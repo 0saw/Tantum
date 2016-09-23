@@ -42,4 +42,31 @@
       min-width: 100%;
     }
   }
+
+  @media screen and (max-width: 60rem) {
+    &__header, h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      sup {
+        top: -1em;
+      }
+    }
+  }
+  @media screen and (max-width: 40rem) {
+    &__header, h2 {
+      /*font-size: 1.6rem;*/
+      font-size: 2rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__header, h2 {
+      font-size: 1.8rem;
+      sup {
+        top: -0.5em;
+      }
+    }
+  }
 }
