@@ -18,7 +18,7 @@ $menu_width: 280px !default;
     visibility: hidden;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
-    a {
+    a, span {
       display: block;
       color: #EFEFEF;
       padding: 15px 30px;
@@ -33,7 +33,7 @@ $menu_width: 280px !default;
       }
     }
 
-    a:hover {
+    a:hover, span:hover {
       color: #FFF;
       /*text-decoration: underline;*/
       padding-left: 40px;
@@ -160,11 +160,11 @@ $menu_width: 280px !default;
 
     /* Submenu Icon */
 
-    > a {
+    > a, > span {
         position: relative;
     }
 
-    > a::after {
+    > a::after, > span::after {
         content: '';
         display: block;
         height: 11px;
@@ -204,7 +204,7 @@ $menu_width: 280px !default;
 
     /* Submenu Icon */
 
-    a::after {
+    a::after, span::after {
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
