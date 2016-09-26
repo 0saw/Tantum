@@ -7,10 +7,18 @@
     display: flex;
     width: 100%;
     align-items: center;
-    &, h1 {
+    h1 {
       font: italic 3.125rem 'Georgia', serif;
       padding: 0 2rem;
       text-align: center;
+    }
+    .formats__subtitle {
+      font: italic 1.4rem 'Georgia', serif;
+      position: relative;
+      top: -1.5rem;
+    }
+    sup {
+      font-size: 0.9rem;
     }
   }
   &__line {
@@ -31,9 +39,30 @@
     -js-display: flex;
     display: flex;
     align-items: center;
-    padding: 0.1rem 0;
+    padding: 0.2rem 0;
     img {
       margin-right: 10px;
+    }
+    &:first-child {
+      &:hover {
+        img {
+          animation: rubberBand 1s linear forwards;
+        }
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        img {
+          animation: tada 1s linear forwards;
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        img {
+          animation: zoomIn 0.5s ease-out forwards;
+        }
+      }
     }
   }
   &__item {

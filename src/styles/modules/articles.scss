@@ -31,8 +31,15 @@
     padding-right: 3rem;
     img {
       border-radius: 50%;
+      display: block;
       overflow: hidden;
-      box-shadow: 0 0 0 8px #fcccd5;
+      transition: box-shadow 0.3s ease-out;
+      transition-timing-function: $mTrans;
+      &:hover {
+        box-shadow: 0 0 0 8px #fcccd5;
+        transition-duration: 0.2s;
+        transition-timing-function: $mTransOut;
+      }
     }
   }
   &__title {

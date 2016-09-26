@@ -8,6 +8,9 @@
     font-size: 1.1rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    sup {
+      font-size: 0.9rem;
+    }
   }
   &__item {
     -js-display: flex;
@@ -16,6 +19,39 @@
     align-items: center;
     img {
       margin: 0.4rem 1.2rem 0.4rem 0.4rem;
+    }
+    &:hover {
+      img {
+        animation: tada 0.5s ease-out forwards;
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        img {
+          animation: rollIn 1s ease-out forwards;
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        img {
+          animation: rubberBand 1s ease-out forwards;
+        }
+      }
+    }
+    &:nth-child(5) {
+      &:hover {
+        img {
+          animation: pulse 1s ease-out forwards;
+        }
+      }
+    }
+    &:nth-child(6) {
+      &:hover {
+        img {
+          animation: pulse 1s ease-out forwards;
+        }
+      }
     }
   }
   &__col {

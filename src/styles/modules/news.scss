@@ -34,6 +34,32 @@
     text-align: center;
     margin: 2rem 0;
   }
+  &_horisontal {
+    .news {
+      &__container {
+        flex-flow: column;
+      }
+      &__image, &__excert, &__button {
+        text-align: left;
+      }
+      &__excert {
+        padding: 0 0 3rem 1rem;
+        position: relative;
+      }
+      &__item {
+        flex-flow: row;
+        -js-display: flex;
+        display: flex;
+        align-items: stretch;
+      }
+      &__button {
+        margin: 0;
+        position: absolute;
+        right: 0rem;
+        bottom: 1rem;
+      }
+    }
+  }
   @media screen and (max-width: 40rem) {
     &__container {
       flex-flow: row wrap;

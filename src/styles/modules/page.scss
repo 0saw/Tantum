@@ -16,6 +16,10 @@
       font: italic 3.125rem 'Georgia', serif;
       padding: 0 2rem;
       text-align: center;
+      sup {
+        font-size: 0.9rem;
+        top: -1.5rem;
+      }
     }
   }
   &__line {

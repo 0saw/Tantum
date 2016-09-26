@@ -3,6 +3,7 @@
 @import '_sprite';
 @import 'node_modules/normalize.css/normalize';
 @import 'node_modules/sass-easing/_easings';
+@import '_animate';
 
 @import 'fonts/_fonts';
 
@@ -44,6 +45,9 @@ body {
 .wrapper {
   max-width: 60rem;
   margin: 0 auto;
+  @media screen and (max-width: 60rem) {
+    padding: 0 0.2rem;
+  }
 }
 
 .viewport {
@@ -78,7 +82,7 @@ body {
   margin-left: 0em;
   font-weight: normal;
   vertical-align: super;
-  font-size: small;
+  font-size: 0.75rem;
   &:hover {
     text-decoration: underline;
   }
