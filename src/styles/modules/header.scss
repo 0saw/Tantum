@@ -262,16 +262,23 @@
 }
 
 .inner-welcome .header {
+  position: relative;
+  margin-bottom: -9.125rem;
   &__logo {
     background: url('../images/inner-top_bg.jpg') center top;
     background-size: cover;
     text-align: center;
-    height: 98px;
-    padding: 10px 0;
+    padding: 0.5rem 0;
+    img {
+      height: 4rem;
+    }
   }
   &__line {
     /*background-color: #edf2f6;*/
     background-color: #de628c;
+  }
+  &.fixed {
+    position: fixed;
   }
 }
 

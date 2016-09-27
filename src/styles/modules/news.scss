@@ -55,10 +55,13 @@
       &__button {
         margin: 0;
         position: absolute;
-        right: 0rem;
-        bottom: 1rem;
+        right: 0.2rem;
+        bottom: 0rem;
       }
     }
+  }
+  @media screen and (max-width: 100rem) {
+    background: url("../images/news_bg.jpg") center center no-repeat;
   }
   @media screen and (max-width: 40rem) {
     &__container {

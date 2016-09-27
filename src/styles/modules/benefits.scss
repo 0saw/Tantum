@@ -2,6 +2,7 @@
   background: url('../images/benefits_bg.jpg') center center no-repeat;
   background-size: cover;
   padding: 4rem 0 5rem;
+  counter-reset: benefits;
   &__header {
     padding-left: 5.2rem;
     font-weight: bold;
@@ -15,7 +16,7 @@
   &__item {
     -js-display: flex;
     display: flex;
-    padding: 0.7rem 0;
+    padding: 0.7rem 0.5rem;
     align-items: center;
     img {
       margin: 0.4rem 1.2rem 0.4rem 0.4rem;
@@ -71,5 +72,21 @@
     margin-top: 2rem;
     font: bold italic 1.2rem 'Georgia', serif;
     text-align: center;
+  }
+  @media screen and (max-width: 30rem) {
+    &__item {
+      align-items: flex-start;
+    }
+    &__col:first-child {
+      min-width: 2rem;
+      img {
+        display: none;
+      }
+      &:before {
+        counter-increment: benefits;
+        content: counter(benefits) ")";
+        font: bold italic 1.2rem 'Georgia', serif;
+      }
+    }
   }
 }

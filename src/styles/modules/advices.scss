@@ -33,6 +33,24 @@
     &:nth-child(6n) {
       background-image: url('../images/advices/advice6.png');
     }
+    &:hover img {
+      animation: rubberBand 1s linear forwards;
+    }
+    &:nth-child(2n):hover img {
+      animation: pulse 1s linear forwards;
+    }
+    &:nth-child(3n):hover img {
+      animation: shake 1s linear forwards;
+    }
+    &:nth-child(4n):hover img {
+      animation: tada 1s linear forwards;
+    }
+    &:nth-child(5n):hover img {
+      animation: pulse 1s linear forwards;
+    }
+    &:nth-child(6n):hover img {
+      animation: swing 1s linear forwards;
+    }
     img {
       float: left;
     }

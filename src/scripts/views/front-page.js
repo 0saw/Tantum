@@ -161,7 +161,7 @@ var frontPage = function() {
   knob.init();
 
   $header = $('.header');
-  document.addEventListener('scroll', function () {
+  var scrollFun = function () {
     $header.toggleClass('fixed', $(this).scrollTop() > 10);
 
     var $myElem = $('#problems');
@@ -183,7 +183,9 @@ var frontPage = function() {
         $myElem.removeClass('animating');
       }, 5000);
     }
-  });
+  };
+  document.addEventListener('scroll', scrollFun);
+  $(document).ready(scrollFun);
 
   windowResize();
 }

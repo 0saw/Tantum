@@ -29,9 +29,9 @@
   }
   &__image {
     padding-right: 3rem;
+    text-align: center;
     img {
       border-radius: 50%;
-      display: block;
       overflow: hidden;
       transition: box-shadow 0.3s ease-out;
       transition-timing-function: $mTrans;
@@ -107,10 +107,8 @@
       background: #fefbfb;
     }
   }
-  @media screen and (max-width: 30rem) {
-    &__arrow {
-      display: none;
-    }
+  @media screen and (max-width: 60rem) {
+    padding: 0 0.5rem;
   }
   @media screen and (max-width: 40rem) {
     &__item {
@@ -138,6 +136,11 @@
     }
     &__button {
       text-align: center;
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__arrow {
+      display: none;
     }
   }
 }

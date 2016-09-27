@@ -66,11 +66,16 @@ $(function() {
 
   var page = $(document.body).hasClass('front');
   page = page ? 'front' : '';
+  page = ($('.header__logo').length > 0) ? 'inner' : page;
   switch (page) {
     case 'front':
       var frontPage = require('./views/front-page');
       break;
+    case 'inner':
+      var innerPage = require('./views/inner-page');
+      break;
     default:
       break;
   }
+  console.log(page);
 });
