@@ -26,8 +26,18 @@
   }
   &__image {
     text-align: center;
+    display: block;
     img {
       max-width: 100%;
+      transition: box-shadow 0.3s ease-out;
+      transition-timing-function: $mTrans;
+      background-position: top center;
+      background-size: cover;
+      &:hover {
+        box-shadow: 0 0 0 8px #f37799;
+        transition-duration: 0.2s;
+        transition-timing-function: $mTransOut;
+      }
     }
   }
   &__button {
