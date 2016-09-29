@@ -9622,3 +9622,13 @@
         transform-origin: center bottom
     }
 }
+
+
+
+.anim {
+  &.pulse {
+    &:hover {
+      animation: pulse 1s linear forwards;
+    }
+  }
+}

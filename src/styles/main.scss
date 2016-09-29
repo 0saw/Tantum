@@ -69,6 +69,20 @@ body {
   color: #a0a3a5;
   font-size: 90%;
 }
+.cat {
+  color: #eb526d;
+  font-weight: normal;
+  display: block;
+
+  a {
+    color: #eb526d;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 .site-content {
   overflow-x: hidden;
@@ -79,7 +93,7 @@ body {
   margin-left: 0em;
   font-weight: normal;
   vertical-align: super;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   &:hover {
     text-decoration: underline;
   }

@@ -3,6 +3,7 @@
   &__item {
     padding: 2rem 0;
     background-size: contain !important;
+    
     .wrapper {
       -js-display: flex;
       display: flex;
@@ -149,33 +150,37 @@
 
 .filter {
   &__col {
-    width: 50%;
+    width: 52%;
     float: left;
+    &:first-child {
+      width: 48%;
+    }
   }
   &__select {
     width: 65%;
   }
-  label {
+  label, span {
     margin-right: 2%;
+    font: italic 1.1rem 'Georgia', serif;
   }
   @media screen and (max-width: 64rem) {
-    &__col {
+    &__col, &__col:first-child {
       width: 100%;
       margin-bottom: 1rem;
       padding-left: 0.5rem;
     }
-    label {
+    label, span {
       display: inline-block;
       min-width: 27%;
       margin-bottom: 1rem;
     }
   }
   @media screen and (max-width: 40rem) {
-    &__col {
+    &__col, &__col:first-child {
       float: none;
       text-align: center;
     }
-    label {
+    label, span {
       text-align: left;
       min-width: auto;
     }

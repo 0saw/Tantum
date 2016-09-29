@@ -1,11 +1,11 @@
 .format {
   background: url('../images/format_bg.png') center center no-repeat;
-  padding: 0 0 2rem;
+  padding: 5rem 0 2.5rem;
   &__header {
     font: italic 3rem 'Georgia', serif;
     padding: 0 2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     sup {
       font-size: 1rem;
       top: -1.5em;
@@ -45,6 +45,7 @@
     left: 0;
   }
   @media screen and (max-width: 60rem) {
+    padding: 1rem 0 2.5rem;
     &__header {
       font-size: 2.2rem;
       text-align: center;
@@ -98,12 +99,16 @@
     }
   }
   @media screen and (max-width: 30rem) {
-    &__header {
+    &__header { 
       font-size: 1.8rem;
       sup {
         top: -0.5em;
       }
     }
+  }
+  @media screen and (max-width: 75rem),
+         screen and (max-height: 40rem) {
+    background: url('../images/shared_bg.png') top center repeat-x, url('../images/format_bg.png') center center no-repeat;
   }
 /*
   @media screen and (min-height: 900px) {

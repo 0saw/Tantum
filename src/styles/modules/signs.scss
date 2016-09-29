@@ -7,17 +7,17 @@
     position: relative;
     height: 90vh;
     min-height: 900px;
+    padding: 3rem 0 0rem;
     @media screen and (max-width: 60rem) {
-      padding: 0 1rem;
       min-height: auto;
       height: auto;
-      padding: 0 0 3rem;
+      padding: 1rem 0 3rem;
     }
   }
   &__header {
     position: absolute;
     z-index: 20;
-    padding: 4rem 0 2rem 0;
+    padding: 0rem 0 2rem 0;
     left: 30%;
     text-align: center;
     font: italic 3.125rem 'Georgia', serif;
@@ -32,7 +32,7 @@
       left: 0;
     }
     @media screen and (max-width: 60rem) {
-      padding: 3rem 0 2rem 0;
+      padding: 0rem 0 1rem 0;
       position: static;
       font-size: 2.2rem;
       text-align: center;
@@ -41,7 +41,7 @@
       }
     }
     @media screen and (max-width: 40rem) {
-      padding: 3rem 0 2rem 0;
+      padding: 0rem 0 2rem 0;
       font-size: 2rem;
       text-align: center;
       br {
@@ -75,7 +75,7 @@
       }
     }
     &_mobile {
-      padding: 0 0 0 30%;
+      padding: 0 0 0 50%;
       display: none;
       font-weight: 400;
       .pulse {
@@ -126,7 +126,7 @@
       height: 285px;
       width: 345px;
       left: 580 / 960 * 100%;
-      top: 280 / 1130 * 100%;
+      top: -5 + 280 / 1130 * 100%;
       animation-delay: -0.4s;
       div {
         left: 55%;
@@ -138,7 +138,7 @@
       height: 175px;
       width: 291px;
       left: 260 / 960 * 100%;
-      top: 350 / 1130 * 100%;
+      top: -5 + 350 / 1130 * 100%;
       animation-delay: -2.9s;
       div {
         left: 45%;
@@ -149,7 +149,7 @@
       height: 178px;
       width: 276px;
       left: 610 / 960 * 100%;
-      top: 890 / 1130 * 100%;
+      top: -5 + 890 / 1130 * 100%;
       animation-delay: -3.4s;
     }
     &_5 {
@@ -157,7 +157,7 @@
       height: 193px;
       width: 274px;
       left: 420 / 960 * 100%;
-      top: 610 / 1130 * 100%;
+      top: -5 + 610 / 1130 * 100%;
       animation-delay: -1.3s;
       div {
         left: 45%;
@@ -169,7 +169,7 @@
       height: 156px;
       width: 324px;
       left: 250 / 960 * 100%;
-      top: 840 / 1130 * 100%;
+      top: -5 + 840 / 1130 * 100%;
       animation-delay: -2.3s;
     }
     &_4 {
@@ -177,7 +177,7 @@
       height: 197px;
       width: 277px;
       left: 730 / 960 * 100%;
-      top: 540 / 1130 * 100%;
+      top: -5 + 540 / 1130 * 100%;
       animation-delay: -2.5s;
       div {
         left: 45%;
@@ -188,7 +188,7 @@
       height: 166px;
       width: 254px;
       left: 0 / 960 * 100%;
-      top: 520 / 1130 * 100%;
+      top: -5 + 520 / 1130 * 100%;
       animation-delay: -0.4s;
     }
     &_8 {
@@ -196,7 +196,7 @@
       height: 175px;
       width: 291px;
       left: -2.91667%;
-      top: 75.97345%;
+      top: -5 + 75.97345%;
       animation-delay: -2.9s;
       div {
         left: 45%;
@@ -219,6 +219,12 @@
     @media screen and (max-width: 75rem) {
       opacity: 0.001;
       transition-timing-function: $mTransOut;
+    }
+    @media screen and (max-width: 60rem) {
+      opacity: 1;
+      transition-timing-function: $mTransOut;
+      margin-left: -500px;
+      top: 7rem;
     }
     @media screen and (max-width: 40rem) {
       display: none;

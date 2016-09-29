@@ -397,7 +397,7 @@ $color3: #fd7991;
 }
 
 @media screen and (max-width: 60rem) {
-  .problems__item:hover .pulse__ripple, .pulse:hover .pulse__ripple_small {
+  .problems__item:hover .pulse__ripple, .pulse:hover .pulse__ripple {
     animation: headacheSmall linear 1.6s infinite forwards;
   }
 }

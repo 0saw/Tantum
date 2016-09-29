@@ -2,31 +2,27 @@
   padding: 5rem 0 3rem;
   &--shared-bg {
     // background: url('../images/helper_bg.jpg') top center no-repeat;
-    background: url('../images/problems_girl.png') 100% 150px no-repeat, 
+    background: url('../images/problems_girl.png') 100% 150px no-repeat,
                 url('../images/problems_background_mobile.jpg') center top no-repeat;
     // background-size: auto auto, cover;
-    -webkit-background-size: auto auto, auto auto;
-    background-size: auto auto, auto auto;
+    background-size: auto auto, cover;
     @media screen and (max-width: 100rem),
            screen and (max-height: 900px) {
       /*background-position: 120% 200px, top center;*/
-      -webkit-background-size: 600px auto, auto auto;
-              background-size: 600px auto, auto auto;
-              background-position: 100% 260px, center top;
+      background-size: 600px auto, cover;
+      background-position: 100% 260px, center top;
     }
     @media screen and (max-width: 87.5rem),
-           screen and (max-height: 800px) {
+           screen and (max-height: 40rem) {
       /*background-position: 120% 200px, top center;*/
-      -webkit-background-size: 400px auto, auto auto;
-              background-size: 400px auto, auto auto;
-              background-position: 100% 240px, center top;
+      background-size: 400px auto, cover;
+      background-position: 100% 240px, center top;
     }
     @media screen and (max-width: 75rem),
-           screen and (max-height: 500px) {
+           screen and (max-height: 40rem) {
       /*background-position: 150% 200px, center top;*/
-      -webkit-background-size: 300px auto, auto auto;
-              background-size: 300px auto, auto auto;
-              background-position: 100% 200px, center top;
+      background-size: 300px auto, cover;
+      background-position: 100% 200px, center top;
     }
     @media screen and (max-width: 60rem) {
       background: url('../images/problems_background_mobile.jpg') center top no-repeat;
@@ -125,9 +121,11 @@
     }
   }*/
   @media screen and (max-width: 60rem) {
+    padding: 1rem 0 1rem;
     &__container {
       width: 100%;
       transition: all 0.5s ease-out;
+      margin: 1rem 0 1rem;
     }
     &__item-image {
       margin-top: -1rem;
@@ -139,6 +137,7 @@
     }
     &__header {
       font-size: 2.2rem;
+
       sup {
         top: -1em;
       }
