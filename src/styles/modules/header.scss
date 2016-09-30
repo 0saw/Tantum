@@ -262,8 +262,7 @@
 }
 
 .inner-welcome .header {
-  position: relative;
-  margin-bottom: -9.125rem;
+  position: fixed;
   &__logo {
     background: url('../images/inner-top_bg.jpg') center top;
     background-size: cover;
@@ -283,7 +282,7 @@
 }
 
 .breadcrumbs {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 0rem;
   * {
     vertical-align: middle;
   }
@@ -403,7 +402,7 @@
       }
       &:first-child {
         flex-grow: 0;
-        padding: 1rem 0 1rem 1rem;
+        padding: 1rem 0 1rem 0rem;
         & > a {
           overflow: hidden;
           text-indent: 9999px;
@@ -451,7 +450,7 @@
           padding-left: 1rem;
         }
         a {
-          display: inline-block;
+          display: inline;
           text-decoration: none;
           color: #1e1e1d;
           font-weight: normal;

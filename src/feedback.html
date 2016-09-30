@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <!-- @if ENV='dev' -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <link rel="stylesheet" href="styles/main.min.css">
+  <!-- @endif -->
+
+  <!-- @include inc/_meta.html -->
+
+  <!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="page page_nobg">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Обратная связь</span>
+          </div>
+        </div>
+        <div class="page__header">
+          <div class="page__line"></div>
+          <h1>Обратная связь</h1>
+          <div class="page__line"></div>
+        </div>
+        <div class="wrapper">
+        </div>
+      </section>
+
+      <section class="footer-form">
+        <div class="wrapper">
+           <!-- @include inc/footer-form.html -->
+        </div>
+      </section>
+
+      <!-- @include inc/news.html -->
+
+      <section class="interesting">
+        <!-- @include inc/interesting.html -->
+      </section>
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>
