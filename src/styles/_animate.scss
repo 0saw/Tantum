@@ -9626,7 +9626,7 @@
 
 
 .anim {
-  &.pulse {
+  &_pulse {
     &:hover {
       animation: pulse 1s linear forwards;
     }

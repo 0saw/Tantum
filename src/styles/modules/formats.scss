@@ -107,6 +107,7 @@
     }
   }
   @media screen and (max-width: 40rem) {
+    padding-top: 10rem;
     &__header {
       padding-bottom: 1rem;
     }
@@ -143,6 +144,10 @@
       sup {
         top: -1em;
       }
+      .formats__subtitle {
+        font-weight: 400;
+        font-size: 1.4rem;
+      }
     }
   }
   @media screen and (max-width: 40rem) {
@@ -155,11 +160,15 @@
     }
   }
   @media screen and (max-width: 30rem) {
-    padding: 14rem 0 3rem;
+    padding: 11rem 0 3rem;
     &__header, &__header h1 {
       font-size: 1.8rem;
       sup {
         top: -0.5em;
+      }
+      .formats__subtitle {
+        font-weight: 400;
+        font-size: 1.2rem;
       }
     }
   }

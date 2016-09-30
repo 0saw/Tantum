@@ -34,7 +34,7 @@
       background-image: url('../images/advices/advice6.png');
     }
     &:hover img {
-      animation: rubberBand 1s linear forwards;
+      animation: pulse 1s linear forwards;
     }
     &:nth-child(2n):hover img {
       animation: pulse 1s linear forwards;

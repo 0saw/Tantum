@@ -75,6 +75,9 @@
     text-align: center;
   }
   @media screen and (max-width: 30rem) {
+    &__header {
+      padding-left: 2.5rem;
+    }
     &__item {
       align-items: flex-start;
     }

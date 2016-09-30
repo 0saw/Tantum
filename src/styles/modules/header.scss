@@ -302,6 +302,9 @@
       margin: 0 0rem 0 0;
       border-radius: 0;
       @include retina-sprite($home-pink-group);
+      @media screen and (max-width: 52rem) {
+        margin-left: 1rem;
+      }
     }
   }
   &__delim {
