@@ -1,0 +1,136 @@
+.reasons {
+  counter-reset: reasons;
+  &--bg {
+    background: #f7efed url('../images/rose.png') right 200px no-repeat;
+  }
+  &__item {
+    -js-display: flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 2rem;
+  }
+  &__header {
+    font: bold italic 1.4rem 'Georgia', serif;
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+  &__image {
+    border-radius: 10px;
+    background-color: #000;
+    transition: box-shadow 0.3s ease-out;
+    transition-timing-function: $mTrans;
+    position: relative;
+    &:hover {
+      box-shadow: 0 0 0 2px #f37799;
+      transition-duration: 0.2s;
+      transition-timing-function: $mTransOut;
+      img {
+        opacity: 1;
+        transition-timing-function: $mTransOut;
+        transition-duration: 0.2s;
+        // transition-delay: 0.1s;
+      }
+      .reasons__stop {
+        background-color: lighten(#f37799, 10%);
+        transition-duration: 0.2s;
+        transition-timing-function: $mTransOut;
+        &:before {
+          background-color: #fff;
+        }
+      }
+    }
+    img {
+      display: block;
+      opacity: 0.8;
+      transition: opacity 0.3s ease-out;
+      transition-timing-function: $mTrans;
+    }
+  }
+  &__title {
+    font: bold italic 1.2rem 'Georgia', serif;
+    text-transform: uppercase;
+  }
+  &__text {
+    padding-left: 2rem;
+    font-size: 0.95rem;
+  }
+  &__stop {
+    background-color: #f37799;
+    border-radius: 50%;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: 1rem;
+    top: 1rem;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: background-color 0.3s ease-out;
+    transition-timing-function: $mTrans;
+    border: 2px solid #f37799;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 10px;
+      display: block;
+      margin: auto;
+      width: 60%;
+      height: 0.8rem;
+      border-radius: 2px;
+      background-color: #f5f5f5;
+
+      box-shadow: 0px 0px 0 #f37799,1px 1px 0 #f37799,2px 2px 0 #f37799,3px 3px 0 #f37799,4px 4px 0 #f37799,5px 5px 0 #f37799,6px 6px 0 #f37799,7px 7px 0 #f37799,8px 8px 0 #f37799,9px 9px 0 #f37799,10px 10px 0 #f37799,11px 11px 0 #f37799,12px 12px 0 #f37799,13px 13px 0 #f37799,14px 14px 0 #f37799,15px 15px 0 #f37799,16px 16px 0 #f37799,17px 17px 0 #f37799,18px 18px 0 #f37799,19px 19px 0 #f37799,20px 20px 0 #f37799,21px 21px 0 #f37799,22px 22px 0 #f37799,23px 23px 0 #f37799,24px 24px 0 #f37799,25px 25px 0 #f37799,26px 26px 0 #f37799,27px 27px 0 #f37799,28px 28px 0 #f37799,29px 29px 0 #f37799,30px 30px 0 #f37799,31px 31px 0 #f37799,32px 32px 0 #f37799,33px 33px 0 #f37799,34px 34px 0 #f37799,35px 35px 0 #f37799,36px 36px 0 #f37799,37px 37px 0 #f37799,38px 38px 0 #f37799,39px 39px 0 #f37799,40px 40px 0 #f37799,41px 41px 0 #f37799,42px 42px 0 #f37799,43px 43px 0 #f37799,44px 44px 0 #f37799,45px 45px 0 #f37799,46px 46px 0 #f37799,47px 47px 0 #f37799,48px 48px 0 #f37799,49px 49px 0 #f37799,50px 50px 0 #f37799,51px 51px 0 #f37799,52px 52px 0 #f37799,53px 53px 0 #f37799,1px 1px 0 rgba(243, 119, 153, 0.98182),2px 2px 0 rgba(243, 119, 153, 0.96364),3px 3px 0 rgba(243, 119, 153, 0.94545),4px 4px 0 rgba(243, 119, 153, 0.92727),5px 5px 0 rgba(243, 119, 153, 0.90909),6px 6px 0 rgba(243, 119, 153, 0.89091),7px 7px 0 rgba(243, 119, 153, 0.87273),8px 8px 0 rgba(243, 119, 153, 0.85455),9px 9px 0 rgba(243, 119, 153, 0.83636),10px 10px 0 rgba(243, 119, 153, 0.81818),11px 11px 0 rgba(243, 119, 153, 0.8),12px 12px 0 rgba(243, 119, 153, 0.78182),13px 13px 0 rgba(243, 119, 153, 0.76364),14px 14px 0 rgba(243, 119, 153, 0.74545),15px 15px 0 rgba(243, 119, 153, 0.72727),16px 16px 0 rgba(243, 119, 153, 0.70909),17px 17px 0 rgba(243, 119, 153, 0.69091),18px 18px 0 rgba(243, 119, 153, 0.67273),19px 19px 0 rgba(243, 119, 153, 0.65455),20px 20px 0 rgba(243, 119, 153, 0.63636),21px 21px 0 rgba(243, 119, 153, 0.61818),22px 22px 0 rgba(243, 119, 153, 0.6),23px 23px 0 rgba(243, 119, 153, 0.58182),24px 24px 0 rgba(243, 119, 153, 0.56364),25px 25px 0 rgba(243, 119, 153, 0.54545),26px 26px 0 rgba(243, 119, 153, 0.52727),27px 27px 0 rgba(243, 119, 153, 0.50909),28px 28px 0 rgba(243, 119, 153, 0.49091),29px 29px 0 rgba(243, 119, 153, 0.47273),30px 30px 0 rgba(243, 119, 153, 0.45455),31px 31px 0 rgba(243, 119, 153, 0.43636),32px 32px 0 rgba(243, 119, 153, 0.41818),33px 33px 0 rgba(243, 119, 153, 0.4),34px 34px 0 rgba(243, 119, 153, 0.38182),35px 35px 0 rgba(243, 119, 153, 0.36364),36px 36px 0 rgba(243, 119, 153, 0.34545),37px 37px 0 rgba(243, 119, 153, 0.32727),38px 38px 0 rgba(243, 119, 153, 0.30909),39px 39px 0 rgba(243, 119, 153, 0.29091),40px 40px 0 rgba(243, 119, 153, 0.27273),41px 41px 0 rgba(243, 119, 153, 0.25455),42px 42px 0 rgba(243, 119, 153, 0.23636),43px 43px 0 rgba(243, 119, 153, 0.21818),44px 44px 0 rgba(243, 119, 153, 0.2),45px 45px 0 rgba(243, 119, 153, 0.18182),46px 46px 0 rgba(243, 119, 153, 0.16364),47px 47px 0 rgba(243, 119, 153, 0.14545),48px 48px 0 rgba(243, 119, 153, 0.12727),49px 49px 0 rgba(243, 119, 153, 0.10909),50px 50px 0 rgba(243, 119, 153, 0.09091),51px 51px 0 rgba(243, 119, 153, 0.07273),52px 52px 0 rgba(243, 119, 153, 0.05455),53px 53px 0 rgba(243, 119, 153, 0.03636),55px 55px 0 rgba(243, 119, 153, 0);
+    }
+  }
+  @media screen and (max-width: 112rem) {
+    &--bg {
+      background-position: 120% 200px;
+    }
+  }
+  @media screen and (max-width: 100rem) {
+    &--bg {
+      background-position: 140% 200px;
+    }
+  }
+  @media screen and (max-width: 87rem) {
+    &--bg {
+      background: #f7efed;
+    }
+  }
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
+  @media screen and (max-width: 40rem) {
+    &__image {
+      img {
+        width: 150px;
+      }
+    }
+    &__stop {
+      width: 2rem;
+      height: 2rem;
+      &:before {
+        height: 0.5rem;
+      }
+    }
+  }
+  @media screen and (max-width: 30rem) {
+    &__image {
+      background: none;
+      img {
+        display: none;
+      }
+      &:after {
+        counter-increment: benefits;
+        content: counter(benefits) ")";
+        font: bold italic 1.2rem 'Georgia', serif;
+      }
+    }
+    &__stop {
+      display: none;
+    }
+  }
+}

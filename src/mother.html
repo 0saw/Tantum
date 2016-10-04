@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <!-- @if ENV='dev' -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <link rel="stylesheet" href="styles/main.min.css">
+  <!-- @endif -->
+
+  <!-- @include inc/_meta.html -->
+
+  <!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="page">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <a href="#">Когда применять</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Я - мама!</span>
+          </div>
+        </div>
+        <div class="page__header">
+          <div class="page__line"></div>
+          <h1>Я - мама!</h1>
+          <div class="page__line"></div>
+        </div>
+        <div class="wrapper">
+          <p>Беременность готовит женщину к встрече с малышом. Девять месяцев Вы носите ребенка под сердцем, и вот долгожданная встреча свершилась! Теперь есть человек, для которого Вы - самое дорогое на свете - его любимая мама. С первых дней жизни мама рядом с ребенком, чувствует перемены в его настроении и делает всё, чтобы малыш не огорчался.</p>
+          <p>Первое прикосновения малыша к маме, первая улыбка, первый смех... Это счастье! День ото дня мама учит малыша чему-то новому, и учится сама видеть мир ярче. За окном то солнце, то дождь, а в доме должна быть всегда атмосфера любви и тепла. Это то, чего хотят многие. А хорошая погода в доме зависит в том числе и от маминого самочувствия, поэтому забота о женском здоровье важна как никогда.</p>
+          <p>Нередко после родов появляются неприятные ощущения в интимной зоне. Тантум<sup>®</sup> Роза помогает снять ощущение дискомфорта.</p>
+          <table class="icons-list">
+            <tbody>
+              <tr>
+                <td><img class="anim anim_pulse" src="images/icon_feather.png" alt=""></td>
+                <td>
+                  <p><b>Облегчает симптомы уже через 20 минут.</b></p>
+                  <p>Через 20 минут после 1-го применения препарат облегчает раздражение, боль, зуд<a href="#literature1" class="literature">1</a><a href="#literature1" class="literature">-</a><a href="#literature2" class="literature">2</a>.
+                  Тантум<sup>®</sup> Роза помогает вернуть спокойствие и легкость. Всего трех применений достаточно, чтобы значительно облегчить состояние и наслаждаться жизнью без дискомфорта</p>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="anim anim_pulse" src="images/icon_bacila.png" alt=""></td>
+                <td>
+                  <p><b>Восстанавливает микрофлору.</b></p>
+                  <p>Тантум<sup>®</sup> Роза помогает восстановить нарушенную микрофлору интимной зоны, подавляя рост только болезнетворной флоры<a href="#literature2" class="literature">3</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="anim anim_pulse" src="images/icon_shield.png" alt=""></td>
+                <td>
+                  <p><b>Снимает воспаление.</b></p>
+                  <p>
+                    Тантум<sup>®</sup> Роза помогает организму бороться с воспалением<a href="#literature2" class="literature">4</a>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="anim anim_pulse" src="images/icon_pregnant2.png" alt=""></td>
+                <td>
+                  <p><b>Применение во время беременности и лактации.</b></p>
+                  <p>
+                    Тантум<sup>®</sup> Роза можно применять во время беременности и лактации<a href="#literature2" class="literature">4</a>, ведь здоровье женщины, которая носит под сердцем малыша или уже заботится о новорожденном, превыше всего! Жизнь полна красок, приятных встреч и неожиданностей! Наслаждайтесь ими, а устранить дискомфорт поможет Тантум<sup>®</sup> Роза!
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- To Женя: Список литературы
+            Не завезли.
+            -->
+        </div>
+      </section>
+
+      <!-- @include inc/news.html -->
+
+      <section class="interesting">
+        <!-- @include inc/interesting.html -->
+      </section>
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>

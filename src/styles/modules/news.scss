@@ -76,6 +76,7 @@
   }
   @media screen and (max-width: 100rem) {
     background: url("../images/news_bg.jpg") center center no-repeat;
+    background-size: cover;
   }
   @media screen and (max-width: 40rem) {
     &__container {

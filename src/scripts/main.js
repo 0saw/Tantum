@@ -62,7 +62,7 @@ $(function() {
   };
   $(window).on('resize', windowResize);
 
-  $('.filter input[type="radio"], .filter select').styler();
+  $('.filter input[type="radio"], .filter select, .toexperts__field  input[type="radio"]').styler();
 
   var page = $(document.body).hasClass('front');
   page = page ? 'front' : '';

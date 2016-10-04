@@ -28,34 +28,57 @@
         <!-- @include inc/inner-header.html -->
       </div>
 
-      <section class="page page_nobg">
+      <section class="page page_sidebyside">
         <div class="wrapper">
           <div class="breadcrumbs">
             <a href="/">Главная</a>
             <span class="breadcrumbs__delim">•</span>
-            <span class="breadcrumbs__current">Обратная связь</span>
+            <a href="#">Это интересно</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Консультация специалиста</span>
           </div>
         </div>
-        <div class="page__header">
-          <div class="page__line"></div>
-          <h1>Обратная связь</h1>
-          <div class="page__line"></div>
-        </div>
-        <div class="wrapper">
+        <div class="wrapper page__container">
+          <div class="page__col page__expert">
+            <img src="images/expert.jpg" alt="" width="300">
+          </div>
+          <div class="page__col page__col_thick">
+            <div class="page__header page__header_alt page__header_left">
+              <h1>У Вас возник вопрос,<br> с которым вы хотите обратиться к специалисту?</h1>
+            </div>
+            <div class="page__text">
+              <div class="page__career">
+                <p>
+                  <b>Крыжановская Анна Владимировна</b>
+                </p>
+                <p class="page__semibold">
+                  Достижения / Образование
+                </p>
+              </div>
+              <p>
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам обратиться к специалисту.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="footer-form">
+        <header class="footer-form__header">
+          Получите консультацию у специалиста
+        </header>
         <div class="wrapper">
            <!-- @include inc/footer-form.html -->
         </div>
       </section>
+     
 
       <!-- @include inc/news.html -->
 
       <section class="interesting">
         <!-- @include inc/interesting.html -->
       </section>
+
     </div>
   <!-- @include inc/footer.html -->
   </div>

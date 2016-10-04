@@ -302,8 +302,11 @@
       margin: 0 0rem 0 0;
       border-radius: 0;
       @include retina-sprite($home-pink-group);
-      @media screen and (max-width: 52rem) {
-        margin-left: 1rem;
+      @media screen and (max-width: 60rem) {
+        margin-left: 0.5rem;
+        .formats & {
+          margin-left: 1rem;
+        }
       }
     }
   }
@@ -525,7 +528,7 @@
       margin-left: 0;
     }
   }
-  @media screen and (max-width: 52rem) {
+  @media screen and (max-width: 60rem) {
     &__pushy {
       display: block;
     }

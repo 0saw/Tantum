@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <!-- @if ENV='dev' -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <link rel="stylesheet" href="styles/main.min.css">
+  <!-- @endif -->
+
+  <!-- @include inc/_meta.html -->
+
+  <!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content toexperts">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="page toexperts__bg">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Экспертам</span>
+          </div>
+        </div>
+        <div class="page__header page__header_alt page__center toexperts__header">
+          <div class="wrapper">
+            <h1>Для перехода на страницу «Специалистам» ответьте на 3 вопроса</h1>
+          </div>
+        </div>
+        <div class="wrapper">
+          <form class="toexperts__form multiple-lines">
+            <div class="toexperts__question">
+              <div class="toexperts__number"></div>
+              <div class="toexperts__text">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться?
+              </div>
+              <div class="toexperts__answers">
+                <div class="toexperts__field">
+                  <input type="radio" name="answer1" id="answer1_1" value="1" checked>
+                  <label for="answer1_1">Информация, размещенная сайте</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer1" id="answer1_2" value="2">
+                  <label for="answer1_2">Отпускается без рецепта</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer1" id="answer1_3" value="3">
+                  <label for="answer1_3">Справочный характер</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="toexperts__question">
+              <div class="toexperts__number"></div>
+              <div class="toexperts__text">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер?
+              </div>
+              <div class="toexperts__answers">
+                <div class="toexperts__field">
+                  <input type="radio" name="answer2" id="answer2_1" value="1" checked>
+                  <label for="answer2_1">Информация, размещенная сайте</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer2" id="answer2_2" value="2">
+                  <label for="answer2_2">Отпускается без рецепта</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer2" id="answer2_3" value="3">
+                  <label for="answer2_3">Справочный характер</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="toexperts__question">
+              <div class="toexperts__number"></div>
+              <div class="toexperts__text">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер?
+              </div>
+              <div class="toexperts__answers">
+                <div class="toexperts__field">
+                  <input type="radio" name="answer3" id="answer3_1" value="1" checked>
+                  <label for="answer3_1">Информация, размещенная сайте</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer3" id="answer3_2" value="2">
+                  <label for="answer3_2">Отпускается без рецепта</label>
+                </div>
+                <div class="toexperts__field">
+                  <input type="radio" name="answer3" id="answer3_3" value="3">
+                  <label for="answer3_3">Справочный характер</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="toexperts__button">
+          <a href="#" class="button button_toexperts">Принять</a>
+        </div>
+      </section>
+
+      <!-- @include inc/news.html -->
+
+      <section class="interesting">
+        <!-- @include inc/interesting.html -->
+      </section>
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Получить консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>
