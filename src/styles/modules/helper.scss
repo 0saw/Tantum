@@ -12,6 +12,9 @@
       background-size: 600px auto, cover;
       background-position: 100% 260px, center top;
     }
+    @media screen and (max-width: 100rem) {
+      background-image: url('../images/problems_girl_transparent.png'), url('../images/problems_background_mobile.jpg');
+    }
     @media screen and (max-width: 87.5rem),
            screen and (max-height: 40rem) {
       /*background-position: 120% 200px, top center;*/

@@ -4,13 +4,21 @@
               url("../images/roses/rose5.png") 7% 400px no-repeat,
               url("../images/news_bg.jpg") center center no-repeat;
   background-size: auto auto, auto auto, cover;
-  .page + & {
+  &_page {
+    padding: 2rem 0 2rem;
+  }
+  &__nav {
     padding-top: 2rem;
   }
   h2, &__header {
     font: italic 3.125rem 'Georgia', serif;
     padding: 0 2rem;
     text-align: center;
+  }
+  &__info {
+    color: #333;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
   }
   &__container {
     -js-display: flex;
@@ -43,6 +51,10 @@
         transition-timing-function: $mTransOut;
       }
     }
+  }
+  &__title {
+    font: bold italic 1.2rem 'Georgia', serif;
+    margin-bottom: 0.5rem;
   }
   &__button {
     text-align: center;

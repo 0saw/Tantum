@@ -157,6 +157,17 @@
     }
   }
   @media screen and (max-width: 30rem) {
+    &__legal {
+      a {
+        color: darken(#41a7e7, 30);
+        text-decoration: underline;
+        font-weight: normal;
+        &:hover {
+          text-decoration: none;
+          color: darken(lighten(#41a7e7, 10), 30);
+        }
+      }
+    }
     &__col {
       width: 100%;
       padding: 0 0.5rem;

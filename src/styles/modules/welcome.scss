@@ -72,12 +72,23 @@
       font-size: 1.6rem;
     }
     &__supertext {
-      top: 9rem;
+      top: 10rem;
     }
   }
   @media screen and (max-width: 24rem) {
     &__supertext {
+      top: 8rem;
+    }
+    &__tagline {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 20rem) {
+    &__supertext {
       top: 6rem;
+    }
+    &__tagline {
+      font-size: 1.2rem;
     }
   }
 }
