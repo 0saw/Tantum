@@ -107,6 +107,7 @@
     &__image {
       img {
         width: 150px;
+        border-radius: 10px;
       }
     }
     &__stop {
@@ -124,10 +125,13 @@
         display: none;
       }
       &:after {
-        counter-increment: benefits;
-        content: counter(benefits) ")";
+        counter-increment: reasons;
+        content: counter(reasons) ")";
         font: bold italic 1.2rem 'Georgia', serif;
       }
+    }
+    &__text {
+      padding-left: 0.5rem;
     }
     &__stop {
       display: none;

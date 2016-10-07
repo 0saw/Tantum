@@ -2,7 +2,7 @@
   background: url('../images/benefits_bg.jpg') center center no-repeat;
   background-size: cover;
   padding: 4rem 0 5rem;
-  counter-reset: benefits;
+  /*counter-reset: benefits;*/
   &__header {
     padding-left: 6rem;
     font-weight: bold;
@@ -82,14 +82,16 @@
       align-items: flex-start;
     }
     &__col:first-child {
-      min-width: 2rem;
+      min-width: 5rem;
       img {
-        display: none;
+        /*display: none;*/
+        height: 3rem;
+        width: auto;
       }
       &:before {
-        counter-increment: benefits;
-        content: counter(benefits) ")";
-        font: bold italic 1.2rem 'Georgia', serif;
+        /*counter-increment: benefits;*/
+        /*content: counter(benefits) ")";*/
+        /*font: bold italic 1.2rem 'Georgia', serif;*/
       }
     }
   }

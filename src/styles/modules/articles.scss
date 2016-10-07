@@ -140,8 +140,16 @@
     }
   }
   @media screen and (max-width: 30rem) {
+    &__nav {
+      ul {
+        padding: 0 0rem;
+      }
+    }
     &__arrow {
-      display: none;
+      
+    }
+    &__dots {
+      
     }
   }
 }

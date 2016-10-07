@@ -70,9 +70,14 @@
     margin: 0.6rem;
   }
   .icons-list {
-    td:first-child img {
-      margin-right: 1rem;
+    td:first-child {
+      img {
+        margin-right: 1rem;
+      }
     }
+  }
+  .dib {
+    display: inline-block;
   }
   @media screen and (max-width: 60rem) {
     padding-left: 0.5rem;
@@ -114,9 +119,12 @@
       }
     }
     .icons-list {
-      td:first-child img {
-        width: 40px;
-        margin-right: 1rem;
+      td:first-child {
+        vertical-align: top;
+        img {
+          width: 40px;
+          margin-right: 1rem;
+        }
       }
     }
   }
