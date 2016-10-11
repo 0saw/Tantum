@@ -1,5 +1,5 @@
 .reasons {
-  counter-reset: reasons;
+  /*counter-reset: reasons;*/
   &--bg {
     background: #f7efed url('../images/rose.png') right 200px no-repeat;
   }
@@ -10,9 +10,10 @@
     margin: 0 0 2rem;
   }
   &__header {
-    font: bold italic 1.4rem 'Georgia', serif;
-    text-align: center;
+    font: italic 1.4rem 'Georgia', serif;
+    text-align: left;
     margin: 1rem 0 2rem;
+    padding-left: 32+259 + px;
   }
   &__image {
     border-radius: 10px;
@@ -47,8 +48,8 @@
     }
   }
   &__title {
-    font: bold italic 1.2rem 'Georgia', serif;
-    text-transform: uppercase;
+    font: italic 1.2rem 'Georgia', serif;
+    /*text-transform: uppercase;*/
   }
   &__text {
     padding-left: 2rem;
@@ -117,6 +118,9 @@
         height: 0.5rem;
       }
     }
+    &__header {
+      padding-left: 32+150 + px;
+    }
   }
   @media screen and (max-width: 30rem) {
     &__image {
@@ -125,9 +129,9 @@
         display: none;
       }
       &:after {
-        counter-increment: reasons;
-        content: counter(reasons) ")";
-        font: bold italic 1.2rem 'Georgia', serif;
+        /*counter-increment: reasons;*/
+        /*content: counter(reasons) ")";*/
+        /*font: bold italic 1.2rem 'Georgia', serif;*/
       }
     }
     &__text {
@@ -135,6 +139,9 @@
     }
     &__stop {
       display: none;
+    }
+    &__header {
+      padding-left: 0;
     }
   }
 }

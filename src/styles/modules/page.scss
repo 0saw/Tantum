@@ -109,6 +109,11 @@
     &__container {
       flex-wrap: wrap;
     }
+    .icons-list {
+      td:first-child {
+        vertical-align: top;
+      }
+    }
   }
   @media screen and (max-width: 30rem) {
     /*padding: 14rem 0 3rem;*/

@@ -1,32 +1,68 @@
 .helper {
   padding: 5rem 0 3rem;
+  &--damn-this-gurl-is-so-good {
+    width: 100*668/1920 + vw;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    right: 0;
+    transition: 0.3s ease-out;
+    transition-property: width, height, top, right;
+    @media screen and (max-width: 112.5rem) 
+                  and (min-height: 40rem) {
+      right: -6%;
+    }
+    @media screen and (max-width: 87.5rem) 
+                  and (min-height: 40rem) {
+      width: 100*668/2560 + vw;
+      right: 0;
+      top: 200px;
+    }
+    @media screen and (max-width: 80rem) 
+                  and (min-height: 40rem) {
+      right: -5%;
+    }
+    @media screen and (max-width: 70rem)
+                  and (min-height: 40rem) {
+      width: 100*668/3840 + vw;
+      top: 300px;
+      right: 0;
+    }
+    @media screen and (max-height: 40rem) {
+      top: 200px;
+      width: 20vmax;
+    }
+    @media screen and (max-width: 60rem) {
+      display: none !important;
+    }
+  }
   &--shared-bg {
     // background: url('../images/helper_bg.jpg') top center no-repeat;
-    background: url('../images/problems_girl.png') 100% 150px no-repeat,
-                url('../images/problems_background_mobile.jpg') center top no-repeat;
-    // background-size: auto auto, cover;
-    background-size: auto auto, cover;
-    @media screen and (max-width: 114rem),
+    background: url('../images/problems_background_mobile.jpg') center top no-repeat;
+    background-size: cover;
+    position: relative;
+    /*@media screen and (max-width: 114rem),
            screen and (max-height: 900px) {
-      /*background-position: 120% 200px, top center;*/
+      background-position: 120% 200px, top center;
       background-size: 600px auto, cover;
       background-position: 100% 260px, center top;
-    }
-    @media screen and (max-width: 100rem) {
+    }*/
+    /*@media screen and (max-width: 100rem) {
       background-image: url('../images/problems_girl_transparent.png'), url('../images/problems_background_mobile.jpg');
-    }
-    @media screen and (max-width: 87.5rem),
+    }*/
+    /*@media screen and (max-width: 87.5rem),
            screen and (max-height: 40rem) {
-      /*background-position: 120% 200px, top center;*/
+      background-position: 120% 200px, top center;
       background-size: 400px auto, cover;
       background-position: 100% 240px, center top;
-    }
-    @media screen and (max-width: 75rem),
+    }*/
+    /*@media screen and (max-width: 75rem),
            screen and (max-height: 40rem) {
-      /*background-position: 150% 200px, center top;*/
+      background-position: 150% 200px, center top;
       background-size: 300px auto, cover;
       background-position: 100% 200px, center top;
-    }
+    }*/
     @media screen and (max-width: 60rem) {
       background: url('../images/problems_background_mobile.jpg') center top no-repeat;
     }
