@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <meta property="og:title" content="Tantum"/>
+  <meta property="og:url" content="https://0saw.github.io/Tantum/dist/"/>
+  <meta property="og:image" content="/static/share.png"/>
+  <meta property="og:site-name" content="Tantum"/>
+  <meta property="og:description" content="An ES6 boilerplate with common frontend tasks using Gulp 4 as build system."/>
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@domain">
+  <meta name="twitter:title" content="Tantum">
+  <meta name="twitter:description" content="An ES6 boilerplate with common frontend tasks using Gulp 4 as build system.">
+  <meta name="twitter:creator" content="@domain">
+  <meta name="twitter:image:src" content="/static/share.png">
+  
+
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="transparent">
+  <meta name="application-name" content="Tantum">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tantum">
+  <link rel="icon" type="image/png" sizes="228x228" href="images/favicon/coast-228x228.png">
+  <link rel="yandex-tableau-widget" href="images/favicon/yandex-browser-manifest.json">
+  <meta name="msapplication-TileColor" content="transparent">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-320x460.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-640x920.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-640x1096.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-750x1294.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="images/favicon/apple-touch-startup-image-1182x2208.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="images/favicon/apple-touch-startup-image-1242x2148.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-748x1024.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="images/favicon/apple-touch-startup-image-768x1004.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-1496x2048.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="images/favicon/apple-touch-startup-image-1536x2008.png">
+</head>
+<body>
+  <nav class="pushy pushy-left">
+    <ul>
+      <li class="pushy-link menu-item"><a href="index.html">Главная</a></li>
+      <li class="pushy-link menu-item"><a href="benefits.html">Преимущества</a></li>
+      <li class="pushy-link menu-item"><a href="reasons.html">Причины</a></li>
+      <li class="pushy-submenu menu-item menu-item-has-children">
+        <a href="format.html">Формы выпуска</a>
+        <div></div>
+        <ul>
+          <li class="pushy-link menu-item"><a href="#">Раствор</a></li>
+          <li class="pushy-link menu-item"><a href="#">Порошок</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu menu-item menu-item-has-children">
+        <a href="#">Когда применять</a>
+        <div></div>
+        <ul>
+          <li><a href="mother.html">Я - мама</a></li>
+          <li><a href="procedure.html">До и после операции</a></li>
+          <li><a href="another-reasons.html">Если причина в другом</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu menu-item menu-item-has-children">
+        <a href="#">Это интересно</a>
+        <div></div>
+        <ul>
+          <!-- <li><a href="#">Причины неприятных симптомов</a></li> -->
+          <li class="pushy-link menu-item"><a href="news.html">Новости</a></li>
+          <li class="pushy-link menu-item"><a href="articles.html">Полезные статьи</a></li>
+          <li class="pushy-link menu-item"><a href="advices.html">Советы</a></li>
+          <li class="pushy-link menu-item"><a href="#">Женские хитрости</a></li>
+          <li class="pushy-link menu-item"><a href="#">Тест</a></li>
+          <li class="pushy-link menu-item"><a href="feedback.html">Обратная связь</a></li>
+          <li class="pushy-link menu-item"><a href="feedback.html">Консультация специалиста</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu menu-item menu-item-has-children">
+        <a href="toexperts.html">Специалистам</a>
+        <div></div>
+        <ul>
+          <li class="pushy-link menu-item"><a href="news.html">Новости</a></li>
+          <li class="pushy-link menu-item"><a href="articles.html">Статьи</a></li>
+          <li class="pushy-link menu-item"><a href="#">Абстракты</a></li>
+        </ul>
+      </li>
+      <li class="pushy-link menu-item last"><a href="javascript://void">Закрыть</a></li>
+    </ul>
+  </nav>
+  
+  <div class="site-overlay"></div>
+  
+
+  <div class="viewport" id="container">
+    <div class="site-content site-content_pink">
+      <!--[if lt IE 8]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      
+      <div class="inner-welcome">
+        <header class="header">
+          <div class="header__logo">
+            <a href="index.html"><img src="images/logo-inner.png" alt=""></a>
+          </div>
+          <div class="header__line">
+            <nav class="nav wrapper">
+              <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="benefits.html">Преимущества</a></li>
+                <li><a href="reasons.html">Причины</a></li>
+                <li class="menu-item-has-children">
+                  <a href="format.html">Формы выпуска</a>
+                  <ul>
+                    <li><a href="#">Раствор</a></li>
+                    <li><a href="#">Порошок</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Когда применять</a>
+                  <ul>
+                    <li><a href="mother.html">Я - мама</a></li>
+                    <li><a href="procedure.html">До и после операции</a></li>
+                    <li><a href="another-reasons.html">Если причина в другом</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Это интересно</a>
+                  <ul>
+                    <!-- <li><a href="#">Причины неприятных симптомов</a></li> -->
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="articles.html">Полезные статьи</a></li>
+                    <li><a href="advices.html">Советы</a></li>
+                    <li><a href="#">Женские хитрости</a></li>
+                    <li><a href="#">Тест</a></li>
+                    <li><a href="feedback.html">Обратная связь</a></li>
+                    <li><a href="experts.html">Консультация специалиста</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="toexperts.html">Специалистам</a>
+                  <ul>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">Абстракты</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="#">Контакты</a></li> -->
+              </ul>
+              <div class="nav__pushy">
+                <div class="menu-btn"><img src="images/menu.png" alt=""><span></span></div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        
+      </div>
+
+      <section class="page page_nobg page_pink">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Политика конфиденциальности</span>
+          </div>
+        </div>
+        <div class="page__header page__header_alt page__center">
+          <div class="wrapper">
+            <h1>Политика конфиденциальности</h1>
+          </div>
+        </div>
+        <div class="wrapper">
+<p>Доступ к сайту и его использование регулируются следующими условиями. Просим не использовать настоящий сайт в случае ашего несогласия со следующими условиями. Настоящий сайт был разработан компанией ООО «АНДЖЕЛИНИ ФАРМА РУС» и контролируется ею. Мы сохраняем за собой право на отмену или внесение частичных или полных изменений в настоящий сайт или в Условия использования, в наши Общие условия и в наши Общие условия продажи и поставки. Следует учитывать, что мы вносим указанные изменения по собственному усмотрению и без предварительного уведомления. В связи с вышесказанным просим вас при следующем посещении сайта вновь ознакомиться с условиями и принять к сведению все изменения, которые могут быть внесены.</p>
+
+<p><b>Право на использование</b><br>
+  Все данные, документы и изображения, публикуемые на настоящем сайте, принадлежат исключительно компании ООО «АНДЖЕЛИНИ ФАРМА РУС». Права на их использование предоставляются при условии нанесения на их копии соответствующего уведомления об авторском праве, а также при условии, что они используются исключительно в личных целях, не используются в коммерческих целях, в них не вносятся какие-либо изменения, а также при условии использования изображений, скопированных с сайта, только вместе с сопроводительным текстом.</p>
+
+<p><b>Торговые марки</b><br>
+  Все названия продукции, указанные на настоящем сайте заглавными буквами или отмеченные каким-либо иным образом, являются торговыми марками компании ООО «АНДЖЕЛИНИ ФАРМА РУС», ее дочерних компаний, филиалов, лицензиаров и партнеров совместных предприятий. Незаконное или неправомочное использование указанных торговых марок и иных материалов запрещено и представляет собой нарушение авторских прав, законодательства о торговых марках и иных прав на промышленную собственность.</p>
+
+<p><b>Ограниченная ответственность</b><br>
+  По имеющимся у компании сведениям, информация, размещенная компанией ООО «АНДЖЕЛИНИ ФАРМА РУС» на настоящем сайте, была получена из надежных внутренних и внешних источников с использованием профессиональной осмотрительности. Мы принимаем необходимые меры для постоянного расширения и обновления информации. Информация размещена на сайте с целью предоставления сведений о компании ООО «АНДЖЕЛИНИ ФАРМА РУС», ее продукции и услугах. Однако мы не делаем явных или подразумеваемых заявлений и не даем гарантий в отношении полноты или правильности предоставленной на сайте информации. В частности, обращаем ваше внимание на то, что указанная информация может быть устаревшей. Поэтому мы рекомендуем всегда проверять информацию, полученную с сайта, прежде чем использовать ее в каких-либо целях. Рекомендации, размещенные на сайте, не освобождают вас от необходимости ознакомления с нашими последними рекомендациями – паспортами безопасности и техническими спецификациями − и рекомендациями о нашей продукции в части ее применимости в определенных процессах и целях. По вашему запросу мы готовы предоставить вам подробную информацию о продукции и услугах компании. Пользователи настоящего сайта подтверждают, что они согласны получить доступ к сайту и его содержимому на свой риск. Компания ООО «АНДЖЕЛИНИ ФАРМА РУС», а также третьи лица, участвующие в создании и разработке настоящего сайта или предоставлении доступа к нему, не несут ответственность за повреждения и причинение вреда здоровью, связанные с доступом или отсутствием доступа на сайт, возможностью или невозможностью использовать сайт либо с использованием вами информации, размещенной на сайте, в качестве достоверной.</p>
+
+<p><b>Сайты сторонних поставщиков/ссылки</b><br>
+  На сайте размещены ссылки на сайты третьих лиц. Предоставление указанных ссылок компанией ООО «АНДЖЕЛИНИ ФАРМА РУС» не является одобрением их содержания. Также компания ООО «АНДЖЕЛИНИ ФАРМА РУС» не несет ответственности за их содержимое, доступность, а также за повреждения и причинение вреда здоровью, связанные с использованием информации. Ссылки на другие сайты размещены для удобства пользователей. Пользователи посещают указанные сайты на свой риск.</p>
+
+<p><b>Сведения, предоставляемые пользователями</b><br>
+  Пользователи данного сайта несут полную ответственность за содержимое и достоверность сведений, направляемых ими в адрес компании ООО «АНДЖЕЛИНИ ФАРМА РУС», а также за нарушение прав третьих лиц, которое может возникнуть в результате предоставления таких сведений. Пользователи дают согласие компании ООО «АНДЖЕЛИНИ ФАРМА РУС» на хранение и использование таких сведений с целью статистического анализа или для других целей, связанных с деятельностью компании, кроме случаев, когда в состав информации включены персональные данные, не относящиеся к основным данным или информации об использовании. В частности, компания ООО «АНДЖЕЛИНИ ФАРМА РУС» вправе использовать содержание таких сообщений, включая идеи, изобретения, проекты, технологические приемы и профессиональные знания, включенные в их состав, в любых целях, таких как разработка, производство и (или) продажа продукции или услуг, а также воспроизведение и передача такой информации третьим лицам без каких-либо ограничений.</p>
+
+<p><b>Международные пользователи</b><br>
+  Проверка, поддержание и обновление сайта осуществляется компанией ООО «АНДЖЕЛИНИ ФАРМА РУС». Цель настоящего сайта – предоставление информации международной аудитории. Предоставляемая информация носит общеобразовательный и информационный характер. Компания ООО «АНДЖЕЛИНИ ФАРМА РУС» принимает все возможные меры для обеспечения точности и актуальности размещаемой на сайте информации. Следует иметь в виду, что информация, размещаемая на сайте, не является полноценной заменой консультаций, лечения и рекомендаций медицинских специалистов. Более того, не все препараты, информация о которых представлена на сайте, могут быть в продаже в вашей стране, при этом указания по применению препарата и зарегистрированные показания в разных странах могут отличаться. В связи с этим перед началом применения препаратов, информация о которых размещена на сайте, обязательно проконсультируйтесь с врачом или другим медицинским специалистом, а также ознакомьтесь с описанием и инструкцией по медицинскому применению препарата, утвержденной в вашей стране.</p>
+
+<p>Препараты, указанные на сайте, могут поступать в продажу в различных упаковках разных размеров или с различными буквенными обозначениями и маркировкой в зависимости от страны.</p>
+
+<p><b>Продажа препаратов компании ООО «АНДЖЕЛИНИ ФАРМА РУС»</b><br>
+  Продажа препаратов компании ООО «АНДЖЕЛИНИ ФАРМА РУС» осуществляется в соответствии с текущей редакцией Общих условий продажи и поставки компании ООО «АНДЖЕЛИНИ ФАРМА РУС».</p>
+        </div>
+      </section>
+
+      <section class="news news_horisontal">
+        <div class="wrapper">
+          <h2>Новости</h2>
+          <div class="news__container">
+            <div class="news__item">
+              <a href="#" class="news__image"><img src="images/news-item.jpg" alt=""></a>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Узнайте больше</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <a href="#" class="news__image"><img src="images/news-item.jpg" alt=""></a>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Узнайте больше</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item">
+              <a href="#" class="news__image"><img src="images/news-item.jpg" alt=""></a>
+              <div class="news__excert">
+                Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее.
+                <div class="news__button">
+                  <a href="#" class="button button_trust">Узнайте больше</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="interesting">
+        <div class="wrapper">
+          <div class="interesting__header">
+            Вас может заинтересовать:
+          </div>
+          <div class="interesting__item">
+            <a class="interesting__image" href="#" style="background-image: url('images/interesting_girl.jpg');"></a>
+            <div class="interesting__text">
+              <div class="interesting__title">Heading</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы. Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="interesting__button">
+                <a href="#">Узнайте больше</a>
+              </div>
+            </div>
+          </div>
+          <div class="interesting__item">
+            <a class="interesting__image" href="#" style="background-image: url('images/interesting_girl2.jpg');"></a>
+            <div class="interesting__text">
+              <div class="interesting__title">Heading</div>
+              Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы. Производство препарата осуществляется на фармакологическом заводе Италии. Он является, по праву, самым качественным средством от лечения молочницы
+              <div class="interesting__button">
+                <a href="#">Узнайте больше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Спросите специалиста</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <footer class="footer">
+    <a href="" id="footer"></a>
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__col footer__col_left">
+          <div class="footer__logo footer__logo_m">
+            <a href="/"><img src="images/footer_logo.png" alt="Тантум" /></a>
+          </div>
+          <div class="footer__title footer__text">Разделы сайта</div>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Преимущества</a></li>
+            <li><a href="#">Причины</a></li>
+            <li><a href="format.html">Формы выпуска</a></li>
+            <li><a href="#">Когда применять</a></li>
+            <li><a href="#">Это интересно</a></li>
+            <li><a href="#">Специалистам</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col_center">
+          <div class="footer__logo">
+            <a href="/"><img src="images/footer_logo.png" alt="Тантум" /></a>
+          </div>
+          <ul>
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Политика использования</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+          <div class="footer__share">
+            <div class="footer__text">Поделиться в социальных сетях:</div>
+            <div class="soc">
+              <a href="#" class="soc__icon soc__icon_fb" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_vk" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_ok" rel="nofollow"></a>
+              <a href="#" class="soc__icon soc__icon_twitter" rel="nofollow"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__col footer__col_parent">
+          <div>
+            <a href="#" rel="nofollow"><img src="images/footer_parent.png" alt="Angelini" /></a>
+          </div>
+          <div class="footer__button">
+            <a href="#" class="button button_footer">Обратная связь</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__legal footer__text">
+        <div class="footer__more">
+          <a href="#" class="readMoreFooter">Список литературы</a>
+        </div>
+        <div class="footer__cont">
+          <p id="literature1">1. Czajka, R. et al. Assessment of the efficacy of benzydamine (Tantum Rosa) in form of vaginal lavage in the treatment of perineal complaints in the early puerperium. Pol J Gyn Invest 2001; 4(2): 99-105</p>
+          <p id="literature2">2. MaglianoE. At al. The role of benzydamine in the topical treatment of the so called non specific vaginitis. Int J Tiss React 1987; X1(2): 151-156</p>
+          <p id="literature3">3. Согласно инструкции по применению препарата Тантум® Роза</p>
+        </div>
+        © ООО  «Анджелини Фарма Рус», Россия, 2016<br>
+          Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться консультацией медицинского работника или заменить ее. Для получения более подробной мы рекомендуем Вам обратиться к специалисту.<br>
+          Нажимая на кнопку "Поделиться в социальных сетях", я подтверждаю, что выражаю собственное мнение о продукте Тантум® Роза. Мое мнение основано исключительно на моей собственной оценке данного продукта, я подтверждаю, что оно не мотивировано получением каких-либо благ или преференций производителя/импортера/продавцов продукта.<br>
+          Номера регистрационных удостоверений: ПN 014275/01 от 16.05.2012, ПN 014275/02 от 30.06.2010<br><br>
+          Если во время приема препарата ООО «Анджелини Фарма Рус» Ваше состояние ухудшилось, пожалуйста, как можно скорее сообщите нам об этом, прислав сообщение на электронный адрес <a href="mailto:Angelini.Russia@angelini.ru">Angelini.Russia@angelini.ru</a>.
+      </div>
+      <div class="footer__pd">
+        <a href="http://smartlanding.ru/">Разработано в smartlanding</a>
+      </div>
+      <hr>
+      <div class="footer__warning">
+        ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО<br>
+        ОЗНАКОМИТЬСЯ С ИНСТРУКЦИЕЙ ПО ПРИМЕНЕНИЮ
+      </div>
+      <div class="footer__text footer__copyright">
+        При использовании материалов, размещенных на данном сайте, ссылка на сайт обязательна
+      </div>
+    </div>
+  </footer>
+  
+  </div>
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>

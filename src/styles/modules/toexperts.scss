@@ -2,6 +2,7 @@
   counter-reset: toexperts;
   &__bg {
     background: url('../images/toexperts_bg.jpg') center center no-repeat;
+    background-size: cover;
   }
   &__header {
     margin-top: 2.1rem;
