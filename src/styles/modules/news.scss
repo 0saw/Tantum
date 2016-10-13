@@ -1,5 +1,5 @@
 .news {
-  padding: 1px 0;
+  padding: 1px 0 2rem;
   background: url("../images/roses/rose2.png") 93% 100px no-repeat, 
               url("../images/roses/rose5.png") 7% 400px no-repeat,
               url("../images/news_bg.jpg") center center no-repeat;
@@ -94,8 +94,8 @@
     background: url("../images/news_bg.jpg") center center no-repeat;
     background-size: cover;
     &_gimmebackmypetals {
-      background: url("../images/roses/rose2.png") 93% 100px no-repeat, 
-              url("../images/roses/rose5.png") 7% 400px no-repeat,
+      background: url("../images/rose2.png") 93% 100px no-repeat, 
+              url("../images/rose5.png") 7% 400px no-repeat,
               url("../images/news_bg.jpg") center center no-repeat;
       background-size: auto auto, auto auto, cover;
     }

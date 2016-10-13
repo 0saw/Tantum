@@ -1,5 +1,6 @@
 .reasons {
   /*counter-reset: reasons;*/
+  padding: 0 0 2rem;
   &--bg {
     background: #f7efed url('../images/rose.png') right 200px no-repeat;
   }
@@ -53,7 +54,7 @@
   }
   &__text {
     padding-left: 2rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   &__stop {
     background-color: #f37799;
