@@ -1,5 +1,5 @@
 .button {
-  &_format, &_toexperts {
+  &_format.button, &_toexperts.button {
     display: inline-block;
     position: relative;
     background: linear-gradient(to bottom, #fe7fa2 0%, #e96388 100%);
@@ -58,7 +58,7 @@
     }
   }
 
-  &_trust, &_articles {
+  &_trust.button, &_articles.button {
     display: inline-block;
     position: relative;
     /*overflow: hidden;*/
@@ -104,7 +104,7 @@
     }
   }
 
-  &_footer {
+  &_footer.button {
     display: block;
     text-decoration: none;
     background-color: rgba(255,255,255,0);

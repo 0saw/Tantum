@@ -89,6 +89,33 @@
   .dib {
     display: inline-block;
   }
+  .alignright {
+    float: right;
+  }
+  .alignleft {
+    float: left;
+  }
+  a {
+    color: $pink;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    &:hover {
+      text-decoration: none;
+      color: lighten($pink, 10);
+    }
+  }
+  .breadcrumbs a {
+    color: #333;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: #333;
+    }
+  }
   ul {
     list-style: none;
     padding-left: 2rem;
@@ -110,6 +137,7 @@
         text-decoration: none;
         color: #333;
         font-size: 1.1rem;
+        font-weight: normal;
         &:hover {
           text-decoration: underline;
         }
@@ -145,6 +173,12 @@
       sup {
         top: -1em;
       }
+    }
+    img {
+      float: none !important;
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
     }
   }
   @media screen and (max-width: 40rem) {
