@@ -44,6 +44,12 @@
       }
     }
   }
+  &__subheader {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+  }
   &__line {
     flex-grow: 1;
     background: rgba(216,216,216,0.5);

@@ -56,16 +56,20 @@
   .filter {
     padding-bottom: 3rem;
   }
-  &__nav {
+  .wrapper &__nav {
     -js-display: flex;
     display: flex;
     align-items: center;
-    ul {
+    & ul {
       list-style: none;
       margin: 0;
       padding: 0 1rem;
       li {
         display: inline-block;
+        &:before {
+          content: none;
+          display: none;
+        }
         a {
           display: inline-block;
           padding: 6px 10px;
@@ -87,12 +91,12 @@
       }
     }
   }
-  &__dots {
+  .wrapper &__dots {
     background: url('../images/articles_dots.png') left top repeat-x;
     height: 1px;
     flex-grow: 1;
   }
-  &__arrow {
+  .wrapper &__arrow {
     background: url('../images/articles_arrows.png') left center no-repeat;
     width: 21px;
     height: 16px;

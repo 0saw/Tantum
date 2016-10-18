@@ -113,7 +113,7 @@
   
 
   <div class="viewport" id="container">
-    <div class="site-content">
+    <div class="site-content test">
       <!--[if lt IE 8]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -176,51 +176,119 @@
         
       </div>
 
-      <section class="page page_nobg">
+      <section class="page test__bg">
         <div class="wrapper">
           <div class="breadcrumbs">
             <a href="/">Главная</a>
             <span class="breadcrumbs__delim">•</span>
-            <span class="breadcrumbs__current">Обратная связь</span>
+            <a href="#">Архив тестов</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Тест</span>
           </div>
         </div>
-        <div class="page__header">
-          <div class="page__line"></div>
-          <h1>Обратная связь</h1>
-          <div class="page__line"></div>
+        <div class="page__header page__header_alt page__center toexperts__header">
+          <div class="wrapper">
+            <h1>Тест «Узнайте, какой Вы киногерой?»</h1>
+            <div class="page__subheader">Пройдите тест и узнайте, какой Вы киногерой</div>
+          </div>
         </div>
         <div class="wrapper">
+          <form class="test__form multiple-lines">
+            <div>
+              <div class="test__row">
+                <div class="test__header">
+                  Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться?
+                </div>
+                <div class="test__body">
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer1" id="answer1_1" value="1">
+                    </div>
+                    <label for="answer1_1">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer1" id="answer1_2" value="2">
+                    </div>
+                    <label for="answer1_2">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer1" id="answer1_3" value="3">
+                    </div>
+                    <label for="answer1_3">Информация, размещенная на сайте</label>
+                  </div>
+                </div>
+              </div>
+              <div class="test__row">
+                <div class="test__header">
+                  Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться?
+                </div>
+                <div class="test__body">
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer2" id="answer2_1" value="1">
+                    </div>
+                    <label for="answer2_1">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer2" id="answer2_2" value="2">
+                    </div>
+                    <label for="answer2_2">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer2" id="answer2_3" value="3">
+                    </div>
+                    <label for="answer2_3">Информация, размещенная на сайте</label>
+                  </div>
+                </div>
+              </div>
+              <div class="test__row">
+                <div class="test__header">
+                  Отпускается без рецепта. Информация, размещенная на сайте, носит справочный характер и не может считаться?
+                </div>
+                <div class="test__body">
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer3" id="answer3_1" value="1">
+                    </div>
+                    <label for="answer3_1">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer3" id="answer3_2" value="2">
+                    </div>
+                    <label for="answer3_2">Информация, размещенная на сайте</label>
+                  </div>
+                  <div class="test__field cf">
+                    <div class="test__radio-wrap">
+                      <input type="radio" name="answer3" id="answer3_3" value="3">
+                    </div>
+                    <label for="answer3_3">Информация, размещенная на сайте</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="test__button">
+              <button type="submit" class="button button_test">Посмотреть результаты</button>
+            </div>
+            <div class="test__button">
+              <button type="submit" class="button button_archive">Другие тесты</button>
+            </div>
+          </form>
         </div>
+
       </section>
 
-      <section class="footer-form">
+      <div class="footer-form inner">
         <div class="wrapper">
-           <img class="footer-form__left" src="images/footer-form_left.png" alt="">
-           <img class="footer-form__right" src="images/footer-form_right.png" alt="">
-           <form action="/">
-             <input type="text" name="name" placeholder="Ваше имя" />
-             <input type="email" name="email" placeholder="Ваш e-mail*" required />
-             <textarea name="mess" placeholder="Задайте свой вопрос"></textarea>
-             <div class="footer-form__checkbox">
-               <label for="processdata">
-                 <input type="checkbox" name="processdata" id="processdata"><span></span>
-               </label>
-               <label for="processdata" class="footer-form__label">Согласен на обработку<br>персональных данных</label>
-             </div>
-             <div class="footer-form__submit">
-               <input type="submit" value="Отправить" />
-             </div>
-             <div class="footer-form__checkbox">
-               <label for="newsletter">
-                 <input type="checkbox" name="newsletter" id="newsletter"><span></span>
-               </label>
-               <label for="newsletter" class="footer-form__label">Подписаться на рассылку новостей</label>
-             </div>
-             <div class="footer-form__legend">*Укажите верный email. На него придет ответ по вашему вопросу</div>
-           </form>
-           
+          <div class="footer-form__submit">
+            <a href="" class="submit">Спросите специалиста</a>
+          </div>
         </div>
-      </section>
+      </div>
 
       <section class="news news_horisontal">
         <div class="wrapper">
@@ -286,6 +354,7 @@
         </div>
         
       </section>
+
     </div>
   <footer class="footer">
     <a href="" id="footer"></a>

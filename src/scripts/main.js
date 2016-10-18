@@ -78,7 +78,7 @@ $(function() {
   };
   $(window).on('resize', windowResize);
 
-  $('.filter input[type="radio"], .filter select, .toexperts__field  input[type="radio"]').styler();
+  $('.filter input[type="radio"], .filter select, .toexperts__field input[type="radio"], .test__field input[type="radio"]').styler();
 
   var page = $(document.body).hasClass('front');
   page = page ? 'front' : '';
@@ -93,5 +93,4 @@ $(function() {
     default:
       break;
   }
-  console.log(page);
 });
