@@ -87,6 +87,23 @@
       transition-duration: 0.2s;
     }
   }
+  &_download.button {
+    display: inline-block;
+    margin-left: 2rem;
+    border-bottom: 1px dashed $pink;
+    text-decoration: none;
+    position: relative;
+    color: $pink;
+    &:before {
+      display: block;
+      position: absolute;
+      left: -2rem;
+      content: '';
+      background: url('../images/icon_download.png');
+      width: 24px;
+      height: 24px;
+    }
+  }
 
   &_trust.button, &_articles.button {
     display: inline-block;

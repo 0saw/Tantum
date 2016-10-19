@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <title>Tantum</title>
+
+  <!-- @if ENV='dev' -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <link rel="stylesheet" href="styles/main.min.css">
+  <!-- @endif -->
+
+  <!-- @include inc/_meta.html -->
+
+  <!-- @include inc/_favicons.html -->
+</head>
+<body>
+  <!-- @include inc/pushy.html -->
+
+  <div class="viewport" id="container">
+    <div class="site-content">
+      <!-- @include inc/_browserhappy.html -->
+      <div class="inner-welcome">
+        <!-- @include inc/inner-header.html -->
+      </div>
+
+      <section class="formats format">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span class="breadcrumbs__delim">•</span>
+            <a href="#">Формы выпуска</a>
+            <span class="breadcrumbs__delim">•</span>
+            <span class="breadcrumbs__current">Порошок</span>
+          </div>
+        </div>
+        <div class="formats__header">
+          <div class="wrapper">
+            <header class="formats__tagline">
+              <h1>Готовый раствор Тантум<sup>&reg;</sup> Роза <br> в удобном флаконе</h1>
+              <div class="formats__subtitle">Готовый раствор Тантум<sup>&reg;</sup> Роза  - нестероидный противовоспалительный препарат<br> комплексного действия для снятия неприятных симптомов в интимной области в удобном<br> флаконе со специальной направляющей насадкой для мягкого душа.</div>
+            </header>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="formats__container">
+            <div class="formats__item">
+              <div class="formats__image">
+                <img src="images/format_prepeared.png" alt="Готовый раствор в удобном флаконе">
+              </div>
+              <div class="formats__button">
+                <a href="#" class="button button_format">Показания к применению</a>
+              </div>
+              <div class="format__roses">
+                <ul>
+                  <li style="background-image: urL('images/roses/rose12.png');">
+                    <b>Разрешен<br> беременным<br> и кормящим<span class="literature">3</span></b>
+                    <div class="format__info"><span>Подходит<br> беременным<br> и кормящим<span class="literature">3</span></span></div>
+                  </li>
+                  <li style="background-image: urL('images/roses/rose9.png');">
+                    <b>Восстанавливает<br> микрофлору</b>
+                    <div class="format__info"><span>Избирательно<br> действует на<br> вагинальную<br> микрофлору, подавляя<br> рост и активность<br> только<br> болезнетворных<br> микроорганизмов<span class="literature">2</span></span></div>
+                  </li>
+                  <li style="background-image: urL('images/roses/rose10.png');">
+                    <b>Борется<br> с воспалением<span class="literature">3</span></b>
+                    <div class="format__info"><span>Помогает<br> организму бороться<br> с воспалением<span class="literature">3</span></span></div>
+                  </li>
+                  <li style="background-image: urL('images/roses/rose11.png');">
+                    <b>Без возрастных<br> ограничений<span class="literature">3</span></b>
+                    <div class="format__info"><span>Не имеет<br> возрастных<br> ограничений<span class="literature">3</span></span></div>
+                  </li>
+                  <li style="background-image: urL('images/roses/rose8.png');">
+                    <b>Снимает боль,<br> зуд и жжение<span class="literature">1</span></b>
+                    <div class="format__info"><span>Облегчает боль,<br> зуд и жжение через 20<br> минут после<br> 1-го применения<span class="literature">1</span>. А после<br> 3-го применения<br> наблюдается<br> заметное улучшение<br> общего состояния<span class="literature">1</span></span></div>
+                  </li>
+                  <li style="background-image: urL('images/roses/rose13.png');">
+                    <b>Экономия<br> времени</b>
+                    <div class="format__info"><span>Экономия времени:<br> раствор готов<br> к применению</span></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="format__text">Более подробную информацию вы можете прочитать в инструкции по применению.</div>
+              <div class="format__button--signle"><a href="#" class="button button_download">Инструкция</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include inc/howto.html -->
+
+      <section class="interesting">
+        <!-- @include inc/interesting.html -->
+      </section>
+
+      <div class="footer-form inner">
+        <div class="wrapper">
+          <div class="footer-form__submit">
+            <a href="" class="submit">Спросите специалиста</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- @include inc/footer.html -->
+  </div>
+  <!-- @if ENV='dev' -->
+  <script src="scripts/vendor.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- @endif -->
+  <!-- @if ENV='prod' -->
+  <script src="scripts/vendor.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+  <!-- @endif -->
+
+  <!-- //@include inc/_analytics.html -->
+</body>
+</html>
