@@ -41,6 +41,9 @@
         }
       }
     }
+    .pulse {
+      display: none;
+    }
     img {
       display: block;
       opacity: 0.8;
@@ -133,6 +136,9 @@
         /*counter-increment: reasons;*/
         /*content: counter(reasons) ")";*/
         /*font: bold italic 1.2rem 'Georgia', serif;*/
+      }
+      .pulse {
+        display: block;
       }
     }
     &__text {

@@ -83,12 +83,11 @@
     font-weight: 400;
   }
   td img {
-    margin: 0.6rem;
+    padding: 0.3rem;
   }
   .icons-list {
     td:first-child {
       img {
-        margin-right: 1rem;
       }
     }
   }
@@ -185,6 +184,12 @@
       display: block;
       margin: 0 auto;
       max-width: 90%;
+      min-width: 48px;
+    }
+    .icons-list {
+      td:first-child {
+        padding-right: 1rem;
+      }
     }
   }
   @media screen and (max-width: 40rem) {
@@ -209,6 +214,10 @@
     .icons-list {
       td:first-child {
         vertical-align: top;
+        padding-right: 1rem;
+        img {
+          min-width: 48px;
+        }
       }
     }
     &_rose {
@@ -228,7 +237,6 @@
         vertical-align: top;
         img {
           width: 40px;
-          margin-right: 1rem;
         }
       }
     }

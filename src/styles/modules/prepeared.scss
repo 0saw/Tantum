@@ -28,6 +28,12 @@
     position: relative;
     height: 1px;
     margin-top: 4rem;
+    .pulse {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     ul {
       position: absolute;
       list-style: none;
@@ -151,5 +157,57 @@
   &__text {
     text-align: center;
     margin-top: 15rem;
+  }
+  @media screen and (max-width: 60rem) {
+    
+    &__roses {
+      height: auto;
+      .pulse {
+        display: block;
+      }
+      ul {
+        position: static;
+        li, li:nth-child(n) {
+          text-align: left;
+          position: static;
+          background: none !important;
+          height: auto;
+          width: auto;
+          b {
+            margin-left: 36px;
+            text-align: left;
+            position: static;
+          }
+        }
+      }
+      br {
+        display: none !important;
+      }
+    }
+    &__info {
+      margin-left: 36px;
+      position: static;
+      height: auto;
+      width: auto;
+      opacity: 1;
+      background: none;
+      transform: none;
+      display: block;
+      padding: 0;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      margin-top: 2rem;
+    }
+    & .formats__item {
+      padding-right: 1rem;
+      margin-top: 0;
+      &:last-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
   }
 }

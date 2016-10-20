@@ -28,5 +28,26 @@
   //   scrollFun();
   // });
   // $(document).ready(scrollFun);
-
+  $('a[href="#format-advice"]').on('click', function (e) {
+    e.preventDefault();
+    document.openForm('#format-advice');
+  });
 })();
+
+document.openForm = function(selector) {
+    if (selector == null) {
+      selector = ".form form:eq(1)";
+    }
+    return $.magnificPopup.open({
+      items: {
+        src: $(selector),
+        type: 'inline'
+      },
+      removalDelay: 500,
+      mainClass: 'mfp-zoom-in modal',
+      callbacks: {
+        beforeOpen: function() {}
+      },
+      midClick: true
+    });
+  };
