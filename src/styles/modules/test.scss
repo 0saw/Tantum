@@ -4,7 +4,7 @@
     background: #f6f2f2;
   }
   &__form {
-
+    margin-top: 2rem;
   }
   &__row {
     padding-left: 4.5rem;
@@ -20,7 +20,6 @@
   }
   &__header {
     position: relative;
-    font-size: 1.1rem;
     margin-bottom: 1.2rem;
     &:before {
       height: 3rem;
@@ -47,7 +46,6 @@
   }
   &__field {
     margin: 0.7rem 0;
-    font-size: 0.9rem;
     label {
 
     }
